@@ -1,0 +1,111 @@
+nav{
+  background-color: #eee; display:block;
+}
+
+nav ul{
+	margin:0;
+}
+
+nav li{
+	  float: left;
+  list-style: none;
+}
+nav:after{
+	 visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+
+//block-nav
+.block-nav li{
+	  width:50%;
+}
+
+.block-nav li > a {
+  display:block;
+  padding: 1rem 2rem;
+  text-decoration:none;
+}
+
+.block-nav li > a:hover{
+	background-color: #ddd;
+}
+
+
+
+
+
+
+
+//Toggle
+.toggle ul {
+	display: none;
+}
+
+.toggle li{
+	width:100%;
+}
+
+.toggle li > a{
+	  display:block;
+  padding: 1rem 2rem;
+  text-decoration:none;
+}
+
+.toggle li > a:hover{
+		background-color: #ddd;
+
+}
+
+
+.burger{
+	float:right;
+	padding:1rem;
+}
+
+
+
+
+
+@media only screen and (min-width: @tablet-up) {
+	.block-nav li{
+		  width:33.3333%;
+	}
+}
+
+
+
+@media only screen and (min-width: @desktop-up) {
+
+	.block-nav li {
+		width: auto;
+	}
+
+
+
+	.burger > i{
+		display: none;
+	}
+
+	.toggle li{
+		width:auto;
+	}
+
+	.toggle ul {
+		display: block;
+	}
+
+
+
+
+
+
+}
+
+
+
+

@@ -1,0 +1,642 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <!-- Compiled SMACSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Web Font -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</head>
+<body class="egpage">
+
+<!-- 
+<div class="row wow fadeIn">
+    <h1>Lightbox</h1>
+    <div id="wrapper">
+    <p>Our super simple lightbox demo. Here are the image links:
+        <ul>
+            <li>
+                <a href="https://farm7.static.flickr.com/6130/5935338876_47b61c93a5.jpg" class="lightbox_trigger">
+                Picture 1
+                </a>
+            </li>
+            <li>
+                <a href="https://farm7.static.flickr.com/6020/5924329054_4bdc419c3a_o.jpg" class="lightbox_trigger">
+                Picture 2
+                </a>
+            </li>
+            <li>
+                <a href="https://farm7.static.flickr.com/6020/5931933181_ddb737e528.jpg" class="lightbox_trigger">
+                Picture 3
+                </a>
+            </li> 
+        </ul>
+     </p>
+
+
+</div>
+
+</div> --> <!-- #/wrapper -->
+</div>
+
+     <div class="row wow fadeIn">
+    
+    <h1>Navigation Patterns</h1>
+
+<h5>Basic Toggle</h5>
+<nav>
+<div class="toggle">
+<a href="#" class="burger"> <i class="fa fa-bars"></i></a>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">What we do</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+</div>
+</nav>
+
+<h5>Block Navigation</h5>
+<nav>
+<div class="block-nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">What we do</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+</div>
+
+</nav>
+
+    </div>
+
+     <div class="row wow fadeIn">
+    
+    <h1>Forms elements</h1>
+
+<h5>Label above</h5>
+<form method="post" action="" class="forms">
+    <label>
+        Email
+        <input type="email" name="user-email"/>
+    </label>
+    <label>
+        Password
+        <input type="password" name="user-password"/>
+    </label>
+
+</form>
+
+
+<h5>Label inside</h5>
+<form method="post" action="" class="forms">
+    <label>
+        <input type="email" name="user-email" placeholder="Email" />
+    </label>
+    <label>
+        <input type="password" name="user-password" placeholder="Password" />
+    </label>
+
+</form>
+
+<h5>Required Field</h5>
+<form method="post" action="" class="forms">
+    <label>
+        Email <span class="req">*</span>
+        <input type="email" name="user-email" class="width-50"  />
+    </label>
+</form>
+
+<h5>Input Descriptions</h5>
+
+<form method="post" action="" class="forms">
+    <label>
+        Name <span class="forms-desc">Always nice to feel important.</span>
+        <input type="text" name="user-name" class="width-50"  />
+    </label>
+    <label>
+        Email
+        <input type="email" name="user-email" class="width-50"  />
+        <div class="forms-desc">Please enter your email.</div>
+    </label>
+</form>
+
+<ul class="forms-list">
+        <li>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" value="0">
+            <label for="checkbox-1">Check 1</label>
+        </li>
+        <li>
+            <input type="checkbox" name="checkbox-2" id="checkbox-2" value="0">
+            <label for="checkbox-2">Check 2</label>
+        </li>
+        <li>
+            <input type="checkbox" name="checkbox-3" id="checkbox-3" value="0">
+            <label for="checkbox-3">Check 3</label>
+        </li>
+        <li>
+            <input type="checkbox" name="checkbox-4" id="checkbox-4" value="0">
+            <label for="checkbox-4">Check 4</label>
+        </li>
+    </ul>
+
+    <form method="post" action="" class="forms">
+    Phone number
+    <ul class="forms-inline-list">
+        <li>
+            ( <input type="text" name="phone-prefix" size="3"> )
+        </li>
+        <li>
+            <input type="text" name="phone-number-1" size="3">
+        </li>
+            - <input type="text" name="phone-number-2" size="3">
+        
+        <li>
+             &nbsp;ext: <input type="text" name="phone-ext" size="3">
+        </li>
+        <div class="forms-desc">Needed if there are questions about your order</div>
+    </ul>
+</form>
+    
+</div>
+
+
+    <div class="row wow fadeIn">
+        <h1>Colors</h1>
+        <div class="large-6 columns">
+            <div class="primary-color-band color">
+                <div class="small-4 columns">Primary Light</div>
+                <div class="small-4 columns">Primary</div>
+                <div class="small-4 columns">Primary Dark</div>
+            </div>
+            <div class="secondary-color-band color">
+                <div class="small-4 columns">Secondary Light</div>
+                <div class="small-4 columns">Secondary</div>
+                <div class="small-4 columns">Secondary Dark</div>
+            </div>
+            <div class="tertiary-color-band color">
+                <div class="small-4 columns">Tertiary Light</div>
+                <div class="small-4 columns">Tertiary</div>
+                <div class="small-4 columns">Tertiary Dark</div>
+            </div>
+        </div>
+        <div class="large-6 columns">
+            <code>.pimary-color, .secondary-color, .tertiary-color</code>
+        </div>
+    </div>
+
+    <div class="row wow fadeIn">
+        <h1>Headings</h1>
+        <h1>H1 Heading</h1>
+        <h2>H2 Heading</h2>
+        <h3>H3 Heading</h3>
+        <h4>H4 Heading</h4>
+        <h5>H5 Heading</h5>
+        <h6>H6 Heading</h6>
+
+    </div>
+
+    <div class="row wow fadeIn">
+
+        <h1>Text Treatment</h1>
+        <div class="row">
+            <div class="large-6 columns">
+                <h5>paragraphs</h5>
+                <p>Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Enim delectus Pitchfork, nihil gluten-free vinyl chambray letterpress gastropub proident hashtag Etsy et officia. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna. Aliquip pop-up esse literally, Thundercats quis ennui readymade tempor ugh fap DIY. +1 bitters selfies aesthetic crucifix. Neutra organic Shoreditch, excepteur biodiesel dreamcatcher put a bird on it sed banjo in Etsy ennui Schlitz try-hard asymmetrical. Sunt et jean shorts id.</p>
+            </div>
+
+            <div class="large-6 columns">
+                <h5>Links</h5>
+                <a href="#">This is a link</a>
+                <br> <a href="#">This is a link</a> 
+                <br> <a href="#">This is a link</a>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="large-6 columns">
+                <h5>Unordered List</h5>
+                <ul>
+                    <li>This is a list item in an unordered list</li>
+                    <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line.</li>
+                    <li>
+                        Lists can be nested inside of each other
+                        <ul>
+                            <li>This is a nested list item</li>
+                            <li>This is another nested list item in an unordered list</li>
+                        </ul>
+                    </li>
+                    <li>This is the last list item</li>
+                </ul>
+            </div>
+
+
+            <div class="large-6 columns">
+                <h5>Blockquote</h5>
+                <blockquote>
+                    McSweeney's hella put a bird on it, pork belly blue bottle mlkshk dreamcatcher readymade aesthetic. Wayfarers fixie actually Bushwick. Skateboard kale chips try-hard Neutra post-ironic. Mixtape single-origin coffee wayfarers, fanny pack flannel Carles jean shorts artisan pork belly. Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra, Tonx flannel Portland mustache viral narwhal McSweeney's keytar lomo quinoa. 8-bit skateboard direct trade, craft beer ethnic hoodie Marfa church-key.
+                </blockquote>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="large-6 columns">
+
+                <h5>Emphasis and Modifiers</h5>
+                <p>Cred tattooed jean shorts, <sup>church-key</sup> organic wayfarers</p>
+                <p>Cred tattooed jean shorts, <sub>church-key</sub> organic wayfarers</p>
+
+                <p>Cred tattooed jean shorts,
+                    <em>church-key</em>organic wayfarers</p>
+                <p>Cred tattooed jean shorts, <b>church-key</b> organic wayfarers</p>
+                <p>Cred tattooed jean shorts,
+                    <del>church-key</del>organic wayfarers</p>
+                <p>Cred tattooed jean shorts,
+                    <code>church-key</code>organic wayfarers</p>
+
+            </div>
+
+            <div class="large-6 columns">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row wow fadeIn">
+        <h1>Alerts</h1>
+
+
+        <div class="large-6 columns">
+            <p class="error">Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra, Tonx flannel Portland mustache viral narwhal McSweeney's keytar lomo quinoa. 8-bit skateboard direct trade, craft beer ethnic hoodie Marfa church-key.</p>
+            <p class="warning">Warning</p>
+            <p class="success">Success</p>
+        </div>
+
+
+        <div class="large-6 columns">
+            <code>.error, .warning, .success</code>
+        </div>
+    </div>
+
+    <div class="row wow fadeIn">
+        <h1>Visibility</h1>
+        <h5>Show for specific device</h5>
+        <code>.show-for-phone-only</code>
+        <code>.show-for-tablet-only</code>
+        <code>.show-for-desktop-only</code>
+        <p class="show-for-phone-only">You should only see this if you are on a phone sized screen</p>
+        <p class="show-for-tablet-only">You should only see this if you are on a tablet sized screen</p>
+        <p class="show-for-desktop-only">You should only see this if you are on a desktop sized screen</p>
+
+        <h5>hide for specific device</h5>
+        <code>.hide-for-phone-only</code>
+        <code>.hide-for-tablet-only</code>
+        <code>.hide-for-desktop-only</code>
+        <p class="hide-for-phone-only">You should only see this if you are on a tablet or desktop sized screen</p>
+        <p class="hide-for-tablet-only">You should only see this if you are on a phone or desktop sized screen</p>
+        <p class="hide-for-desktop-only">You should only see this if you are on a phone or tablet sized screen</p>
+
+    </div>
+
+
+    <div class="row wow fadeIn">
+        <h1>Buttons</h1>
+
+        <div class="row wow fadeIn">
+            <h5>Standard</h5>
+            <div class="large-6 column">
+
+                <a href="#" class="btn-small">small button</a>
+                <a href="#" class="btn">Normal button</a>
+                <a href="#" class="btn-large">large button</a>
+            </div>
+            <div class="large-6 column">
+                <code>.btn-small | .btn | .btn-large</code>
+            </div>
+
+        </div>
+
+                <div class="row wow fadeIn">
+            <h5>Outline</h5>
+
+            <div class="large-6 column">
+
+                <a href="#" class="btn-small-outline">Small button</a>
+                <a href="#" class="btn-outline">Normal button</a>
+                <a href="#" class="btn-large-outline">Large button</a>
+            </div>
+            <div class="large-6 column">
+
+                <code>.btn-small-outline | .btn-outline | .btn-large-outline</code>
+            </div>
+
+        </div>
+
+
+        <div class="row wow fadeIn">
+            <h5>Disabled</h5>
+
+            <div class="large-6 column">
+
+                <a href="#" class="btn-small-disabled">Small button</a>
+                <a href="#" class="btn-disabled">Normal button</a>
+                <a href="#" class="btn-large-disabled">Large button</a>
+            </div>
+            <div class="large-6 column">
+
+                <code>.btn-small-disabled | .btn-disabled | .btn-large-disabled</code>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="row wow fadeIn">
+
+        <h1>Tables</h1>
+        <div class="large-6 columns">
+            <h5>Simple Table</h5>
+            <code>.table-simple</code>
+            <table class="table-simple">
+                <caption>Table Caption</caption>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <div class="large-6 columns">
+
+            <h5>Default Table</h5>
+            <code>*No Class Required</code>
+            <table>
+                <caption>Table Caption</caption>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <div class="large-6 columns">
+            <h5>Bordered Table</h5>
+            <code>.table-bordered</code>
+            <table>
+                <caption>Table Caption</caption>
+
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total points</td>
+                        <td>223</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+        <div class="large-6 columns">
+            <h5>Responsive Table</h5>
+            <code>.table-container > table</code>
+            <div class="table-container">
+                <table class="table-striped">
+                    <caption>Table Caption</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Head 1</th>
+                            <th>Head 2</th>
+                            <th>Head 3</th>
+                            <th>Head 4</th>
+                            <th>Head 5</th>
+                            <th>Head 6</th>
+                            <th>Head 7</th>
+                            <th>Head 8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="nowrap">
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                        </tr>
+                        <tr class="nowrap">
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                            <td>Lorem ipsum</td>
+                            <td>adipisicing elit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid">
+
+        <div class="row wow fadeIn">
+            <h1>Grid</h1>
+            <code>.large-[#] .medium-[#] .small-[#] .column</code>
+            <br>
+            <br>
+
+            <div class="large-2 medium-6 small-4 column">
+                <span class="show-for-desktop-only">large-2</span>
+                <span class="show-for-tablet-only">Medium-6</span>
+                <span class="show-for-phone-only">Small-4</span>
+            </div>
+            <div class="large-2 medium-6 small-4 column">
+                <span class="show-for-desktop-only">large-2</span>
+                <span class="show-for-tablet-only">Medium-6</span>
+                <span class="show-for-phone-only">Small-4</span>
+            </div>
+            <div class="large-2 medium-6 small-4 column">
+                <span class="show-for-desktop-only">large-2</span>
+                <span class="show-for-tablet-only">Medium-6</span>
+                <span class="show-for-phone-only">Small-4</span>
+            </div>
+            <div class="large-2 medium-6 small-4 column">
+                <span class="show-for-desktop-only">large-2</span>
+                <span class="show-for-tablet-only">Medium-6</span>
+                <span class="show-for-phone-only">Small-4</span>
+            </div>
+            <div class="large-2 medium-6 small-4 column">
+                <span class="show-for-desktop-only">large-2</span>
+                <span class="show-for-tablet-only">Medium-6</span>
+                <span class="show-for-phone-only">Small-4</span>
+            </div>
+            <div class="large-2 medium-6 small-4 column">
+                <span class="show-for-desktop-only">large-2</span>
+                <span class="show-for-tablet-only">Medium-6</span>
+                <span class="show-for-phone-only">Small-4</span>
+            </div>
+
+        </div>
+
+        <div class="row wow fadeIn">
+            <div class="large-3 column">
+                <span class="show-for-desktop-only">Large-3</span>
+                <span class="show-for-tablet-only">Medium-12</span>
+                <span class="show-for-phone-only">Small-12</span>
+            </div>
+            <div class="large-3 column">
+                <span class="show-for-desktop-only">Large-3</span>
+                <span class="show-for-tablet-only">Medium-12</span>
+                <span class="show-for-phone-only">Small-12</span>
+            </div>
+            <div class="large-3 column">
+                <span class="show-for-desktop-only">Large-3</span>
+                <span class="show-for-tablet-only">Medium-12</span>
+                <span class="show-for-phone-only">Small-12</span>
+            </div>
+            <div class="large-3 column">
+                <span class="show-for-desktop-only">Large-3</span>
+                <span class="show-for-tablet-only">Medium-12</span>
+                <span class="show-for-phone-only">Small-12</span>
+            </div>
+
+        </div>
+
+        <div class="row wow fadeIn">
+            <div class="large-4 small-4 column">
+                <span class="show-for-desktop-only">large-4</span>
+                <span class="show-for-tablet-only">medium-4</span>
+                <span class="show-for-phone-only">small-3</span>
+            </div>
+
+            <div class="large-4 small-4 column">
+                <span class="show-for-desktop-only">large-4</span>
+                <span class="show-for-tablet-only">medium-4</span>
+                <span class="show-for-phone-only">small-3</span>
+            </div>
+
+            <div class="large-4 small-4 column">
+                <span class="show-for-desktop-only">large-4</span>
+                <span class="show-for-tablet-only">medium-4</span>
+                <span class="show-for-phone-only">small-3</span>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+    <script src="js/custom.js" ></script>
+
+    
+
+<script src="js/wow.min.js">
+</script>
+<script>
+new WOW().init();
+
+wow = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animated', // default
+    offset: 0 // default
+})
+</script>
+
+</html>

@@ -1,0 +1,287 @@
+/**
+====================
+ 0 Variables, Mixins & Settings
+====================
+
+
+
+/**  
+-----------------------------------
+0.1 Variables
+-----------------------------------
+**/
+
+
+/*
+Grid Settings
+*/
+
+@row-width:75rem;
+@column-gutter:2rem;
+
+// Setting row-width variable equal to the media queries will site "fixed-responsive"
+// Setting row-width variables equal to 100% will make the site "fluid-responsive"
+@desktop-row-width:@row-width; //desktop (or your largest) width should always be defined by the @row-width variable above
+@tablet-row-width:@tablet-up;
+@phone-row-width:@phone-up;
+
+
+// Media Queries Settings
+@desktop-up:@row-width; // desktop should inherit whatever the max row-width is
+@tablet-up:48rem; // 48rem = 768px
+@phone-up:30rem; // 30rem = 480px
+
+
+
+//Theme Settings
+@primary-color:#32ccfe;
+@secondary-color:#fa6b5b;
+@tertiary-color:#cc66cc;
+@panel-color:#eee;
+@font-color:#333;
+@link-color:#3570c3;
+
+@warning-color:#ffe5c7;
+@success-color:#dff0d8;
+@error-color:#f2dede;
+
+@disabled:#808080;
+
+@white:#fff;
+@black:#000;
+
+/*
+==============
+global styles
+==============
+*/
+@body-bg: #fff;
+
+@global-radius:3px;
+@global-background-transition:background-color 300ms ease-out;
+
+// Base
+@base-font-size: 1rem;
+@base-line-height: 150%;
+
+@global-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@heading-font-family: @global-font-family;
+@control-font-family: @global-font-family;
+@code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Headings
+@h1-size: 2rem; 
+@h2-size: 1.8rem; 
+@h3-size: 1.6rem; 
+@h4-size: 1.4rem; 
+@h5-size: 1.2rem; 
+@h6-size: .8rem; 
+
+@h1-color:@font-color; 
+@h2-color:@font-color; 
+@h3-color:@font-color; 
+@h4-color:@font-color; 
+@h5-color:@font-color; 
+@h6-color:@font-color; 
+
+
+//buttons
+
+
+// LinkColor
+
+// Forms
+@fieldsBottom: 1.6em;
+
+// Util
+@em: @base-font-size * 1em; // outputting ems, e.g. 14 / @em
+
+
+/**
+-----------------------------------
+ 0.2 Mixins
+-----------------------------------
+**/
+
+.clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+}
+
+
+.border-radius-global(@params:@global-radius){
+	-webkit-border-radius: @params;
+	-moz-border-radius:    @params;
+	-ms-border-radius: 	   @params;
+	border-radius:         @params;
+
+}
+
+.transition-bg-global(@transition:@global-background-transition){
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition: 	@transition;
+	transition:         @transition;
+}
+
+
+.btn-color(@color, @darken: 10%) {
+	background: @color;
+	&:hover {
+		background: darken(@color, @darken);
+	}
+}
+.opacity(@opacity: 100) {
+	filter: e(%("alpha(opacity=%d)", @opacity));
+	-moz-opacity: @opacity / 100;
+	opacity: @opacity / 100;
+}
+.selection(@r, @g, @b) {
+	::selection { background: rgb(@r, @g, @b); }
+	::-moz-selection { background: rgb(@r, @g, @b); }
+	img::selection { background: transparent; }
+	img::-moz-selection { background: transparent; 	}
+}
+.box-sizing(@box-model) {
+	-webkit-box-sizing: @box-model;
+	-moz-box-sizing: @box-model;
+	box-sizing: @box-model;
+}
+.vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.gradient(@start: #555, @end: #333) {
+	background-color: mix(@start, @end, 60%);
+	background-image: -moz-linear-gradient(top, @start, @end); // FF 3.6+
+	background-image: -ms-linear-gradient(top, @start, @end); // IE10
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@start), to(@end)); // Safari 4+, Chrome 2+
+	background-image: -webkit-linear-gradient(top, @start, @end); // Safari 5.1+, Chrome 10+
+	background-image: -o-linear-gradient(top, @start, @end); // Opera 11.10
+	background-image: linear-gradient(top, @start, @end); // The standard
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@start,@end));
+	 // IE9 and down
+}
+
+
+.border-radius-custom(@values){
+	-webkit-border-radius: @values;
+	-moz-border-radius:    @values;
+	-ms-border-radius: 	   @values;
+	border-radius:         @values;
+}
+
+.box-shadow-custom(@values){
+	-webkit-box-shadow: @values;
+	-moz-box-shadow:    @values;
+	-ms-box-shadow: 	@values;
+	box-shadow:         @values;
+}
+
+
+
+.retina-image(@path, @w: auto, @h: auto) {
+  background-image: url(@path);
+  @at2x_path: ~'@{path}.replace(/\.\w+$/, function(match) { return "@2x" + match; })';
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url(@at2x_path);
+    background-size: @w @h;
+  }
+}
+.transition(@transition: all linear .2s) {
+	-webkit-transition:@transition;
+	-moz-transition: @transition;
+	-ms-transition:@transition;
+	transition: @transition;
+}
+.blur(@radius) {
+	-webkit-filter: blur(@radius);
+	-moz-filter: blur(@radius);
+	-ms-filter: blur(@radius);
+	filter: blur(@radius);
+}
+.arrow-top(@color: #fff, @size: 5px, @left: 5px) {
+	&:after {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-bottom-color: @color;
+		border-width: @size;
+		left: @left;
+	}
+}
+.arrow-bottom(@color: #fff, @size: 5px, @left: 5px) {
+	&:after {
+		top: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-top-color: @color;
+		border-width: @size;
+		left: @left;
+	}
+}
+.arrow-left(@color: #fff, @size: 5px, @top: 5px) {
+	&:after {
+		right: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-right-color: @color;
+		border-width: @size;
+		top: @top;
+	}
+}
+.arrow-right(@color: #fff, @size: 5px, @top: 5px) {
+	&:after {
+		left: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-left-color: @color;
+		border-width: @size;
+		top: @top;
+	}
+}
+.close(@r: 0, @g: 0, @b: 0) {
+	padding: 4px 6px;
+	line-height: 1;
+	font-size: 18px;
+	cursor: pointer;
+	color: rgba(@r, @g, @b, 1);
+	text-decoration: none;
+	.opacity(50);
+	&:before {
+		content: '\00D7';
+	}
+	&:hover {
+		.opacity(100);
+	}
+}

@@ -1,0 +1,45 @@
+
+//MOBILE PHONE AND UP
+@media only screen {
+	.visible{
+	display: block !important;
+	}
+
+	.hide{
+		display: none !important;
+	}
+
+	.hide-for-phone-only{display: none !important;}
+	.hide-for-tablet-only{display: block !important;}
+	.hide-for-desktop-only{display: block !important;}
+
+	.show-for-phone-only{display: block !important;}
+	.show-for-tablet-only{display: none !important;}
+	.show-for-desktop-only{display: none;}
+
+}
+
+//TABLET AND UP
+@media only screen and (min-width: @tablet-up) {
+
+	.hide-for-phone-only{display: block !important;}
+	.hide-for-tablet-only{display: none !important;}
+	.hide-for-desktop-only{display: block !important;}
+
+	.show-for-phone-only{display: none !important;}
+	.show-for-tablet-only{display: block !important;}
+	.show-for-desktop-only{display: none !important;}
+}
+
+//DESKTOP AND UP
+@media only screen and (min-width:@desktop-up){
+
+	.hide-for-phone-only{display: block !important;}
+	.hide-for-tablet-only{display: block !important;}
+	.hide-for-desktop-only{display: none !important;}
+
+	.show-for-phone-only{display: none !important;}
+	.show-for-tablet-only{display: none !important;}
+	.show-for-desktop-only{display: block !important;}
+}
+

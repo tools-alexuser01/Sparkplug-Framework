@@ -1,0 +1,166 @@
+/**
+========================================
+ Typography (Layout)
+========================================
+**/
+
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @heading-font-family;
+	font-weight: bold;
+	color: @font-color;
+	text-rendering: optimizeLegibility;
+	line-height: @base-line-height;
+	margin-bottom: .5em;
+
+}
+h1 {
+	font-size: @h1-size;
+}
+
+h2 {
+	font-size: @h2-size;
+	}
+
+h3 {
+	font-size: @h3-size;
+}
+
+h4 {
+	font-size: @h4-size;
+}
+
+h5 {
+	font-size: @h5-size;
+	margin:2rem 0 .5rem;
+}
+
+h6 {
+	font-size: @h6-size;	
+	text-transform: uppercase;
+}
+
+p  {
+	margin-bottom:1rem;
+}
+
+a {
+	color: @link-color;
+	&:focus,
+	&:hover {
+		color: darken(@link-color, 10%);
+	}
+}
+
+
+ul {margin-bottom:1rem;}
+
+address {
+	font-style: normal;
+}
+dl dt {
+	font-weight: 500;
+}
+dd {
+	margin-left: 1em;
+}
+
+blockquote {
+	font-size: @base-font-size;
+	font-style: italic;
+	padding: 0 0 0 1rem;
+	margin: 0 0 1rem 1rem;
+	border-left: 2px solid #dbdada;
+	& p {
+		margin-bottom: .5em;
+	}
+}
+blockquote small, small {
+	font-size: @base-font-size - .3rem;
+	line-height: 1;
+}
+del {text-decoration: line-through;}
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+strong,
+b {font-weight: bold;}
+em,
+i {font-style: italic;}
+sub,
+sup {
+	font-size: @base-font-size - .6rem;
+	line-height: 0;
+	position: relative;
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+pre,
+code,
+kbd,
+samp {
+	font-size: 90%;
+	font-family: @code-font-family;
+}
+pre {
+	font-size: 90%;
+	line-height: 1.45em;
+	color: @font-color;
+	background: #f6f6f6;
+	padding: 30px;
+	overflow: auto;
+    border: 1px solid #eee;
+    word-wrap: break-word;
+    padding: 6px 10px;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+code {
+    border: 1px solid #ddd;
+    margin: 0px 2px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+pre code {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+pre, code {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    color: #333;
+    background: #F7F5FA;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+pre, pre code {
+    font-size: 13px;
+}
+kbd {
+	padding: 2px 6px 1px 6px;
+	line-height: 1;
+	display: inline-block;
+	border-radius: .3em;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px white inset;
+	background-color: #fafafa;
+	border: 1px solid #ccc;
+	color: @font-color;
+	font-weight: normal;
+	white-space: nowrap;
+}

@@ -1,0 +1,43 @@
+/*
+-----------------------------------------------------------------------------
+3. Alerts
+-----------------------------------------------------------------------------
+*/
+
+.warning, .success, .error{
+	padding:1rem;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width:100%;
+	line-height: 220%;
+
+	&:before{
+  content: "\f00d";
+  float:right;
+
+	}
+
+	&:hover{
+		  cursor:pointer;
+	}
+}
+
+.warning{
+	background-color: @warning-color;
+	color:darken(@warning-color, 40%);
+}
+
+.success{
+	background-color: @success-color;
+	color:darken(@success-color, 40%);
+}
+
+.error{
+	background-color: @error-color;
+	color:darken(@error-color, 40%);
+}

@@ -1,0 +1,44 @@
+/**
+==============================
+		
+		 1.0 BASE 
+
+==============================
+
+## Base Guidelines:
+- Global Element Declarations
+- CSS Resets
+
+## Try to avoid using:
+- classes
+- ID Selectors
+
+## Base Examples: 
+- heading sizes
+- default link styles
+- default font styles
+- body styles
+- CSS Resets
+
+#Table of Contents
+
+1.1 Normalize Reset
+1.2 Typography
+
+**/
+
+
+@import "components/b-normalize.less"; // this is the reset. Shouldn't need to remove or modify this
+@import "components/b-typography.less"; // includes headings, <p>, <a>, lists, blockquotes, <code> just to name a few
+@import "components/b-visibility.less";
+
+body {
+	background: @body-bg;
+	color: @font-color;
+	font-size: @base-font-size;
+	line-height:@base-line-height;
+	font-family: @global-font-family;
+}
+
+
+
