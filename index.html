@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Sparkplug Framework</title>
 
     <!-- Compiled SMACSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -20,34 +20,6 @@
 </head>
 <body class="egpage">
 
-<!-- 
-<div class="row wow fadeIn">
-    <h1>Lightbox</h1>
-    <div id="wrapper">
-    <p>Our super simple lightbox demo. Here are the image links:
-        <ul>
-            <li>
-                <a href="https://farm7.static.flickr.com/6130/5935338876_47b61c93a5.jpg" class="lightbox_trigger">
-                Picture 1
-                </a>
-            </li>
-            <li>
-                <a href="https://farm7.static.flickr.com/6020/5924329054_4bdc419c3a_o.jpg" class="lightbox_trigger">
-                Picture 2
-                </a>
-            </li>
-            <li>
-                <a href="https://farm7.static.flickr.com/6020/5931933181_ddb737e528.jpg" class="lightbox_trigger">
-                Picture 3
-                </a>
-            </li> 
-        </ul>
-     </p>
-
-
-</div>
-
-</div> --> <!-- #/wrapper -->
 </div>
 
      <div class="row wow fadeIn">
@@ -65,7 +37,6 @@
         <li><a href="#">What we do</a></li>
         <li><a href="#">History</a></li>
         <li><a href="#">Contact</a></li>
-
     </ul>
 </div>
 </nav>
@@ -288,9 +259,18 @@
 
 
         <div class="large-6 columns">
-            <p class="error">Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra, Tonx flannel Portland mustache viral narwhal McSweeney's keytar lomo quinoa. 8-bit skateboard direct trade, craft beer ethnic hoodie Marfa church-key.</p>
-            <p class="warning">Warning</p>
-            <p class="success">Success</p>
+            <div class="error">
+            <i class="close"></i>
+            Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra.</div>
+
+            <div class="warning">
+            <i class="close"></i>
+            Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra.</div>
+
+            <div class="success">
+            <i class="close"></i>
+            Error Cred tattooed jean shorts, church-key organic wayfarers fashion axe typewriter disrupt Vice authentic fap messenger bag. Echo Park Wes Anderson asymmetrical Neutra.</div>
+
         </div>
 
 
@@ -622,21 +602,19 @@
     <br>
     <br>
     <br>
+<script src="js/custom.js" ></script>
+<script src="js/wow.min.js"> </script>
+    <script>
+    new WOW().init();
+
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // default
+        offset: 0 // default
+    })
+    </script>
+
+
 </body>
-    <script src="js/custom.js" ></script>
-
-    
-
-<script src="js/wow.min.js">
-</script>
-<script>
-new WOW().init();
-
-wow = new WOW({
-    boxClass: 'wow', // default
-    animateClass: 'animated', // default
-    offset: 0 // default
-})
-</script>
 
 </html>

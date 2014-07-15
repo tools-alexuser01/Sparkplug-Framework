@@ -1,0 +1,252 @@
+
+//
+// ---------------------------------------------------------
+//     Grid Variables and Settings
+// ---------------------------------------------------------
+//
+
+@row-width: 75rem;
+@total-columns: 12;
+@column-gutter:2rem;
+
+.column,
+.columns {
+	padding-left: @column-gutter / 2;
+	padding-right: @column-gutter / 2;
+	width: 100%;
+	float: left; 
+}
+
+
+
+.row {
+	max-width: @row-width; 
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+	.row:before, .row:after {
+		content: " ";
+		display: table; }
+	.row:after {
+		clear: both; }
+
+	.row .row {
+		width: auto;
+		margin-left: -0.9375em;
+		margin-right: -0.9375em;
+		margin-top: 0;
+		margin-bottom: 0;
+		max-width: none; }
+		.row .row:before, .row .row:after {
+			content: " ";
+			display: table; }
+		.row .row:after {
+			clear: both; }
+
+
+
+//
+// ---------------------------------------------------------
+//     Large Column Mixins
+// ---------------------------------------------------------
+//
+
+//Large Column Mixin
+.generate-large-columns(@total-columns; @column-number: 1) when (@column-number =< @total-columns) {
+		.large-@{column-number} { 
+			width: (@column-number/@total-columns*100%); 
+		}
+		.generate-large-columns(@total-columns, (@column-number + 1) );
+}
+
+
+//Large Column Offset Mixin
+.generate-large-offset-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.large-@{prefix}-@{column-number} {
+			margin-left: (@column-number/@total-columns*100%)  !important;
+		}
+	 
+		.generate-large-offset-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//Large Column pull Mixin
+.generate-large-pull-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.large-@{prefix}-@{column-number} {
+			position:relative;
+			right: (@column-number/@total-columns*100%);
+			left:auto
+		}
+	 
+		.generate-large-pull-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//Large Column push Mixin
+.generate-large-push-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.large-@{prefix}-@{column-number} {
+			position:relative;
+			left: (@column-number/@total-columns*100%);
+			right:auto
+		}
+	 
+		.generate-large-push-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+//
+// ---------------------------------------------------------
+//     Medium Column Mixins
+// ---------------------------------------------------------
+//
+
+
+//medium Column Mixin
+.generate-medium-columns(@total-columns; @column-number: 1) when (@column-number =< @total-columns) {
+		.medium-@{column-number} { 
+			width: (@column-number/@total-columns*100%); 
+		}
+		.generate-medium-columns(@total-columns, (@column-number + 1) );
+}
+
+
+//medium Column Offset Mixin
+.generate-medium-offset-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.medium-@{prefix}-@{column-number} {
+			margin-left: (@column-number/@total-columns*100%)  !important;
+		}
+	 
+		.generate-medium-offset-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//medium Column pull Mixin
+.generate-medium-pull-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.medium-@{prefix}-@{column-number} {
+			position:relative;
+			right: (@column-number/@total-columns*100%);
+			left:auto
+		}
+	 
+		.generate-medium-pull-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//medium Column push Mixin
+.generate-medium-push-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.medium-@{prefix}-@{column-number} {
+			position:relative;
+			left: (@column-number/@total-columns*100%);
+			right:auto
+		}
+	 
+		.generate-medium-push-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//
+// ---------------------------------------------------------
+//     Small Column Mixins
+// ---------------------------------------------------------
+//
+
+//small Column Mixin
+.generate-small-columns(@total-columns; @column-number: 1) when (@column-number =< @total-columns) {
+		.small-@{column-number} { 
+			width: (@column-number/@total-columns*100%); 
+		}
+		.generate-small-columns(@total-columns, (@column-number + 1) );
+}
+
+
+//small Column Offset Mixin
+.generate-small-offset-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.small-@{prefix}-@{column-number} {
+			margin-left: (@column-number/@total-columns*100%)  !important;
+		}
+	 
+		.generate-small-offset-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//small Column pull Mixin
+.generate-small-pull-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.small-@{prefix}-@{column-number} {
+			position:relative;
+			right: (@column-number/@total-columns*100%);
+			left:auto
+		}
+	 
+		.generate-small-pull-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+
+//small Column push Mixin
+.generate-small-push-columns(@total-columns; @prefix; @column-number: 1) when (@column-number =< @total-columns) {
+
+		.small-@{prefix}-@{column-number} {
+			position:relative;
+			left: (@column-number/@total-columns*100%);
+			right:auto
+		}
+	 
+		.generate-small-push-columns(@total-columns, @prefix, (@column-number + 1) );
+
+}
+
+ 
+@media only screen {
+
+	.generate-small-columns(@total-columns);
+	.generate-small-offset-columns(@total-columns, offset);
+	.generate-small-pull-columns(@total-columns, pull);
+	.generate-small-push-columns(@total-columns, push);
+
+}
+
+
+
+@media only screen and (min-width: @tablet-up) {
+
+	.generate-medium-columns(@total-columns);
+	.generate-medium-offset-columns(@total-columns, offset);
+	.generate-medium-pull-columns(@total-columns, pull);
+	.generate-medium-push-columns(@total-columns, push);
+
+}
+
+
+@media only screen and (min-width: @desktop-up) {
+
+	.generate-large-columns(@total-columns);
+	.generate-large-offset-columns(@total-columns, offset);
+	.generate-large-pull-columns(@total-columns, pull);
+	.generate-large-push-columns(@total-columns, push);
+
+}
+
+
+
+
+
+/*
+END of the NEW GRID SYSTEM!!!!!!!!
+*/

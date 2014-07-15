@@ -7,7 +7,6 @@
 .warning, .success, .error{
 	padding:1rem;
 	display: inline-block;
-	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;
 	line-height: 1;
@@ -15,17 +14,33 @@
 	-moz-osx-font-smoothing: grayscale;
 	width:100%;
 	line-height: 220%;
+	margin:1rem;
 
-	&:before{
-  content: "\f00d";
-  float:right;
+	// &:before{
+	// font-family: FontAwesome;
+ //  content: "\f00d";
+ //  float:right;
+	// }
 
-	}
-
-	&:hover{
-		  cursor:pointer;
-	}
 }
+
+	i.close{	
+	 padding:0px 7px;
+	 float: right;
+
+
+		&:before{
+		font-family: FontAwesome;
+		content: "\f00d";
+		float:right;
+		font-style: normal;
+		}
+	
+		&:hover{
+			cursor: pointer;
+		}
+
+	}
 
 .warning{
 	background-color: @warning-color;

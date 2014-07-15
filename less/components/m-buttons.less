@@ -5,22 +5,16 @@
 3.3 Buttons
 -----------------------------------------------------------------------------
 
-.btn
-.btn-small
-.btn-large
-
-.btn-outline
-.btn-small-outline
-.btn-large-outline
-
-.btn-disabled
-.btn-small-disabled
-.btn-large-disabled
 
 */
 
-
-
+// Mixins
+.btn-color(@color, @darken: 10%) {
+	background: @color;
+	&:hover {
+		background: darken(@color, @darken);
+	}
+}
 
 button:active,
 button:focus {
