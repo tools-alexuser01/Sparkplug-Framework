@@ -1,0 +1,65 @@
+/*
+==============================
+
+	 3.0 Module Rules 
+
+==============================
+
+## Module Guidelines:
+- This will be the meat of your css
+- Modules sit inside Layout components
+- Modules can sometimes sit within other Modules
+- Each Module should be designed to exist as a standalone component
+- Modules can easily be moved to different parts of the layout without breaking
+
+## isolation Theory 
+- Each element lives on it's own
+
+<div class="grid">
+	<div class="module"></div>
+</div>
+
+NOT
+
+<div class="grid module">
+
+</div>
+
+## Try to avoid using:
+- IDs and element selectors
+- more than 3 levels of nesting
+
+## Module Examples:
+- Dialogs
+- Buttons
+- Widgets
+- Callouts
+- Nav bars
+- Sidebars
+
+
+## SMACSS Reference
+http://smacss.com/book/type-module
+
+
+## Module Naming Conventions
+.ModuleName (Root Node)
+.ModuleName-subModule (Sub-Modules)
+.ModuleName--subComponent (Sub-components)
+
+*/
+
+
+
+@import "components/m-alerts.less";
+@import "components/m-buttons.less";
+@import "components/m-tables.less";
+@import "components/m-forms.less";
+@import "components/m-navigation.less";
+@import "components/m-lightbox.less";
+@import "components/m-breadcrumbs.less";
+
+
+
+
+
