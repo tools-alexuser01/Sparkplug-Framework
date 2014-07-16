@@ -22,9 +22,9 @@ This framework will help set you up for scalable modular css. Our code will give
   * run `npm install` (first time users)
   * run `grunt` (to watch and compile less files)
  
-## Fro 
+## What next? 
 
-Next time you come into the project, just run cd to the correct filder and run `grunt watch` from the terminal
+Next time you come into the project, just  cd to the correct folder and run `grunt watch` from the terminal
 
 
 
