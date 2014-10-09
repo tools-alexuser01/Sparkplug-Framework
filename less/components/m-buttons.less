@@ -26,7 +26,6 @@ button:focus {
 /* Normal Buttons */
 
 
-
 .btn {
 	display: block;
 	vertical-align: top;
@@ -41,8 +40,8 @@ button:focus {
 	background: @primary-color;
 
 	
-	padding: 9px 20px;
-	margin:10px 5px;
+	padding: .8rem 1.5rem;
+	margin:.8rem 0;
 	border:none;
 
 	.border-radius-global();	
@@ -148,21 +147,18 @@ button:focus {
 }
 
 
-@media only screen and (min-width: @phone-up) {
 
-}
-
-
-@media only screen and (min-width: @tablet-up) {
+@media only screen and (min-width: @medium-up) {
 
 .btn{
 	display: inline-block;
+	margin-right:.5rem;
+	margin-left:0;
 	}
 
 }
 
 
-
-@media only screen and (min-width: @desktop-up) {
+@media only screen and (min-width: @large-up) {
 
 }

@@ -11,8 +11,9 @@
 -----------------------------------
 **/
 
-
-
+@row-width: 75rem;
+@total-columns: 12;
+@column-gutter:2rem;
 
 //
 // ---------------------------------------------------------
@@ -23,10 +24,10 @@
 // For "Fixed Responsive" set the row-width variables to the media querie variables below
 // For "Fluid Responsive" set the row-width variables to 100% 
 
-@desktop-row-width:@row-width; //desktop (or your largest) width should always be defined by the @row-width variable
-@tablet-row-width:@tablet-up;
-@phone-row-width:@phone-up;
-
+@large-row-width:@row-width; //desktop (or your largest) width should always be defined by the @row-width variable
+@medium-row-width:@medium-up;
+@small-row-width:@small-up;
+ 
 
 
 //
@@ -35,10 +36,9 @@
 // ---------------------------------------------------------
 //
 
-@desktop-up:@row-width; // desktop should inherit whatever the row-width is
-@tablet-up:48rem; // 48rem = 768px
-@phone-up:30rem; // 30rem = 480px
-
+@large-up:@row-width; // desktop should inherit whatever the row-width is
+@medium-up:48rem; // 48rem = 768px
+@small-up:30rem; // 30rem = 480px
 
 //
 // ---------------------------------------------------------
@@ -51,8 +51,8 @@
 @primary-color:#32ccfe;
 @secondary-color:#fa6b5b;
 @tertiary-color:#cc66cc;
-@panel-color:#eee;
-@font-color:#333;
+@mono-color:#eee;
+@font-color:#666666;
 @link-color:#3570c3;
 
 //Alert Colors
@@ -106,19 +106,17 @@
 @h6-color:@font-color; 
 
 
-
 // Forms
 @fieldsBottom: 1.6em;
 
 // Util
 @em: @base-font-size * 1em; // outputting ems, e.g. 14 / @em
 
-
-/**
------------------------------------
- 0.2 Mixins
------------------------------------
-**/
+// 
+// -----------------------------------
+// 		Mixins
+// -----------------------------------
+//
 
 .clearfix() {
 	&:after {
@@ -238,6 +236,7 @@
 		left: @left;
 	}
 }
+
 .arrow-bottom(@color: #fff, @size: 5px, @left: 5px) {
 	&:after {
 		top: 100%;
@@ -252,6 +251,7 @@
 		left: @left;
 	}
 }
+
 .arrow-left(@color: #fff, @size: 5px, @top: 5px) {
 	&:after {
 		right: 100%;
@@ -266,6 +266,7 @@
 		top: @top;
 	}
 }
+
 .arrow-right(@color: #fff, @size: 5px, @top: 5px) {
 	&:after {
 		left: 100%;
@@ -280,6 +281,7 @@
 		top: @top;
 	}
 }
+
 .close(@r: 0, @g: 0, @b: 0) {
 	padding: 4px 6px;
 	line-height: 1;

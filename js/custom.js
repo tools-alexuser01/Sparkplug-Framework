@@ -9,10 +9,22 @@ $(function() {
 	});
 	
 // Basic Tiggle Menu
-	$(".burger").on('click', function(){
-		$(".toggle ul").toggleClass("visible");
-	});
+	$(".navtoggle-burger").on('click', function(){
+		
+		$("nav.navtoggle ul").toggleClass("visible")
 
+		});
+
+
+
+	// Menu Toggle
+	$('.toggle-me').on('click', function(e){
+	  
+	  e.preventDefault();
+	  
+	  $('body').toggleClass('nav-collapsed');
+	  
+	});
 
 });
 
