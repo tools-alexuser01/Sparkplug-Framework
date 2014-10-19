@@ -19,6 +19,57 @@
 
 </head>
 
+<style type="text/css">
+
+
+.color{
+	text-align: center;
+	padding:1rem 0;
+	color:#fff;
+}
+
+.grid{
+	margin:2rem 0;
+
+}
+
+.grid .column{
+	background-color:#eee;
+	background-color: #eee;
+	border: 5px solid #fff;
+	border-radius: 7px;
+	text-align: center;
+	padding:1rem 0;
+}
+
+.egpage .row > h1:first-of-type {
+    border-bottom: 2px solid #eee;
+    padding: 0.5rem 0;
+    margin: 1.5rem 0px;
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+
+
+.primary-color-band{
+	background-color: @primary-color
+}
+
+
+.secondary-color-band{
+	background-color: @tertiary-color	
+}
+
+
+.tertiary-color-band{
+	background-color: @secondary-color	
+}
+
+
+	
+</style>
+
 <body class="egpage">
 
 
@@ -173,27 +224,20 @@
 
 	<div class="row wow fadeIn">
 		<h1>Colors</h1>
-		<div class="large-6 columns">
-			<div class="primary-color-band color">
-				<div class="small-4 columns">Primary Light</div>
-				<div class="small-4 columns">Primary</div>
-				<div class="small-4 columns">Primary Dark</div>
-			</div>
-			<div class="secondary-color-band color">
-				<div class="small-4 columns">Secondary Light</div>
-				<div class="small-4 columns">Secondary</div>
-				<div class="small-4 columns">Secondary Dark</div>
-			</div>
-			<div class="tertiary-color-band color">
-				<div class="small-4 columns">Tertiary Light</div>
-				<div class="small-4 columns">Tertiary</div>
-				<div class="small-4 columns">Tertiary Dark</div>
-			</div>
-		</div>
-		<div class="large-6 columns">
-			<code>.pimary-color, .secondary-color, .tertiary-color</code>
-		</div>
+<div class="primary-color-band color small-4 columns">
+	.primary-color
+</div>	
+
+<div class="secondary-color-band color small-4 columns">
+	.secondary-color
+</div>	
+
+<div class="tertiary-color-band color small-4 columns">
+	.tertiary-color
+</div>		
+
 	</div>
+
 
 	<div class="row wow fadeIn">
 		<h1>Headings</h1>
@@ -301,20 +345,20 @@
 	<div class="row wow fadeIn">
 		<h1>Visibility</h1>
 		<h5>Show for specific device</h5>
-		<code>.show-for-phone-only</code>
-		<code>.show-for-tablet-only</code>
-		<code>.show-for-desktop-only</code>
-		<p class="show-for-phone-only">You should only see this if you are on a phone sized screen</p>
-		<p class="show-for-tablet-only">You should only see this if you are on a tablet sized screen</p>
-		<p class="show-for-desktop-only">You should only see this if you are on a desktop sized screen</p>
+		<code>.show-for-phone</code>
+		<code>.show-for-tablet</code>
+		<code>.show-for-desktop</code>
+		<p class="show-for-phone">You should only see this if you are on a phone sized screen</p>
+		<p class="show-for-tablet">You should only see this if you are on a tablet sized screen</p>
+		<p class="show-for-desktop">You should only see this if you are on a desktop sized screen</p>
 
 		<h5>hide for specific device</h5>
-		<code>.hide-for-phone-only</code>
-		<code>.hide-for-tablet-only</code>
-		<code>.hide-for-desktop-only</code>
-		<p class="hide-for-phone-only">You should only see this if you are on a tablet or desktop sized screen</p>
-		<p class="hide-for-tablet-only">You should only see this if you are on a phone or desktop sized screen</p>
-		<p class="hide-for-desktop-only">You should only see this if you are on a phone or tablet sized screen</p>
+		<code>.hide-for-phone</code>
+		<code>.hide-for-tablet</code>
+		<code>.hide-for-desktop</code>
+		<p class="hide-for-phone">You should only see this if you are on a tablet or desktop sized screen</p>
+		<p class="hide-for-tablet">You should only see this if you are on a phone or desktop sized screen</p>
+		<p class="hide-for-desktop">You should only see this if you are on a phone or tablet sized screen</p>
 
 	</div>
 
@@ -536,79 +580,79 @@
 			<br>
 
 			<div class="large-2 medium-6 small-4 column">
-				<span class="show-for-desktop-only">large-2</span>
-				<span class="show-for-tablet-only">Medium-6</span>
-				<span class="show-for-phone-only">Small-4</span>
+				<span class="show-for-desktop">large-2</span>
+				<span class="show-for-tablet">Medium-6</span>
+				<span class="show-for-phone">Small-4</span>
 			</div>
 			<div class="large-2 medium-6 small-4 column">
-				<span class="show-for-desktop-only">large-2</span>
-				<span class="show-for-tablet-only">Medium-6</span>
-				<span class="show-for-phone-only">Small-4</span>
+				<span class="show-for-desktop">large-2</span>
+				<span class="show-for-tablet">Medium-6</span>
+				<span class="show-for-phone">Small-4</span>
 			</div>
 			<div class="large-2 medium-6 small-4 column">
-				<span class="show-for-desktop-only">large-2</span>
-				<span class="show-for-tablet-only">Medium-6</span>
-				<span class="show-for-phone-only">Small-4</span>
+				<span class="show-for-desktop">large-2</span>
+				<span class="show-for-tablet">Medium-6</span>
+				<span class="show-for-phone">Small-4</span>
 			</div>
 			<div class="large-2 medium-6 small-4 column">
-				<span class="show-for-desktop-only">large-2</span>
-				<span class="show-for-tablet-only">Medium-6</span>
-				<span class="show-for-phone-only">Small-4</span>
+				<span class="show-for-desktop">large-2</span>
+				<span class="show-for-tablet">Medium-6</span>
+				<span class="show-for-phone">Small-4</span>
 			</div>
 			<div class="large-2 medium-6 small-4 column">
-				<span class="show-for-desktop-only">large-2</span>
-				<span class="show-for-tablet-only">Medium-6</span>
-				<span class="show-for-phone-only">Small-4</span>
+				<span class="show-for-desktop">large-2</span>
+				<span class="show-for-tablet">Medium-6</span>
+				<span class="show-for-phone">Small-4</span>
 			</div>
 			<div class="large-2 medium-6 small-4 column">
-				<span class="show-for-desktop-only">large-2</span>
-				<span class="show-for-tablet-only">Medium-6</span>
-				<span class="show-for-phone-only">Small-4</span>
+				<span class="show-for-desktop">large-2</span>
+				<span class="show-for-tablet">Medium-6</span>
+				<span class="show-for-phone">Small-4</span>
 			</div>
 
 		</div>
 
 		<div class="row wow fadeIn">
 			<div class="large-3 column">
-				<span class="show-for-desktop-only">Large-3</span>
-				<span class="show-for-tablet-only">Medium-12</span>
-				<span class="show-for-phone-only">Small-12</span>
+				<span class="show-for-desktop">Large-3</span>
+				<span class="show-for-tablet">Medium-12</span>
+				<span class="show-for-phone">Small-12</span>
 			</div>
 			<div class="large-3 column">
-				<span class="show-for-desktop-only">Large-3</span>
-				<span class="show-for-tablet-only">Medium-12</span>
-				<span class="show-for-phone-only">Small-12</span>
+				<span class="show-for-desktop">Large-3</span>
+				<span class="show-for-tablet">Medium-12</span>
+				<span class="show-for-phone">Small-12</span>
 			</div>
 			<div class="large-3 column">
-				<span class="show-for-desktop-only">Large-3</span>
-				<span class="show-for-tablet-only">Medium-12</span>
-				<span class="show-for-phone-only">Small-12</span>
+				<span class="show-for-desktop">Large-3</span>
+				<span class="show-for-tablet">Medium-12</span>
+				<span class="show-for-phone">Small-12</span>
 			</div>
 			<div class="large-3 column">
-				<span class="show-for-desktop-only">Large-3</span>
-				<span class="show-for-tablet-only">Medium-12</span>
-				<span class="show-for-phone-only">Small-12</span>
+				<span class="show-for-desktop">Large-3</span>
+				<span class="show-for-tablet">Medium-12</span>
+				<span class="show-for-phone">Small-12</span>
 			</div>
 
 		</div>
 
 		<div class="row wow fadeIn">
 			<div class="large-4 small-4 column">
-				<span class="show-for-desktop-only">large-4</span>
-				<span class="show-for-tablet-only">medium-4</span>
-				<span class="show-for-phone-only">small-3</span>
+				<span class="show-for-desktop">large-4</span>
+				<span class="show-for-tablet">medium-4</span>
+				<span class="show-for-phone">small-3</span>
 			</div>
 
 			<div class="large-4 small-4 column">
-				<span class="show-for-desktop-only">large-4</span>
-				<span class="show-for-tablet-only">medium-4</span>
-				<span class="show-for-phone-only">small-3</span>
+				<span class="show-for-desktop">large-4</span>
+				<span class="show-for-tablet">medium-4</span>
+				<span class="show-for-phone">small-3</span>
 			</div>
 
 			<div class="large-4 small-4 column">
-				<span class="show-for-desktop-only">large-4</span>
-				<span class="show-for-tablet-only">medium-4</span>
-				<span class="show-for-phone-only">small-3</span>
+				<span class="show-for-desktop">large-4</span>
+				<span class="show-for-tablet">medium-4</span>
+				<span class="show-for-phone">small-3</span>
 			</div>
 
 
