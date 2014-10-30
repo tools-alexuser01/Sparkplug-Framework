@@ -14,26 +14,19 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Web Font -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 </head>
 
 <style type="text/css">
-
-
-.color{
+.color {
 	text-align: center;
 	padding:1rem 0;
 	color:#fff;
 }
-
-.grid{
+.grid {
 	margin:2rem 0;
-
 }
-
-.grid .column{
+.grid .column {
 	background-color:#eee;
 	background-color: #eee;
 	border: 5px solid #fff;
@@ -41,18 +34,13 @@
 	text-align: center;
 	padding:1rem 0;
 }
-
 .egpage .row > h1:first-of-type {
-    border-bottom: 2px solid #eee;
-    padding: 0.5rem 0;
-    margin: 1.5rem 0px;
-    font-weight: lighter;
-    font-size: 3rem;
+	border-bottom: 2px solid #eee;
+	padding: 0.5rem 0;
+	margin: 1.5rem 0px;
+	font-weight: lighter;
+	font-size: 3rem;
 }
-
-
-
-	
 </style>
 
 <body class="egpage">
@@ -65,48 +53,53 @@
 		<h5>Do-Nothing</h5>
 		<nav class="doNothing">
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">History</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">About</a>
+				</li>
+				<li><a href="#">Services</a>
+				</li>
+				<li><a href="#">History</a>
+				</li>
+				<li><a href="#">Contact</a>
+				</li>
 
 			</ul>
 		</nav>
 
 		<h5>Basic Toggle</h5>
 		<nav class="navtoggle">
-				<a href="#" class="navtoggle-burger"> 
-					<i class="fa fa-bars"></i>
-				</a>
-				<ul>
-					<li><a href="#">Home</a>
-					</li>
-					<li><a href="#">About</a>
-					</li>
-					<li><a href="#">Services</a>
-					</li>
-					<li><a href="#">History</a>
-					</li>
-					<li><a href="#">Contact</a>
-					</li>
-				</ul>
+			<a href="#" class="navtoggle-burger">
+				<i class="fa fa-bars"></i>
+			</a>
+			<ul>
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">About</a>
+				</li>
+				<li><a href="#">Services</a>
+				</li>
+				<li><a href="#">History</a>
+				</li>
+				<li><a href="#">Contact</a>
+				</li>
+			</ul>
 		</nav>
 
 		<h5>Block Navigation</h5>
 		<nav class="navBlock">
-				<ul>
-					<li><a href="#">Home</a>
-					</li>
-					<li><a href="#">About</a>
-					</li>
-					<li><a href="#">Services</a>
-					</li>
-					<li><a href="#">History</a>
-					</li>
-					<li><a href="#">Contact</a>
-					</li>
-				</ul>
+			<ul>
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">About</a>
+				</li>
+				<li><a href="#">Services</a>
+				</li>
+				<li><a href="#">History</a>
+				</li>
+				<li><a href="#">Contact</a>
+				</li>
+			</ul>
 		</nav>
 
 	</div>
@@ -116,131 +109,131 @@
 		<h1>Forms elements</h1>
 
 
-<div class="large-6 small-centered columns">
-		<h5>Label above</h5>
-		<form method="post" action="" class="forms">
-			<label>
-				Email
-				<input type="email" name="user-email" />
-			</label>
-			<label>
-				Password
-				<input type="password" name="user-password" />
-			</label>
+		<div class="large-6 small-centered columns">
+			<h5>Label above</h5>
+			<form method="post" action="" class="forms">
+				<label>
+					Email
+					<input type="email" name="user-email" />
+				</label>
+				<label>
+					Password
+					<input type="password" name="user-password" />
+				</label>
 
-		</form>
+			</form>
 
-</div>		
-
-
-<div class="large-6 small-centered columns">
-		<h5>Label inside</h5>
-		<form method="post" action="" class="forms">
-			<label>
-				<input type="email" name="user-email" placeholder="Email" />
-			</label>
-			<label>
-				<input type="password" name="user-password" placeholder="Password" />
-			</label>
-
-		</form>
-</div>
-
-<div class="large-6 small-centered columns">		
-
-		<h5>Required Field</h5>
-		<form method="post" action="" class="forms">
-			<label>
-				Email
-				<span class="req">*</span>
-				<input type="email" name="user-email" class="width-50" />
-			</label>
-		</form>
-
-</div>
-
-<div class="large-6 small-centered columns">
-
-		<h5>Input Descriptions</h5>
-
-		<form method="post" action="" class="forms">
-			<label>
-				Name
-				<span class="forms-desc">Always nice to feel important.</span>
-				<input type="text" name="user-name" class="width-50" />
-			</label>
-			<label>
-				Email
-				<input type="email" name="user-email" class="width-50" />
-				<div class="forms-desc">Please enter your email.</div>
-			</label>
-		</form>
-</div>	
-
-<div class="large-6 small-centered columns">	
-
-		<ul class="forms-list">
-			<li>
-				<input type="checkbox" name="checkbox-1" id="checkbox-1" value="0">
-				<label for="checkbox-1">Check 1</label>
-			</li>
-			<li>
-				<input type="checkbox" name="checkbox-2" id="checkbox-2" value="0">
-				<label for="checkbox-2">Check 2</label>
-			</li>
-			<li>
-				<input type="checkbox" name="checkbox-3" id="checkbox-3" value="0">
-				<label for="checkbox-3">Check 3</label>
-			</li>
-			<li>
-				<input type="checkbox" name="checkbox-4" id="checkbox-4" value="0">
-				<label for="checkbox-4">Check 4</label>
-			</li>
-		</ul>
-</div>
-
-<div class="large-6 small-centered columns">
+		</div>
 
 
-		<form method="post" action="" class="forms">
-			Phone number
-			<ul class="forms-inline-list">
+		<div class="large-6 small-centered columns">
+			<h5>Label inside</h5>
+			<form method="post" action="" class="forms">
+				<label>
+					<input type="email" name="user-email" placeholder="Email" />
+				</label>
+				<label>
+					<input type="password" name="user-password" placeholder="Password" />
+				</label>
+
+			</form>
+		</div>
+
+		<div class="large-6 small-centered columns">
+
+			<h5>Required Field</h5>
+			<form method="post" action="" class="forms">
+				<label>
+					Email
+					<span class="req">*</span>
+					<input type="email" name="user-email" class="width-50" />
+				</label>
+			</form>
+
+		</div>
+
+		<div class="large-6 small-centered columns">
+
+			<h5>Input Descriptions</h5>
+
+			<form method="post" action="" class="forms">
+				<label>
+					Name
+					<span class="forms-desc">Always nice to feel important.</span>
+					<input type="text" name="user-name" class="width-50" />
+				</label>
+				<label>
+					Email
+					<input type="email" name="user-email" class="width-50" />
+					<div class="forms-desc">Please enter your email.</div>
+				</label>
+			</form>
+		</div>
+
+		<div class="large-6 small-centered columns">
+
+			<ul class="forms-list">
 				<li>
-					(
-					<input type="text" name="phone-prefix" size="3">)
+					<input type="checkbox" name="checkbox-1" id="checkbox-1" value="0">
+					<label for="checkbox-1">Check 1</label>
 				</li>
 				<li>
-					<input type="text" name="phone-number-1" size="3">
+					<input type="checkbox" name="checkbox-2" id="checkbox-2" value="0">
+					<label for="checkbox-2">Check 2</label>
 				</li>
-				-
-				<input type="text" name="phone-number-2" size="3">
-
 				<li>
-					&nbsp;ext:
-					<input type="text" name="phone-ext" size="3">
+					<input type="checkbox" name="checkbox-3" id="checkbox-3" value="0">
+					<label for="checkbox-3">Check 3</label>
 				</li>
-				<div class="forms-desc">Needed if there are questions about your order</div>
+				<li>
+					<input type="checkbox" name="checkbox-4" id="checkbox-4" value="0">
+					<label for="checkbox-4">Check 4</label>
+				</li>
 			</ul>
-		</form>
+		</div>
+
+		<div class="large-6 small-centered columns">
+
+
+			<form method="post" action="" class="forms">
+				Phone number
+				<ul class="forms-inline-list">
+					<li>
+						(
+						<input type="text" name="phone-prefix" size="3">)
+					</li>
+					<li>
+						<input type="text" name="phone-number-1" size="3">
+					</li>
+					-
+					<input type="text" name="phone-number-2" size="3">
+
+					<li>
+						&nbsp;ext:
+						<input type="text" name="phone-ext" size="3">
+					</li>
+					<div class="forms-desc">Needed if there are questions about your order</div>
+				</ul>
+			</form>
+
+		</div>
 
 	</div>
-
-</div>	
 
 
 	<div class="row wow fadeIn">
 		<h1>Colors</h1>
-<div class="primary-color-band color small-4 columns">
-	.primary-color
-</div>	
+		<div class="primary-color-band color small-4 columns">
+			.primary-color
+		</div>
 
-<div class="secondary-color-band color small-4 columns">
-	.secondary-color
-</div>	
+		<div class="secondary-color-band color small-4 columns">
+			.secondary-color
+		</div>
 
-<div class="tertiary-color-band color small-4 columns">
-	.tertiary-color
-</div>		
+		<div class="tertiary-color-band color small-4 columns">
+			.tertiary-color
+		</div>
 
 	</div>
 
@@ -280,10 +273,10 @@
 				<ul>
 					<li>This is a list item in an unordered list</li>
 					<li>Lists can be nested inside of each other</li>
-						<ul>
-							<li>This is a nested list item</li>
-							<li>This is another nested list item in an unordered list</li>
-						</ul>
+					<ul>
+						<li>This is a nested list item</li>
+						<li>This is another nested list item in an unordered list</li>
+					</ul>
 					</li>
 					<li>This is the last list item</li>
 				</ul>
@@ -293,7 +286,7 @@
 			<div class="large-6 columns">
 				<h5>Blockquote</h5>
 				<blockquote>
-					McSweeney's hella put a bird on it, pork belly blue bottle mlkshk dreamcatcher readymade aesthetic. Wayfarers fixie actually Bushwick. Skateboard kale chips try-hard Neutra post-ironic. Mixtape single-origin coffee wayfarers, fanny pack flannel Carles jean shorts artisan pork belly. 
+					McSweeney's hella put a bird on it, pork belly blue bottle mlkshk dreamcatcher readymade aesthetic. Wayfarers fixie actually Bushwick. Skateboard kale chips try-hard Neutra post-ironic. Mixtape single-origin coffee wayfarers, fanny pack flannel Carles jean shorts artisan pork belly.
 				</blockquote>
 			</div>
 
@@ -666,7 +659,7 @@
 				<span class="show-for-tablet">medium-6</span>
 				<span class="show-for-phone">small-12</span>
 			</div>
-						<div class="large-6 medium-6 small-12 column">
+			<div class="large-6 medium-6 small-12 column">
 				<span class="show-for-desktop">large-6</span>
 				<span class="show-for-tablet">medium-6</span>
 				<span class="show-for-phone">small-12</span>
@@ -675,10 +668,10 @@
 
 		</div>
 
-				<div class="row wow fadeIn">
-					<div class="medium-4 column large-push-8">large 4</div>
-					<div class="medium-8 column large-pull-4">large 8</div>
-				</div>
+		<div class="row wow fadeIn">
+			<div class="medium-4 column large-push-8">large 4</div>
+			<div class="medium-8 column large-pull-4">large 8</div>
+		</div>
 
 
 
@@ -689,9 +682,10 @@
 	<br>
 	<br>
 	<br>
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/wow.min.js">
-	</script>
+	<script src="js/wow.min.js"></script>
 	<script>
 	new WOW().init();
 
