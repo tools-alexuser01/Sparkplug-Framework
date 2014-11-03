@@ -13,7 +13,7 @@
 
 @row-width: 75rem;
 @total-columns: 12;
-@column-gutter:2rem;
+@column-gutter: 2rem;
 
 //
 // ---------------------------------------------------------
@@ -24,9 +24,9 @@
 // For "Fixed Responsive" set the row-width variables to the media querie variables below
 // For "Fluid Responsive" set the row-width variables to 100% 
 
-@large-row-width:@row-width; //desktop (or your largest) width should always be defined by the @row-width variable
-@medium-row-width:@medium-up;
-@small-row-width:@small-up;
+@large-row-width: @row-width; //desktop (or your largest) width should always be defined by the @row-width variable
+@medium-row-width: @medium-up;
+@small-row-width: @small-up;
  
 
 
@@ -36,9 +36,9 @@
 // ---------------------------------------------------------
 //
 
-@large-up:@row-width; // desktop should inherit whatever the row-width is
-@medium-up:48rem; // 48rem = 768px
-@small-up:30rem; // 30rem = 480px
+@large-up: @row-width; // desktop should inherit whatever the row-width is
+@medium-up: 48rem; // 48rem = 768px
+@small-up: 30rem; // 30rem = 480px
 
 //
 // ---------------------------------------------------------
@@ -48,22 +48,22 @@
 
 
 //Theme colors
-@primary-color:#32ccfe;
-@secondary-color:#fa6b5b;
-@tertiary-color:#cc66cc;
-@mono-color:#eee;
-@font-color:#666666;
-@link-color:#3570c3;
+@primary-color: #32ccfe;
+@secondary-color: #fa6b5b;
+@tertiary-color: #cc66cc;
+@mono-color: #eee;
+@font-color: #666666;
+@link-color: #3570c3;
 
 //Alert Colors
-@warning-color:#ffe5c7;
-@success-color:#dff0d8;
-@error-color:#f2dede;
+@warning-color: #ffe5c7;
+@success-color: #dff0d8;
+@error-color: #f2dede;
 
 //Basic Colors
-@disabled:#808080;
-@white:#fff;
-@black:#000;
+@disabled: #808080;
+@white: #fff;
+@black: #000;
 
 //
 // ---------------------------------------------------------
@@ -71,9 +71,9 @@
 // ---------------------------------------------------------
 //
 
-@body-bg: #fff; // set this as an color or an image
-@global-radius:3px; // applies to buttons
-@global-background-transition:background-color 300ms ease-out;
+@body-bg: @white; // set this as an color or an image
+@global-radius: 3px; // applies to buttons
+@global-background-transition: background-color 300ms ease-out;
 
 
 //
@@ -210,7 +210,7 @@
 	background-size: @w @h;
   }
 }
-.transition(@transition: all linear .2s) {
+.transition(@transition: all ease .2s) {
 	-webkit-transition:@transition;
 	-moz-transition: @transition;
 	-ms-transition:@transition;
