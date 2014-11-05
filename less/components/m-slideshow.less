@@ -1,0 +1,85 @@
+ul[data-slideshow]{
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul[data-slideshow] li {
+  transition: visibility 0ms ease 300ms, opacity 300ms ease;
+  -webkit-transition: visibility 0ms ease 300ms, opacity 300ms ease;
+  -moz-transition: visibility 0ms ease 300ms, opacity 300ms ease;
+  -o-transition: visibility 0ms ease 300ms, opacity 300ms ease;
+}
+
+ul[data-slideshow] > li{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity:0;
+}
+ul[data-slideshow] > li:first-child{
+  position: relative;
+  float: left;
+  visibility: visible;
+  opacity:1;
+}
+ul[data-slideshow] img{
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  border-radius:3px;
+  width:100%;
+  max-width:100%;
+}
+[data-next], [data-prev]{
+  cursor:pointer;
+   -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+ul.ss-navigation{
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+ul.ss-navigation li{
+  padding:5px 10px;
+  padding-top: 30%;
+  height:100%;
+  background: rgba(251, 251, 251, .4);
+  color:@secondary-color;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:75%
+}
+
+[data-next]{
+  background-image: url('../img/chevron-right.png') !important;
+}
+
+[data-prev]{
+  background-image: url('../img/chevron-left.png') !important;
+}
+ul.ss-navigation li:first-child{ 
+  float:left;
+}
+ul.ss-navigation li:last-child{
+  float:right;
+}

@@ -1,0 +1,38 @@
+/* Content Collapse */
+.content-collapse{
+  border:1px solid @mono-color;
+  border-radius:@global-radius;
+  margin-top:15px;
+}
+.content-collapse [data-toggle]{
+  display:block;
+  padding:20px;
+  cursor:pointer;
+  color:@font-color;
+  
+  .transition();
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.content-collapse .content{
+  display:none;
+  border-top:1px solid @mono-color;
+  padding:10px 20px;
+}
+
+.content-collapse.open [data-toggle]{
+   .transition();
+   color:@secondary-color;
+}
+
+/* Equal Height */
+
+.equalHeight.demo{
+  background:@mono-color;
+  padding:0 .5rem;
+}
