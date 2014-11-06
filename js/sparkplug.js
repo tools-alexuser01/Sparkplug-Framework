@@ -13,7 +13,7 @@
             initialNavHeight: '',
             activeClass: 'active',
             hideClass: 'hidden',
-            addClass: 'show-for-phone-only'
+            addClass: ''
         },
         totalHeight: '',
         init: function() {

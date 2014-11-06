@@ -20,7 +20,8 @@
 
 .exampleSection{
 	font-weight: bold;
-	color:@secondary-color;
+	color: @secondary-color;
+	clear: both;
 }
 .examplePage h5{
 	color:@primary-color;
@@ -33,5 +34,35 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: @mono-color;
+}
+
+.doc-menu{
+	position: fixed;
+	list-style: none;
+	margin-top: 45px;
+
+	li{
+		
+		
+		a{
+			display:block;
+			text-decoration: none;
+			padding:5px 15px;
+			color:@font-color;
+			.transition();
+			border-radius:@global-radius;
+
+			&:hover{
+				color:@white;
+				background-color: @primary-color;
+				.transition();
+			}
+
+			&.active{
+				color:@secondary-color;
+				.transition();
+			}
+		}
+	}
 }
 

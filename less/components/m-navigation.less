@@ -112,8 +112,8 @@
 
 .navtoggle {
 	display: block;
-	background-color: @secondary-color;
-	color: @white;
+	background-color: @mono-color;
+	color: @font-color;
 	overflow: hidden;
 	width:100%;
 	.transition();
@@ -156,11 +156,12 @@
 			  	display: block;
 		  		padding: 15px 25px;
 		  		text-decoration: none;
-		  		color: @white;
+		  		color: @font-color;
 				.transition();
 				
 				&:hover {
 					background-color: @primary-color;
+					color:@white;
 					.transition();
 				}
 			}
@@ -178,7 +179,7 @@
 	padding: 5px 10px;
 	border-radius: 5px;
 	margin:.5em 1em .5em 0;
-	color: @white;
+	color: @font-color;
 	.transition();
 	&:hover{
 		background-color:@primary-color;
