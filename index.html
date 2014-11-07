@@ -10,11 +10,10 @@
 	<!-- Compiled SMACSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/animate.css">
-
+	
+	<!-- Web Font -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<!-- Web Font -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	
 </head>
@@ -23,12 +22,14 @@
 
 
 	<div class="row">
-		<div class="large-3 columns">
-			<ul class="doc-menu"></ul>
+		<div class="large-3 medium-2 columns hide-for-phone">
+			<ul class="doc-menu">
+				<li><h5>Sections</h5></li>
+			</ul>
 		</div>
 		
 		
-		<div class="large-8 large-offset-4 columns">
+		<div class="large-8 large-offset-4 medium-8 medium-offset-4 columns">
 			
 			<!-- Grid -->
 			<h1 class="exampleSection" id="grid">Grid</h1>
@@ -49,7 +50,7 @@
 						<span class="show-for-tablet">medium-6</span>
 						<span class="show-for-phone">small-4</span>
 					</div>
-					<div class="large-2 medium-6 small-4 column">
+					<div class="large-2 medium-6 small-4 column ">
 						<span class="show-for-desktop">large-2</span>
 						<span class="show-for-tablet">medium-6</span>
 						<span class="show-for-phone">small-4</span>
@@ -215,9 +216,9 @@
 			<h5>Disabled</h5>
 			<div class="large-12 column">
 				<p><code>.btn-small-disabled</code> <code>.btn-disabled</code> <code>.btn-large-disabled</code></p>
-				<a href="#" class="btn-small-disabled">Small Button</a>
-				<a href="#" class="btn-disabled">Normal Button</a>
-				<a href="#" class="btn-large-disabled">Large Button</a>
+				<a class="btn-small-disabled">Small Button</a>
+				<a class="btn-disabled">Normal Button</a>
+				<a class="btn-large-disabled">Large Button</a>
 			</div>
 			
 				
@@ -333,13 +334,13 @@
 			<p>Use the <code>.equalHeight</code> class to match element height when the DOM loads. The utility takes the height of the tallest element and applies it to all other <code>.equalHeight</code> elements. Note: you can set the point at which the elements stack in sparkplug.js.</p>
 			</div>
 			<div class="medium-4 columns">
-				<p class="equalHeight demo">
+				<p class="equalHeight ">
 					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
 				</p>
 			</div>
 
 			<div class="medium-4 columns">
-				<p class="equalHeight demo">
+				<p class="equalHeight ">
 					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
 					<br>
 					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
@@ -349,7 +350,7 @@
 			</div>
 
 			<div class="medium-4 columns">
-				<p class="equalHeight demo">
+				<p class="equalHeight ">
 					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
 					<br>
 					Minim laborum farm-to-table, semiotics synth delectus ut tote bag jean shorts Shoreditch banjo occaecat. Non salvia quis gastropub Kickstarter, slow-carb American Apparel kitsch magna.
@@ -697,7 +698,7 @@
 				// Bind to scroll
 				$(window).scroll(function(){
 				   // Get container scroll position
-				   var fromTop = $(this).scrollTop()+topMenuHeight;
+				   var fromTop = $(this).scrollTop() + topMenuHeight;
 				   
 				   // Get id of current scroll item
 				   var cur = scrollItems.map(function(){
