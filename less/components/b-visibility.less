@@ -17,37 +17,37 @@
 		transition: all 0.3s ease-out;
 	}
 
-	.hide-for-phone{display: none !important;}
-	.hide-for-tablet{display: block !important;}
-	.hide-for-desktop{display: block !important;}
+	.hide-for-small{display: none !important;}
+	.hide-for-medium{display: block !important;}
+	.hide-for-large{display: block !important;}
 
-	.show-for-phone{display: block !important;}
-	.show-for-tablet{display: none !important;}
-	.show-for-desktop{display: none;}
+	.show-for-small{display: block !important;}
+	.show-for-medium{display: none !important;}
+	.show-for-large{display: none;}
 
 }
 
 // Tablet Up
 @media only screen and (min-width: @medium-up) {
 
-	.hide-for-phone{display: block !important;}
-	.hide-for-tablet{display: none !important;}
-	.hide-for-desktop{display: block !important;}
+	.hide-for-small{display: block !important;}
+	.hide-for-medium{display: none !important;}
+	.hide-for-large{display: block !important;}
 
-	.show-for-phone{display: none !important;}
-	.show-for-tablet{display: block !important;}
-	.show-for-desktop{display: none !important;}
+	.show-for-small{display: none !important;}
+	.show-for-medium{display: block !important;}
+	.show-for-large{display: none !important;}
 }
 
 // Desktop Up
 @media only screen and (min-width:@large-up){
 
-	.hide-for-phone{display: block !important;}
-	.hide-for-tablet{display: block !important;}
-	.hide-for-desktop{display: none !important;}
+	.hide-for-small{display: block !important;}
+	.hide-for-medium{display: block !important;}
+	.hide-for-large{display: none !important;}
 
-	.show-for-phone{display: none !important;}
-	.show-for-tablet{display: none !important;}
-	.show-for-desktop{display: block !important;}
+	.show-for-small{display: none !important;}
+	.show-for-medium{display: none !important;}
+	.show-for-large{display: block !important;}
 }
 

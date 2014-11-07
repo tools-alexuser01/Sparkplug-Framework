@@ -1,30 +1,28 @@
 # Project Boilerplate
 
-This project boilerplate aims to help front-end developers approach building sites from a modular, isolated approach.
+Sparkplug aims to help front-end developers approach building sites from a modular, scallable approach. 
+
+The file structure is specifically set up to help you deliberately build modular, isolated systems.
 
 Inspiration from: 
-* [patternlab.io](http://patternlab.io)
 * [smacss.com](http://smacss.com)
+* [patternlab.io](http://patternlab.io)
 
-This framework will help set you up for scalable modular css. Our code will give you base line functionality, with deliberate modular organization.
 
+## 1. Install global dependancies (one time installation)
 
-## Requirements
+  * [Node.js](http://nodejs.org) http://nodejs.org/
+  * [bower](http://bower.io): `[sudo] npm install bower -g`
+  * [grunt.js](http://grunt.js); `[sudo] npm install -g grunt-cli`
 
-  * [Node.js](http://nodejs.org)
-  * [bower](http://bower.io): `npm install bower -g`
-  * [grunt.js](http://grunt.js); `npm install -g grunt-cli`
+## 2. Install local dependancies (for each new instance of sparkplug)
 
-## Quickstart
-
-  * Git clone project to local directory
+  * Download Zip
   * cd to project folder
-  * run `npm install` (first time users)
+  * run `[sudo] npm install` (first time users)
   * run `grunt` (to watch and compile less files)
- 
-## What next? 
 
-Next time you come into the project, just  cd to the correct folder and run `grunt watch` from the terminal
+Next time you come into the project, just cd to the correct folder and run `grunt` from the terminal
 
 
 

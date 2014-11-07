@@ -2,8 +2,15 @@ body.active-modal{
   /* Disables body scrolling when a dialogue box is open */
   overflow:hidden;
 }
-.modal-box:before, .modal-box:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
-.modal-box:after { clear: both; }
+
+.modal-box:before, .modal-box:after { 
+  content: "\0020"; display: block; height: 0; overflow: hidden; 
+}
+
+.modal-box:after { 
+  clear: both; 
+}
+
 .modal{
   display:none;
   position: fixed;
@@ -27,15 +34,19 @@ body.active-modal{
   border-radius:@global-radius;
   clear:both;
 }
+
 .modal .navigation{
   display:block;
 }
+
 .modal-next{
   float:right;
 }
+
 .modal-prev{
   float:left;
 }
+
 a[data-fire], .modal-next, .modal-prev{
   cursor:pointer;
 }
