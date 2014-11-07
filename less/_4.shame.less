@@ -13,10 +13,10 @@
 - used for quick, one-off changes to be later moved to their appropriate home
 
 ## Try to avoid using:
+
 - This file
 
 **/
-
 
 .exampleSection{
 	font-weight: bold;
@@ -35,19 +35,17 @@
 	margin-bottom: 10px;
 	background-color: @mono-color;
 }
-
 .doc-menu{
 	position: fixed;
 	list-style: none;
-	margin-top: 45px;
+	margin-top: 15px;
 
-	li{
-		
-		
+	li{	
 		a{
 			display:block;
 			text-decoration: none;
 			padding:5px 15px;
+			font-size:.9em;
 			color:@font-color;
 			.transition();
 			border-radius:@global-radius;
@@ -57,12 +55,12 @@
 				background-color: @primary-color;
 				.transition();
 			}
+		}
 
-			&.active{
-				color:@secondary-color;
-				.transition();
-			}
+		&.active a{
+			color:@font-color;
+			background-color: @mono-color;
+			.transition();
 		}
 	}
 }
-

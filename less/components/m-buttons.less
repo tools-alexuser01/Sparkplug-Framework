@@ -82,7 +82,9 @@ button:focus {
 	border:1px solid @primary-color;
 
 		&:hover {
-			color:@primary-color;
+			color:@white;
+			background-color:@primary-color;
+			.transition();
 		}
 }
 
@@ -92,10 +94,12 @@ button:focus {
 	color:@tertiary-color;
 	border:1px solid @tertiary-color;
 	padding:@small-padding;
-
-		&:hover {
-			color:@tertiary-color;
-		}
+	.transition();
+	&:hover {
+		color:@white;
+		background-color:@tertiary-color;
+		.transition();
+	}
 }
 
 .btn-large-outline{
@@ -106,7 +110,9 @@ button:focus {
 	padding:@large-padding;
 
 		&:hover {
-			color:@secondary-color;
+			color:@white;
+			background-color:@secondary-color;
+			.transition();
 		}
 }
 
