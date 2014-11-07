@@ -29,7 +29,7 @@
             $(toggleMenu.config.toggleSelector).on('click', toggleMenu.toggle);
         },
         toggle: function(e) {
-            var $nav = $(toggleMenu.config.navSelector);
+            $nav = $(this).closest(toggleMenu.config.navSelector);
             e.preventDefault();
             $nav.toggleClass(toggleMenu.config.activeClass);
             // Open
@@ -259,14 +259,18 @@
             });
             $scrollMenuItems.on('click', scrollSpy.scrollTo);
             $(window).on('scroll', scrollSpy.scrollCheck);
+
         },
         scrollTo: function(e){
             var anchor = $(this).attr('href'),
-                offset = 0;
+                scrollHere = 0,
+                offset = 0; 
+            if($(this).closest(scrollSpy.config.menuSelector).data('offset'))
+                 offset = $(this).closest(scrollSpy.config.menuSelector).data('offset');
             if(anchor == '#') return;
-            offset = $(anchor).offset().top;
+            scrollHere = $(anchor).offset().top;
             $('html, body').stop().animate({
-                scrollTop: offset
+                scrollTop: scrollHere - offset
             }, scrollSpy.config.scrollSpeed)
 
             e.preventDefault();
