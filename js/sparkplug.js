@@ -242,6 +242,50 @@
         }
     };
 
+    // Scroll Spy
+    var scrollSpy = {
+        config:{
+            menuSelector: '[data-scrollSpy]',
+            activeClass: 'active',
+            scrollSpeed: 300,
+            offset: 0
+        },
+        scrollSectionSelectors: [],
+        init: function(){
+            var $scrollMenuItems = $(scrollSpy.config.menuSelector).find('a');
+            scrollSpy.scrollSectionSelectors = $scrollMenuItems.map(function(){
+                var selector = $(this).attr('href')
+                if(selector) return selector;
+            });
+            $scrollMenuItems.on('click', scrollSpy.scrollTo);
+            $(window).on('scroll', scrollSpy.scrollCheck);
+        },
+        scrollTo: function(e){
+            var anchor = $(this).attr('href'),
+                offset = 0;
+            if(anchor == '#') return;
+            offset = $(anchor).offset().top;
+            $('html, body').stop().animate({
+                scrollTop: offset
+            }, scrollSpy.config.scrollSpeed)
+
+            e.preventDefault();
+        },
+        scrollCheck: function(){
+            var position = $(this).scrollTop(),
+                selectors = scrollSpy.scrollSectionSelectors, 
+                aboveSections = $.map(selectors, function(item, i){
+                    if($(item).offset().top < position)
+                        return item;
+                }),
+                activeSection = aboveSections[aboveSections.length -1];
+            $(scrollSpy.config.menuSelector)
+                .find('li').removeClass(scrollSpy.config.activeClass);
+            $('a[href="' + activeSection + '"]')
+                .parent().addClass(scrollSpy.config.activeClass);
+        }
+    };
+
     // Scroll Animations
     var sparkplugScrollAnimations = new WOW({
         boxClass: 'wow', // default
@@ -255,6 +299,7 @@
     goodSlideshow.init();
     contentCollapse.init();
     equalHeight.init();
+    scrollSpy.init();
     sparkplugScrollAnimations.init();
 
 })(jQuery);
