@@ -187,6 +187,81 @@
 
 /* End */
 
+/* Nav Toggle */
+
+.thumbNav{
+	position:fixed;
+	z-index:1000;
+	width:50px;
+	height:50px;
+	background-color: @secondary-color;
+	border-radius:@global-radius;
+	overflow: hidden;
+	bottom:0;
+	margin-bottom:20px;
+	right:20px;
+	
+	.transition(all ease .35s);
+	i{
+		position: absolute;
+		z-index:10000000000;
+		bottom: 0;
+		right: 0;
+		width: 50px;
+		display: block;
+		text-align: center;
+		padding-bottom: 16px;
+		color: @white;
+		font-size: 20px;
+		-webkit-font-smoothing: antialiased;
+	}
+	ul{
+		margin:0;
+		visibility:hidden;
+		opacity:0;
+		list-style:none;
+		position:absolute;
+		width:100%;
+		-webkit-font-smoothing: antialiased;
+		li{
+			a{
+				display: block;
+				width:100%;
+				padding:1rem 2rem;
+				color:@white;
+				text-decoration: none;
+				font-weight:100;
+				-webkit-font-smoothing: antialiased;
+			}
+		}
+	}
+
+	&.active{
+		border-radius:@global-radius;
+
+		.transition(all ease .35s);
+		ul{
+			visibility:visible;
+			opacity:1;
+			.transition(all ease .35s);
+		}
+	}
+}
+
+.iconSprite{
+	i:first-child{
+		.transition(all ease .35s);
+		opacity:1;
+		visibility: visible;
+	}
+	i:last-child{
+		.transition(all ease .35s);
+		opacity:0;
+		visibility: hidden;
+	}
+}
+/* End */
+
 /* Multilevel */
 
 .menu-link {

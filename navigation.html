@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sparkplug Framework</title>
+
+	<!-- Compiled SMACSS -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
+	<!-- Web Font -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	
+</head>
+
+<body class="examplePage">
+	
+		
+		<nav class="thumbNav">
+			<div class="iconSprite">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-times"></i>
+			</div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Work</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+
+	<div class="row">
+		<div class="medium-12 columns">
+		<h5>Lorem Ipsum</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis assumenda odit veritatis deleniti quibusdam nihil enim tempore reiciendis perferendis, repellendus porro natus, autem alias itaque veniam debitis est incidunt, vero.<p>
+		</div>
+	</div>
+	<script src="js/wow.min.js" type="text/javascript"></script>
+	<script src="js/sparkplug.js" type="text/javascript"></script>
+	<script>
+	$('.thumbNav i').on('click', function(){
+		var $nav = $(this).closest('.thumbNav'),
+			width = $(window).width() - 40,
+			height = $nav.find('ul').height();
+
+		$nav.toggleClass('active')
+			.css({
+				'width': width,
+				'height': height
+			});
+
+		if(!$nav.hasClass('active')) 
+			$($nav).removeAttr('style');
+
+		$('.iconSprite').append($('.iconSprite i:first-child'));
+	});
+	</script>
+</body>
+</html>
