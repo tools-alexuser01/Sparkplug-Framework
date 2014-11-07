@@ -5,7 +5,8 @@ module.exports = function(grunt) {
                 options: {
                     compress: false,
                     cleancss: false,
-                    optimization: 2
+                    optimization: 2,
+                    dumpLineNumbers: 'comments'
                 },
                 files: {
                     // target.css file: source.less file
@@ -26,6 +27,5 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
     grunt.registerTask('default', ['less', 'watch']);
 };

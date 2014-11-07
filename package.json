@@ -1,7 +1,7 @@
 {
-  "name": "project-name",
+  "name": "Sparkplug CSS Framework",
   "version": "1.0.0",
-  "description": "Awesome project",
+  "description": "Modular, scallable CSS",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-less": "~0.11.3",

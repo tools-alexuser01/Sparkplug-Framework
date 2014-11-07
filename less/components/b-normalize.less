@@ -1,20 +1,28 @@
-/* =Normalize
------------------------------------------------------------------------------*/
+// ==============================================
+//				Normalize 
+// ==============================================
+
 *,
 *:before,
 *:after {
 	.box-sizing(border-box);
 }
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
  
 .clearfix:after {
   content: " ";
   display: table;
-  clear: both;
+  clear: both; 
 }
 
 html {
     font-family: sans-serif;
+    font-size:100%;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -216,7 +224,7 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid @mono-color;
 }
 /* Responsive media */
 img,

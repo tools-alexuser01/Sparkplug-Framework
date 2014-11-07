@@ -1,108 +1,72 @@
-/**
-====================
- Variable Settings
-====================
-
-Table of contents:
-
-- Global Variables
-- Grid Settings
-- Color Variables
-- 
-
-**/
-
-
-
 //
-// ---------------------------------------------------------
-//     Global Settings
-// ---------------------------------------------------------
-//
+// ==============================================
+//				_0.Settings
+// ==============================================
+// 1 Global Settings
+// 2 Theme Settings
+// 3 Color Variables
 
-/**
-Global Variables
 
-@global-radius
-@global-font-color
-@global-font-family
 
-**/
 
-@body-bg: @white; // set this as an color or an image
-@global-radius: 3px; // applies to buttons
+// ----------------------------------------
+// 		1 Global Settings
+// ----------------------------------------
+
+@body-bg: @white; // you can set body-bg to a variable, color, or image
+@global-radius: 3px; // the roundness of all things (buttons, inputs, panels, boxes)
 @global-background-transition: background-color 300ms ease-out;
 
 
+// ----------------------------------------
+// 		2 Theme Colors
+// ----------------------------------------
+
+// Theme colors
+@primary-color: #FC604B;
+@secondary-color: #288DBA;
+@tertiary-color: #2ecc71;
 
 
-/**  
------------------------------------
-0.1 Grid Settings
------------------------------------
-**/
+// Basic Colors
+@mono-color: #eee; // light gray primarily used for borders
+@disabled: #808080;
+@white: #fff;
+@black: #333; // ok so not REALLY black.
+
+
+
+// ----------------------------------------
+// 		3 Grid Settings
+// ----------------------------------------
 
 @row-width: 75rem;
 @total-columns: 12;
 @column-gutter: 2rem;
 
-// For "Fixed Responsive" set the row-width variables to the media querie variables below
-// For "Fluid Responsive" set the row-width variables to 100% 
 
-@large-row-width: @row-width; //desktop (or your largest) width should always be defined by the @row-width variable
-@medium-row-width: @medium-up;
-@small-row-width: @small-up;
-
-@large-up: @row-width; // desktop should inherit whatever the row-width is
+// Media Query Settings
+@large-up: @row-width; // your largest width should inherit whatever the @row-width is
 @medium-up: 48rem; // 48rem = 768px
 @small-up: 30rem; // 30rem = 480px
 
-//
-// ---------------------------------------------------------
-//     Color Settings
-// ---------------------------------------------------------
-//
 
-//Theme colors
-@primary-color: #FC604B;
-@secondary-color: #288DBA;
-@tertiary-color: #2ecc71;
-@mono-color: #eee;
+// Only adjust the follow variables if you want to change grid from "Fixed Responsive" to "Fluid Responsive"
+// To change grid to "Fluid Responsive" set the small and medium row-width variables to 100% 
+@large-row-width: @row-width; // Don't change this one. Ever.
+@medium-row-width: @medium-up;
+@small-row-width: @small-up;
+
+
+
+// ---------------------------------------------------------
+//     4 Typography Settings
+// ---------------------------------------------------------
+
+
+// Font Colors
 @font-color: #666666;
 @link-color: @secondary-color;
-
-//Alert Colors
-@warning-color: #ffe5c7;
-@success-color: #dff0d8;
-@error-color: #f2dede;
-
-//Basic Colors
-@disabled: #808080;
-@white: #fff;
-@black: #333;
-
-
-//
-// ---------------------------------------------------------
-//     Font Settings
-// ---------------------------------------------------------
-//
-
-@base-font-size: 1rem;
-@base-line-height: 1.8rem;
-
-@global-font-family: Helvetica, Arial, sans-serif;
-@heading-font-family: @global-font-family;
-@inside-label-font-family: @global-font-family;
-@code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-
-// Headings
-@h1-size: 2rem; 
-@h2-size: 1.8rem; 
-@h3-size: 1.6rem; 
-@h4-size: 1.4rem; 
-@h5-size: 1.2rem; 
-@h6-size: .8rem; 
 
 @h1-color:@font-color; 
 @h2-color:@font-color; 
@@ -110,6 +74,55 @@ Global Variables
 @h4-color:@font-color; 
 @h5-color:@font-color; 
 @h6-color:@font-color; 
+
+// Font Sizes
+
+@base-font-size: 1rem;
+@h1-size: 2rem; 
+@h2-size: 1.8rem; 
+@h3-size: 1.6rem; 
+@h4-size: 1.4rem; 
+@h5-size: 1.2rem; 
+@h6-size: .8rem; 
+
+@base-line-height: 2rem;
+
+
+// Font Family
+@global-font-family: Helvetica, Arial, sans-serif;
+@heading-font-family: @global-font-family;
+
+@inside-label-font-family: @global-font-family;
+@code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+// ---------------------------------------------------------
+//     5 Content Popup aka modal, aka active dialogue
+// ---------------------------------------------------------
+
+
+@modal-background-overlay: rgba(0, 0, 0, .2);
+@modal-width:37.5rem;
+
+
+// ---------------------------------------------------------
+//     6 Alerts
+// ---------------------------------------------------------
+
+// alert colors
+@warning-color: #ffe5c7;
+@success-color: #dff0d8;
+@error-color: #f2dede;
+
+
+
+// ---------------------------------------------------------
+//     7 Breadcrumbs
+// ---------------------------------------------------------
+
+@transparent-overlay: rgba(0, 0, 0, .2);
+
+
 
 
 // Forms
