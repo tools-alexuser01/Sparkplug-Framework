@@ -1,9 +1,6 @@
-
-//
-// ---------------------------------------------------------
-//     Grid Variables and Settings
-// ---------------------------------------------------------
-//
+// ==============================================
+//				Sparkplug Grid
+// ==============================================
 
 .column,
 .columns {
@@ -64,6 +61,7 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		max-width: none; }
+
 		.row .row:before, .row .row:after {
 			content: " ";
 			display: table; }
@@ -72,11 +70,11 @@
 
 
 
-//
+
 // ---------------------------------------------------------
 //     Large Column Mixins
 // ---------------------------------------------------------
-//
+
 
 //Large Column Mixin
 .generate-large-columns(@total-columns; @column-number: 1) when (@column-number =< @total-columns) {
@@ -124,11 +122,9 @@
 
 }
 
-//
 // ---------------------------------------------------------
 //     Medium Column Mixins
 // ---------------------------------------------------------
-//
 
 
 //medium Column Mixin
@@ -180,11 +176,10 @@
 }
 
 
-//
 // ---------------------------------------------------------
 //     Small Column Mixins
 // ---------------------------------------------------------
-//
+
 
 //small Column Mixin
 .generate-small-columns(@total-columns; @column-number: 1) when (@column-number =< @total-columns) {
@@ -246,23 +241,23 @@
 
   .column.small-centered, 
   .columns.small-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
+	margin-left: auto;
+	margin-right: auto;
+	float: none; }
 
   .column.small-uncentered,
   .columns.small-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left; }
+	margin-left: 0;
+	margin-right: 0;
+	float: left; }
 
   .column.small-centered:last-child,
   .columns.small-centered:last-child {
-    float: none; }
+	float: none; }
 
   .column.small-uncentered:last-child,
   .columns.small-uncentered:last-child {
-    float: left; }
+	float: left; }
 
 	.generate-small-columns(@total-columns);
 	.generate-small-offset-columns(@total-columns, offset);
@@ -289,23 +284,23 @@ padding-right:@column-gutter / 2;
 
   .column.medium-centered, 
   .columns.medium-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
+	margin-left: auto;
+	margin-right: auto;
+	float: none; }
 
   .column.medium-uncentered,
   .columns.medium-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left; }
+	margin-left: 0;
+	margin-right: 0;
+	float: left; }
 
   .column.medium-centered:last-child,
   .columns.medium-centered:last-child {
-    float: none; }
+	float: none; }
 
   .column.medium-uncentered:last-child,
   .columns.medium-uncentered:last-child {
-    float: left; }
+	float: left; }
 
 	.generate-medium-columns(@total-columns);
 	.generate-medium-offset-columns(@total-columns, offset);
@@ -329,23 +324,23 @@ padding-left:0;
 
   .column.large-centered, 
   .columns.large-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
+	margin-left: auto;
+	margin-right: auto;
+	float: none; }
 
   .column.large-uncentered,
   .columns.large-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left; }
+	margin-left: 0;
+	margin-right: 0;
+	float: left; }
 
   .column.large-centered:last-child,
   .columns.large-centered:last-child {
-    float: none; }
+	float: none; }
 
   .column.large-uncentered:last-child,
   .columns.large-uncentered:last-child {
-    float: left; }
+	float: left; }
 
 	.generate-large-columns(@total-columns);
 	.generate-large-offset-columns(@total-columns, offset);
@@ -355,9 +350,3 @@ padding-left:0;
 }
 
 
-
-
-
-/*
-END of the NEW GRID SYSTEM!!!!!!!!
-*/

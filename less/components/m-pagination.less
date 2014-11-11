@@ -1,0 +1,65 @@
+// ==============================================
+//				Pagination
+// ==============================================
+
+.pagination {
+	.clearfix;
+	border:1px solid @mono-color;
+	border-radius: @global-radius;
+	position: relative;
+	display: inline-block;
+}
+
+.pagination ul{
+	margin: 0;
+	padding: 0;
+}
+
+.pagination li {
+	float: left;
+	list-style: none;
+	border-right:1px solid @mono-color;
+}
+
+.pagination li a{
+	display: block;
+	padding: .5rem .8rem;
+	line-height: @base-line-height / 2;
+
+	color: @primary-color;
+	text-decoration: none;
+}
+
+.pagination li:last-child{
+	border:0;
+}
+
+
+.pagination li a:focus,
+.pagination li a:hover {
+	text-decoration: none;
+	background-color: @primary-color;
+	color: @white;
+	box-shadow: none;
+}
+
+.pagination .active {
+	box-shadow: inset 0 -2px 0 0 @primary-color;
+	color:@font-color;
+}
+
+
+
+@media only screen and (min-width: @medium-up) {
+
+}
+
+
+
+@media only screen and (min-width: @large-up) {
+
+}
+
+
+
+
