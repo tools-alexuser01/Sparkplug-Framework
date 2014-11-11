@@ -226,7 +226,9 @@
             equalHeight.setHeight();
         },
         setHeight: function(){
+            $(equalHeight.config.selector).removeAttr('style');
             if (window.innerWidth < equalHeight.config.maxWidth) return;
+
             $(equalHeight.config.selector).each(function(){
                 if($(this).height() > equalHeight.config.setHeightTo) 
                     equalHeight.config.setHeightTo = $(this).height();
@@ -234,11 +236,8 @@
             $(equalHeight.config.selector).css('height', equalHeight.config.setHeightTo + 'px');
         },
         reset: function(){
-            if (window.innerWidth < equalHeight.config.maxWidth){
-                $(equalHeight.config.selector).removeAttr('style');
-                return;
-            } 
-            equalHeight.setHeight();
+            $(equalHeight.config.selector).removeAttr('style');
+            window.setTimeout(equalHeight.setHeight, 300)
         }
     };
 
