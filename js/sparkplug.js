@@ -79,10 +79,10 @@
         },
         fire: function(activeTarget) {
             // Allow only one active modal
-            $(activeDialogue.config.modalSelector).css('display', 'none');
+            $(activeDialogue.config.modalSelector).removeClass('active');
             $('.modal').each(function() {
                 if (activeTarget.currentTarget.dataset['fire'] == this.id) {
-                    $(this).css('display', 'initial');
+                    $(this).addClass('active');
                     $('body').addClass('active-modal');
                     return false;
                 }
@@ -90,8 +90,8 @@
         },
         open: function(id) {
             // Allow only one active modal
-            $(activeDialogue.config.modalSelector).css('display', 'none');
-            $('#' + id).css('display', 'initial');
+            $(activeDialogue.config.modalSelector).removeClass('active');
+            $('#' + id).addClass('active');
             $('body').addClass('active-modal');
         },
         close: function(e) {
@@ -107,7 +107,7 @@
                 return;
             }
             activeDialogue.config.mouseDownHere = false;
-            $(activeDialogue.config.modalSelector).css('display', 'none');
+            $(activeDialogue.config.modalSelector).removeClass('active');
             $('body').removeClass('active-modal');
         },
         next: function(e) {
