@@ -203,8 +203,8 @@
 	bottom:0;
 	margin-bottom:20px;
 	right:20px;
-	
 	.transition(all ease .35s);
+	
 	i{
 		position: absolute;
 		z-index:10000000000;
@@ -218,6 +218,7 @@
 		font-size: 20px;
 		-webkit-font-smoothing: antialiased;
 	}
+
 	ul{
 		margin:0;
 		visibility:hidden;
@@ -226,6 +227,7 @@
 		position:absolute;
 		width:100%;
 		-webkit-font-smoothing: antialiased;
+
 		li{
 			a{
 				display: block;
@@ -241,8 +243,9 @@
 
 	&.active{
 		border-radius:@global-radius;
-
+		width: 88%;
 		.transition(all ease .35s);
+		
 		ul{
 			visibility:visible;
 			opacity:1;
@@ -263,6 +266,44 @@
 		visibility: hidden;
 	}
 }
+
+@media only screen and (min-width: @medium-up) {}
+
+@media only screen and (min-width: @large-up) {
+	
+	.thumbNav{
+		position: static;
+		width:100%;
+		height:auto;
+	}
+
+	.thumbNav ul{
+		position: static;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.thumbNav ul li {
+		display: inline-block;
+	}
+
+	.thumbNav ul li a {
+		padding:.6rem 2rem;
+	}
+
+	.thumbNav ul li a:hover{
+		background-color: @primary-color;
+		.transition();
+	}	
+
+	.iconSprite{
+		display: none;
+	}
+
+}
+
+
+
 /* End */
 
 /* Multilevel */
