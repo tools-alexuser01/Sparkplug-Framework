@@ -8,8 +8,8 @@
     // Toggle Menu
     var toggleMenu = {
         config: {
-            navSelector: '.navtoggle',
-            toggleSelector: '.navtoggle-burger',
+            navSelector: '.navToggle',
+            toggleSelector: '.navToggle-burger',
             initialNavHeight: '',
             activeClass: 'active',
             hideClass: 'hidden',
