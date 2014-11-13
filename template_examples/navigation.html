@@ -9,47 +9,182 @@
 
     <!-- Compiled SMACSS -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="css/animate.css">
-
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/animate.css">
 
     <!-- Web Font -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 </head>
 
-<body class="egpage">
+<body>
+    <div class="row">
+        <div class="large-8 large-offset-4 medium-8 medium-offset-4 columns">
 
-
-    <div class="row wow fadeIn">
-
-        <h1>Navigation Patterns</h1>
-            <div class="row">
-                <h5>Do-Nothing</h5>
+        <h5>Basic Toggle</h5>
+                <nav class="navtoggle">
+                    <a href="#" class="navtoggle-burger">
+                        Menu
+                    </a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a> </li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+             <h1>Navigation Patterns</h1>
+                <h1>Multi-Level</h1>
+                <nav class="menu">
+                    <ul>
+                        <li class="has-submenu"><a href="#" class="">For Facilities</a>
+                            <ul class="sub-menu">
+                                 <li><a href="#">Artificial Turf</a></li>
+                                 <li class="has-submenu">
+                                    <a href="#" class="">Batting Cages</a>
+                                    <ul class="">
+                                        <li><a href="#">Indoor</a></li>
+                                        <li><a href="#">Outdoor</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Benches &amp; Bleachers</a></li>
+                                 <li><a href="#">Communication Devices</a></li>
+                                 <li><a href="#">Dugouts</a></li>
+                                 <li><a href="#">Fencing &amp; Windscreen</a></li>
+                                 <li><a href="#">Floor Protectors</a></li>
+                                 <li><a href="#">Foul Poles</a></li>
+                                 <li><a href="#">Shade Structures</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#">Field Maintenance</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">All-in-One Team Cart</a></li>
+                                <li><a href="#">Air &amp; Electrical Reels</a></li>
+                                 <li><a href="#">Field Drags</a></li>
+                                 <li class="has-submenu">
+                                    <a href="#">Field Marking Equipment</a>
+                                    <ul>
+                                        <li><a href="#">Batter's Box Templates</a></li>
+                                        <li><a href="#">Dryline Markers</a></li>
+                                        <li><a href="#">Field Paint</a></li>
+                                        <li><a href="#">Field Sprayers</a></li>
+                                        <li><a href="#">Stencils</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-submenu">
+                                    <a href="#">Field Tarps</a>
+                                    <ul>
+                                        <li><a href="#">Area Tarps</a></li>
+                                        <li><a href="#">Growth Covers / Protectors</a></li>
+                                        <li><a href="#">Infield Tarps</a></li>
+                                        <li><a href="#">Tarp Accessories</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Hand Tools</a></li>
+                                 <li class="has-submenu">
+                                    <a href="#">Irrigation, Hoses, Nozzles</a>
+                                    <ul>
+                                        <li><a href="#">Hoses &amp; Hose Reels</a></li>
+                                        <li><a href="#">Irrigation</a></li>
+                                        <li><a href="#">Nozzles</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Layout &amp; Measurement Tools</a></li>
+                                 <li><a href="#">Moisture Removal</a></li>
+                                 <li><a href="#">Mound &amp; Home Plate Fortification</a></li>
+                                 <li><a href="#">Mowers &amp; Stripers</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#">Game-Practice Equipment</a>
+                            <ul class="sub-menu">
+                                 <li class="has-submenu">
+                                    <a href="#">Baseball - Softball</a>
+                                    <ul>
+                                        <li><a href="#">Base Accessories</a></li>
+                                        <li><a href="#">Bases &amp; Home Plates</a></li>
+                                        <li><a href="#">Game Accessories</a></li>
+                                        <li><a href="#">Pitching Rubbers</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-submenu">
+                                    <a href="#">Batting Practice Equipment</a>
+                                    <ul>
+                                        <li><a href="#">Backstops</a></li>
+                                        <li><a href="#">Infield Screens</a></li>
+                                        <li><a href="#">Jugs Pitching Machines</a></li>
+                                        <li><a href="#">Turf Mats</a></li>
+                                        <li><a href="#">Turf Protectors</a></li>
+                                        <li><a href="#">Replacement Accessories</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-submenu">
+                                    <a href="#">Batting Cages</a>
+                                    <ul>
+                                        <li><a href="#">Indoor</a></li>
+                                        <li><a href="#">Outdoor</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-submenu">
+                                    <a href="#">Portable Mounds</a>
+                                    <ul>
+                                        <li><a href="#">Batting Practice Mounds</a></li>
+                                        <li><a href="#">Game Mounds</a></li>
+                                        <li><a href="#">Practice Mounds</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-submenu">
+                                    <a href="#">Football</a>
+                                    <ul>
+                                        <li><a href="#">First Down Markers</a></li>
+                                        <li><a href="#">Football Accessories</a></li>
+                                        <li><a href="#">Football Goalposts</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-submenu">
+                                    <a href="#">Soccer</a>
+                                    <ul>
+                                        <li><a href="#">Soccer Goals</a></li>
+                                        <li><a href="#">Soccer Accessories</a></li>
+                                    </ul>
+                                 </li>
+                                 
+                            </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#">Training &amp; Conditioning</a>
+                            <ul class="sub-menu">
+                                 <li><a href="#">Ladders &amp; Sticks</a></li>
+                                 <li><a href="#">Hurdles</a></li>
+                                 <li><a href="#">Training Accessories</a></li>
+                                 <li><a href="#">Smart-Cart Training System</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#">Books-Videos</a>
+                            <ul class="sub-menu">
+                                 <li><a href="#">Field Design &amp; Maintenance</a></li>
+                                 <li><a href="#">Turf Management</a></li>
+                                 <li><a href="#">Training</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <h5>Do Nothing</h5>
+                <p>The default nav behavior is the 'do-nothing' approach. Nav items are floated left and have no special behavior for smaller viewports.</p>
                 <nav class="doNothing">
                     <ul>
-                        <li><a href="#">Home</a>
-                        </li>
-                        <li><a href="#">About</a>
-                        </li>
-                        <li><a href="#">Services</a>
-                        </li>
-                        <li><a href="#">History</a>
-                        </li>
-                        <li><a href="#">Contact</a>
-                        </li>
-
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
 
-        </div>
+      
 
-                <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    
 
-            <div class="row">
+            
                 <h5>Block Navigation</h5>
                 <nav class="navBlock">
                     <ul>
@@ -65,208 +200,34 @@
                         </li>
                     </ul>
                 </nav>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis velit facilis tenetur, eligendi totam distinctio blanditiis corporis aperiam tempore nesciunt libero adipisci commodi nam praesentium magni sequi voluptas culpa.
 
-                  </div>
-
-                          <br>
-        <br>
-        <br>
-        <br>
-        <br>
+                
+   
 
 
-              <div class="row">
-                <h5>Basic Toggle</h5>
-                <nav class="navtoggle">
-                    <a href="#" class="navtoggle-burger">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <ul>
-                        <li><a href="#">Home</a>
-                        </li>
-                        <li><a href="#">About</a>
-                        </li>
-                        <li><a href="#">Services</a>
-                        </li>
-                        <li><a href="#">History</a>
-                        </li>
-                        <li><a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+       
+        
+        
         </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <div class="row">
-        	<div class="container">
-		
-		<a class="menu-link" href="#menu">Menu</a>
-		
-		<nav id="menu" class="menu">
-			<ul>
-	        	<li class="has-submenu"><a href="#" class="">For Facilities</a>
-	        		<ul class="sub-menu">
-	        			 <li><a href="#">Artificial Turf</a></li>
-	        			 <li class="has-submenu">
-	        				<a href="#" class="">Batting Cages</a>
-	        				<ul class="">
-	        					<li><a href="#">Indoor</a></li>
-	        					<li><a href="#">Outdoor</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li><a href="#">Benches &amp; Bleachers</a></li>
-	        			 <li><a href="#">Communication Devices</a></li>
-	        			 <li><a href="#">Dugouts</a></li>
-	        			 <li><a href="#">Fencing &amp; Windscreen</a></li>
-	        			 <li><a href="#">Floor Protectors</a></li>
-	        			 <li><a href="#">Foul Poles</a></li>
-	        			 <li><a href="#">Shade Structures</a></li>
-	        		</ul>
-	        	</li>
-	        	<li class="has-submenu"><a href="#">Field Maintenance</a>
-	        		<ul class="sub-menu">
-	        			<li><a href="#">All-in-One Team Cart</a></li>
-	        			<li><a href="#">Air &amp; Electrical Reels</a></li>
-	        			 <li><a href="#">Field Drags</a></li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Field Marking Equipment</a>
-	        				<ul>
-	        					<li><a href="#">Batter's Box Templates</a></li>
-	        					<li><a href="#">Dryline Markers</a></li>
-	        					<li><a href="#">Field Paint</a></li>
-	        					<li><a href="#">Field Sprayers</a></li>
-	        					<li><a href="#">Stencils</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Field Tarps</a>
-	        				<ul>
-	        					<li><a href="#">Area Tarps</a></li>
-	        					<li><a href="#">Growth Covers / Protectors</a></li>
-	        					<li><a href="#">Infield Tarps</a></li>
-	        					<li><a href="#">Tarp Accessories</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li><a href="#">Hand Tools</a></li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Irrigation, Hoses, Nozzles</a>
-	        				<ul>
-	        					<li><a href="#">Hoses &amp; Hose Reels</a></li>
-	        					<li><a href="#">Irrigation</a></li>
-	        					<li><a href="#">Nozzles</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li><a href="#">Layout &amp; Measurement Tools</a></li>
-	        			 <li><a href="#">Moisture Removal</a></li>
-	        			 <li><a href="#">Mound &amp; Home Plate Fortification</a></li>
-	        			 <li><a href="#">Mowers &amp; Stripers</a></li>
-	        		</ul>
-	        	</li>
-	        	<li class="has-submenu"><a href="#">Game-Practice Equipment</a>
-	        		<ul class="sub-menu">
-	        			 <li class="has-submenu">
-	        				<a href="#">Baseball - Softball</a>
-	        				<ul>
-	        					<li><a href="#">Base Accessories</a></li>
-	        					<li><a href="#">Bases &amp; Home Plates</a></li>
-	        					<li><a href="#">Game Accessories</a></li>
-	        					<li><a href="#">Pitching Rubbers</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Batting Practice Equipment</a>
-	        				<ul>
-	        					<li><a href="#">Backstops</a></li>
-	        					<li><a href="#">Infield Screens</a></li>
-	        					<li><a href="#">Jugs Pitching Machines</a></li>
-	        					<li><a href="#">Turf Mats</a></li>
-	        					<li><a href="#">Turf Protectors</a></li>
-	        					<li><a href="#">Replacement Accessories</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Batting Cages</a>
-	        				<ul>
-	        					<li><a href="#">Indoor</a></li>
-	        					<li><a href="#">Outdoor</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Portable Mounds</a>
-	        				<ul>
-	        					<li><a href="#">Batting Practice Mounds</a></li>
-	        					<li><a href="#">Game Mounds</a></li>
-	        					<li><a href="#">Practice Mounds</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Football</a>
-	        				<ul>
-	        					<li><a href="#">First Down Markers</a></li>
-	        					<li><a href="#">Football Accessories</a></li>
-	        					<li><a href="#">Football Goalposts</a></li>
-	        				</ul>
-	        			 </li>
-	        			 <li class="has-submenu">
-	        				<a href="#">Soccer</a>
-	        				<ul>
-	        					<li><a href="#">Soccer Goals</a></li>
-	        					<li><a href="#">Soccer Accessories</a></li>
-	        				</ul>
-	        			 </li>
-	        			 
-	        		</ul>
-	        	</li>
-	        	<li class="has-submenu"><a href="#">Training &amp; Conditioning</a>
-	        		<ul class="sub-menu">
-	        			 <li><a href="#">Ladders &amp; Sticks</a></li>
-	        			 <li><a href="#">Hurdles</a></li>
-	        			 <li><a href="#">Training Accessories</a></li>
-	        			 <li><a href="#">Smart-Cart Training System</a></li>
-	        		</ul>
-	        	</li>
-	        	<li class="has-submenu"><a href="#">Books-Videos</a>
-	        		<ul class="sub-menu">
-	        			 <li><a href="#">Field Design &amp; Maintenance</a></li>
-	        			 <li><a href="#">Turf Management</a></li>
-	        			 <li><a href="#">Training</a></li>
-	        		</ul>
-	        	</li>
-	        </ul>
-		</nav>
-	 <br>
-	 <br>
-	 <br>
-	 <br>
-	 <br>
-	</div>
-        </div>
-
     </div>
 
-    <script src="js/custom.js"></script>
-    <script src="js/wow.min.js">
-	</script>
-        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/wow.min.js" type="text/javascript"></script>
+    <script src="../js/sparkplug.js" type="text/javascript"></script>
 
-    <script>
-    new WOW().init();
-
-    wow = new WOW({
-        boxClass: 'wow', // default
-        animateClass: 'animated', // default
-        offset: 0 // default
-    })
-    </script>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 </body>
+
+</html>
