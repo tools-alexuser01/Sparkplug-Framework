@@ -2,173 +2,165 @@
 //				Navigation
 // ==============================================
 
-.doNothing {
+.doNothing{	
 	display: block;
-	&:after{
-		visibility: hidden;
-	    display: block;
-	    font-size: 0;
-	    content: " ";
-	    clear: both;
-	    height: 0;
-	}
+}
+.doNothing:after{
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.doNothing ul{
+	margin: 0;
+	display: block;
+	margin: 10px 0px 20px;
+	float: left;
+}
 
-	ul{
-		margin: 0;
-		display: block;
-		margin: 10px 0px 20px;
-		float: left;
-	
-		li{
-			float:left;
-			list-style: none;
-			a{
-				text-decoration: none;
-				padding: 1rem;
-				font-size: 16px;
-				float: left;
-				color: @font-color;
-				border-radius: 3px;
-				.transition();
-				&:hover{
-					color: @white;
-					background-color: @secondary-color;
-					.transition();
-				}
-			}
-		}
-	}
+.doNothing ul li{
+	float:left;
+	list-style: none;
+}
+.doNothing ul li a{
+	text-decoration: none;
+	padding: 1rem;
+	font-size: 16px;
+	float: left;
+	color: @font-color;
+	border-radius: 3px;
+	.transition();
+}
+
+.doNothing ul li a:hover{
+	color: @white;
+	background-color: @secondary-color;
+	.transition();
 }
 
 /* Block Nav */
 
 .navBlock {
 	display: block;
-	background-color: @primary-color;
+	background-color: @primary-color;	
+}
 
-	&:after {
-		visibility: hidden;
-	    display: block;
-	    font-size: 0;
-	    content: " ";
-	    clear: both;
-	    height: 0;
-	}
+.navBlock:after {
+	visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;	
+}
 
-	ul {
-		margin-left: 0;
-	}
+.navBlock ul {
+	margin-left: 0;
+}
 
-	li {
-		width: 50%;
-		float: left;
-	  	list-style: none;
+.navBlock ul li {
+	width: 50%;
+	float: left;
+	list-style: none;
+}
 
-	
-		a{
-			display: block;
-	  		padding: 1rem 2rem;
-	  		text-decoration: none;
-	  		color: @white;
-	  		text-align:center;
-			.transition();
+.navBlock ul li a {
+	display: block;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	color: @white;
+	text-align:center;
+	.transition();
+}
 
-			&:hover{
-				background-color: @secondary-color;
-				.transition();
-			}
-		}
-	}
+.navBlock ul li a:hover {
+	background-color: @secondary-color;
+	.transition();
 }
 
 @media only screen and (min-width: @medium-up) {
-		
-	.navBlock{
-		li{
-		  width: 33.3333%;
-		}
-	}
-
+	
+	.navBlock li{
+		width: 33.3333%;
+	}	
 }
 @media only screen and (min-width: @large-up) {
 
-	.navBlock {
-
-		ul{
-			margin: 0;
-
-			li{
-				width: auto;
-			}
-		}
+	.navBlock ul {
+		margin:0;
+	}
+	.navBlock ul li{
+		width: auto;
 	}
 
 }
 
-/* End */ 
 
 /* Nav Toggle */
 
-.navtoggle {
+.navToggle{
 	display: block;
 	background-color: @mono-color;
 	color: @font-color;
 	overflow: hidden;
 	width:100%;
 	.transition();
-	
-	&.hidden {
-		visibility: hidden;
-		position: absolute;
-	}
-
-	&:after { 
-		 visibility: hidden;
-	     display: block;
-	     font-size: 0;
-	     content: " ";
-	     clear: both;
-	     height: 0;
-	}
-
-	&.active {
-		.transition();
-
-		.navtoggle-burger{
-			background-color: @primary-color;
-			color: @white;
-		}
-	}
-
-	ul { 
-		margin: 0;
-		float: left;
-		margin-top: 5px;
-		width: 100%;
-
-		li {
-			width: 100%;
-			float: left;
-	  		list-style: none;
-			
-			a {
-			  	display: block;
-		  		padding: 15px 25px;
-		  		text-decoration: none;
-		  		color: @font-color;
-				.transition();
-				
-				&:hover {
-					background-color: @primary-color;
-					color:@white;
-					.transition();
-				}
-			}
-		}
-	}
+	background-color: @primary-color;
+	color: @white;
 }
 
-.navtoggle-burger {
+.navToggle ul{
+
+	.transition();
+}
+
+.navToggle ul.hidden{
+	visibility: hidden;
+	position: absolute;
+	.transition();
+}
+
+.navToggle:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
+.navToggle.active .navToggle-burger{
+
+}
+
+.navToggle ul{
+	margin: 0;
+	float: left;
+	margin-top: 5px;
+	width: 100%;
+}
+.navToggle ul li{
+	width: 100%;
+	float: left;
+	list-style: none;
+}
+.navToggle ul li a{
+	display: block;
+	padding: 15px 25px;
+	text-decoration: none;
+	color: @white;
+	.transition();
+}
+.navToggle ul li a:hover{
+	background-color: @primary-color;
+	color:@white;
+	.transition();
+}
+.navToggle{}
+.navToggle-burger{
 	float: right;
 	padding: 10px;
 	font-size: 1em;
@@ -180,17 +172,27 @@
 	margin:.5em 1em .5em 0;
 	color: @font-color;
 	.transition();
-	&:hover{
-		background-color:@primary-color;
-		color: @white;
-		.transition();
+}
+.navToggle-burger:hover{
+	background-color: @primary-color;
+	color:@white;
+	.transition();
+}
+
+@media only screen and (min-width: @medium-up) {}
+
+@media only screen and (min-width: @large-up) {
+
+	.navToggle ul li{
+		width: auto;
 	}
+	.navToggle-burger{display: none;}
+
 }
 
 
-/* End */
 
-/* Nav Toggle */
+/* ThumbNav */
 
 .thumbNav{
 	position:fixed;
@@ -204,8 +206,8 @@
 	margin-bottom:20px;
 	right:20px;
 	.transition(all ease .35s);
-	
-	i{
+}
+.thumbNav i{
 		position: absolute;
 		z-index:10000000000;
 		bottom: 0;
@@ -217,54 +219,46 @@
 		color: @white;
 		font-size: 20px;
 		-webkit-font-smoothing: antialiased;
-	}
-
-	ul{
-		margin:0;
+}
+.thumbNav ul{
+			margin:0;
 		visibility:hidden;
 		opacity:0;
 		list-style:none;
 		position:absolute;
 		width:100%;
 		-webkit-font-smoothing: antialiased;
-
-		li{
-			a{
-				display: block;
+}
+.thumbNav ul li a{
+					display: block;
 				width:100%;
 				padding:1rem 2rem;
 				color:@white;
 				text-decoration: none;
 				font-weight:100;
 				-webkit-font-smoothing: antialiased;
-			}
-		}
-	}
-
-	&.active{
-		border-radius:@global-radius;
+}
+.thumbNav.active{
+			border-radius:@global-radius;
 		width: 88%;
 		.transition(all ease .35s);
-		
-		ul{
-			visibility:visible;
+}
+.thumbNav.active ul{
+				visibility:visible;
 			opacity:1;
 			.transition(all ease .35s);
-		}
-	}
 }
 
-.iconSprite{
-	i:first-child{
-		.transition(all ease .35s);
-		opacity:1;
-		visibility: visible;
-	}
-	i:last-child{
-		.transition(all ease .35s);
-		opacity:0;
-		visibility: hidden;
-	}
+.iconSprite i:first-child{
+	.transition(all ease .35s);
+	opacity:1;
+	visibility: visible;	
+}
+
+.iconSprite i:last-child{
+	.transition(all ease .35s);
+	opacity:0;
+	visibility: hidden;
 }
 
 @media only screen and (min-width: @medium-up) {}
@@ -304,7 +298,7 @@
 
 
 
-/* End */
+
 
 /* Multilevel */
 

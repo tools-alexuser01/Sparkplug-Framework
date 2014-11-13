@@ -9,9 +9,11 @@
 
     <!-- Compiled SMACSS -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../css/animate.css">
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 
     <!-- Web Font -->
 
@@ -20,7 +22,7 @@
 <body class="egpage">
 
 
-    <div class="row wow fadeIn">
+    <div class="row">
 
         <h1>Navigation Patterns</h1>
             <div class="row">
@@ -40,14 +42,8 @@
 
                     </ul>
                 </nav>
-
         </div>
 
-                <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
             <div class="row">
                 <h5>Block Navigation</h5>
@@ -68,20 +64,14 @@
 
                   </div>
 
-                          <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
 
               <div class="row">
                 <h5>Basic Toggle</h5>
-                <nav class="navtoggle">
-                    <a href="#" class="navtoggle-burger">
+                <nav class="navToggle">
+                    <a href="#" class="navToggle-burger">
                         <i class="fa fa-bars"></i>
                     </a>
-                    <ul>
+                    <ul class="hidden">
                         <li><a href="#">Home</a>
                         </li>
                         <li><a href="#">About</a>
@@ -96,11 +86,29 @@
                 </nav>
         </div>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
+
+              <div class="row">
+                <h5>Basic Toggle</h5>
+                <nav class="navToggle">
+                    <a href="#" class="navToggle-burger">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <ul class="hidden">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li><a href="#">About</a>
+                        </li>
+                        <li><a href="#">Services</a>
+                        </li>
+                        <li><a href="#">History</a>
+                        </li>
+                        <li><a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+
 
         <div class="row">
         	<div class="container">
@@ -249,20 +257,22 @@
 
     </div>
 
-    <script src="js/custom.js"></script>
-    <script src="js/wow.min.js">
-	</script>
-        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/sparkplug.js"></script>
+    <script src="../js/wow.min.js">	</script>
 
     <script>
-    new WOW().init();
 
-    wow = new WOW({
-        boxClass: 'wow', // default
-        animateClass: 'animated', // default
-        offset: 0 // default
-    })
+	$(document).ready(function() {
+
+		$(".navToggle-burger").on('click', function(e) {
+			$(this).closest(".navToggle").find("ul").toggleClass("hidden");
+				e.preventDefault();
+		});
+
+	});
     </script>
+
+
 
     <br>
     <br>

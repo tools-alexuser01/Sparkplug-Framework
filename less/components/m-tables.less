@@ -2,9 +2,16 @@
 //				Tables
 // ==============================================
 
+// == Index of Tables ==
+// 1. Default Table (no class Required)
+// 2. Bordered Table
+// 3. Responsive Table
+
+
+/* Bordered Table */
 table.table-bordered td,
 table.table-bordered th {
-	border: 1px solid #ddd;
+	border: 1px solid @mono-color;
 }
 table.table-simple td,
 table.table-simple th {
@@ -17,14 +24,15 @@ table.table-flat th {
 	padding: 0;
 }
 table.table-striped tbody tr:nth-child(odd) td {
-	background-color: #f8f8f8;
+	background-color: lighten(@mono-color, 5%);
 }
 table.table-hovered tbody tr:hover td {
-	background-color: #f4f4f4;
+	background-color: lighten(@mono-color, 5%);
 }
 
-/* Responsive Tables */
 
+
+/* Responsive Tables */
 .column, .columns{
 	table{
 		width:100%;
@@ -35,13 +43,15 @@ table.table-hovered tbody tr:hover td {
 	width: 100%;
 	overflow: auto;
 	margin-bottom: 0;
+	
 	& table {
 		margin-bottom: 0;
 	}
+	
 	&::-webkit-scrollbar {
 		-webkit-appearance: none;
-		width: 14px;
-		height: 14px;
+		width: 1rem;
+		height: 1rem;
 	}
 	&::-webkit-scrollbar-thumb {
 		border-radius: 8px;
@@ -53,15 +63,21 @@ table.table-hovered tbody tr:hover td {
 
 th,
 td {
-	border-bottom: 1px solid #eee;
-	padding: 8px 10px;
+	border-bottom: 1px solid @mono-color;
+	padding: .5rem .6rem;
 }
 .no-wrap td{
 	white-space: nowrap;
 }
+
 table caption {
 	text-transform: uppercase;
 	padding: 0 1em;
 	color: #777;
 	font-size: @base-font-size - .3rem;
 }
+
+
+@media only screen and (min-width: @medium-up) {}
+
+@media only screen and (min-width: @large-up) {}
