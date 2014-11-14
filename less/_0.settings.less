@@ -5,6 +5,9 @@
 // 1 Global Settings
 // 2 Theme Settings
 // 3 Color Variables
+// 4 Typography Settings
+// 5 Form Settings
+// 6 buttons
 
 
 
@@ -16,6 +19,10 @@
 @body-bg: @white; // you can set body-bg to a variable, color, or image
 @global-radius: 3px; // the roundness of all things (buttons, inputs, panels, boxes)
 @global-background-transition: background-color 300ms ease-out;
+
+@global-transition:all ease .2s; // for use with the .transition(); mixin
+@global-blur:5px; // for use with the .blur(); mixin
+
 
 
 // ----------------------------------------
@@ -33,6 +40,9 @@
 @disabled: #808080;
 @white: #fff;
 @black: #333; // ok so not REALLY black.
+
+//Pro Tip: to use RGBA, use LESS's baked in fade(@color, 10%) mixin
+
 
 
 
@@ -101,7 +111,6 @@
 // ---------------------------------------------------------
 
 
-@modal-background-overlay: rgba(0, 0, 0, .2);
 @modal-width:37.5rem;
 
 

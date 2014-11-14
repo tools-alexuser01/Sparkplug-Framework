@@ -83,21 +83,25 @@ blockquote {
 	font-style: italic;
 	padding: 0 0 0 1rem;
 	margin: 0 0 1rem 1rem;
-	border-left: 2px solid #dbdada;
-	& p {
-		margin-bottom: .5em;
-	}
+	border-left: 2px solid @mono-color;
+
 }
+blockquote p {
+	margin-bottom: .5em;
+}
+
 blockquote small, small {
 	font-size: @base-font-size - .3rem;
 	line-height: 1;
 }
+
 del {text-decoration: line-through;}
 abbr[title],
 dfn[title] {
 	border-bottom: 1px dotted #000;
 	cursor: help;
 }
+
 strong,
 b {font-weight: bold;}
 em,
@@ -143,30 +147,16 @@ pre code {
 	border: 0px;
 	padding: 0px;
 	margin: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
+	border-radius: @global-radius;
 }
 
 pre, code {
 	font-family: Consolas, 'Liberation Mono', Courier, monospace;
 	color: @font-color;
 	background: lighten(@disabled, 45%);
-   .border-radius-global(); 
+    border-radius:@global-radius;
 }
 
 pre, pre code {
 	font-size: @base-font-size - .3rem;
-}
-kbd {
-	padding: 2px 6px 1px 6px;
-	line-height: 1;
-	display: inline-block;
-	border-radius: .3em;
-	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px white inset;
-	background-color: #fafafa;
-	border: 1px solid #ccc;
-	color: @font-color;
-	font-weight: normal;
-	white-space: nowrap;
 }

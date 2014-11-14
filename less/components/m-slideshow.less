@@ -12,10 +12,7 @@ ul[data-slideshow]{
 }
 
 ul[data-slideshow] li {
-  transition: visibility 0ms ease 300ms, opacity 300ms ease;
-  -webkit-transition: visibility 0ms ease 300ms, opacity 300ms ease;
-  -moz-transition: visibility 0ms ease 300ms, opacity 300ms ease;
-  -o-transition: visibility 0ms ease 300ms, opacity 300ms ease;
+.transition();
 }
 
 ul[data-slideshow] > li{
@@ -38,10 +35,12 @@ ul[data-slideshow] img{
   float: left;
   width: 100%;
   border: 0;
-  border-radius:3px;
+  border-radius:@global-radius;
   width:100%;
   max-width:100%;
+  .blur();
 }
+
 [data-next], [data-prev]{
   cursor:pointer;
    -webkit-touch-callout: none;
@@ -64,23 +63,44 @@ ul.ss-navigation{
   bottom: 0;
 }
 ul.ss-navigation li{
-  padding:5px 10px;
+  padding:.5rem 1.5rem;
   padding-top: 30%;
   height:100%;
-  background: rgba(251, 251, 251, .4);
-  color:#333;
+  background: fade(@white, 50%);
+  color:@black;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size:75%
+  background-size:75%;
 }
 
-[data-next]{
-  background-image: url('../img/chevron-right.png') !important;
+// Adds .fa attributes
+ul.ss-navigation li[data-next],
+ul.ss-navigation li[data-prev], {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-[data-prev]{
-  background-image: url('../img/chevron-left.png') !important;
+ul.ss-navigation li[data-prev]:before,
+ul.ss-navigation li[data-next]:before{
+color: @white;
+font-size: 2rem;
+text-shadow: 0px 1px 0px @black;
 }
+
+ul.ss-navigation li[data-prev]:before{
+content: "\f053";
+}
+
+ul.ss-navigation li[data-next]:before{
+  content: "\f054";
+}
+
+
 ul.ss-navigation li:first-child{ 
   float:left;
 }

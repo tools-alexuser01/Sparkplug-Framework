@@ -1,0 +1,51 @@
+// ==============================================
+//        Content Collapse
+// ==============================================
+
+.contentCollapse{
+	border:1px solid @mono-color;
+	border-radius:@global-radius;
+	margin-top:1rem;
+}
+.contentCollapse [data-toggle]{
+	display:block;
+	padding:.5em 1em;
+	cursor:pointer;
+	color:@font-color;
+	.transition();
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.contentCollapse-content{
+	display:none;
+	padding:1rem 2rem;
+	border-top: 1px solid @mono-color;
+}
+
+i.contentCollapse-plus{
+	font-size: 1.5rem;
+	float: right;
+	padding: .8rem 1rem;
+	color:darken(@mono-color, 10%);
+
+}
+.contentCollapse i.contentCollapse-plus:before{
+	content: "\f196";
+}
+
+.contentCollapse.open i.contentCollapse-plus:before{
+	content: "\f147";
+}
+
+.contentCollapse.open [data-toggle]{
+	 .transition();
+	 color:@secondary-color;
+
+}
+
