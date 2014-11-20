@@ -10,34 +10,67 @@
         config: {
             navSelector: '.navToggle',
             toggleSelector: '.navToggle-burger',
-            initialNavHeight: '',
             activeClass: 'active',
-            hideClass: 'hidden',
-            addClass: ''
+            // Point at which toggle menu 
+            // switches between default and dropdown behavior.
+            maxWidth: 1200
         },
-        totalHeight: '',
         init: function() {
-            toggleMenu.totalHeight = $(toggleMenu.config.navSelector).height() + 'px';
-
-            $(toggleMenu.config.navSelector + ' ul').css('display', 'none');
-            toggleMenu.config.initialNavHeight = $(toggleMenu.config.navSelector).height() + 'px';
-            $(toggleMenu.config.navSelector + ' ul').removeAttr('style');
-
-            $(toggleMenu.config.navSelector).height(toggleMenu.config.initialNavHeight)
-                .removeClass(toggleMenu.config.hideClass)
-                .addClass(toggleMenu.config.addClass);
             $(toggleMenu.config.toggleSelector).on('click', toggleMenu.toggle);
+            $(window).on('resize', toggleMenu.reset);
+
+            toggleMenu.reset();
+        },
+        setup: function(){
+            // TODO: This block can only be fired on load. Can't fire on window resize.
+            $(toggleMenu.config.navSelector).each(function(){
+                var totalHeight = $(this).height() + $(this).find('ul').height();
+                var initialHeight;
+
+                $(this).find('ul').css('display', 'none');
+                initialHeight = $(this).height() + 'px';
+                $(this).find('ul').removeAttr('style');
+
+                $(this).data({
+                    'totalHeight': totalHeight,
+                    'initialHeight': initialHeight
+                });
+
+                $(this).height(initialHeight);
+
+                $(this).find('ul').css({
+                    'visibility':'visible',
+                    'position':'static'
+                });
+            });
+        },
+        reset: function(){
+            if(window.innerWidth > toggleMenu.config.maxWidth){
+                $(toggleMenu.config.navSelector).removeAttr('style');
+                $(toggleMenu.config.navSelector).each(function(){
+                    $(this).find('ul').css({
+                        'visibility':'visible',
+                        'position':'static'
+                    });
+                });
+                return;
+            }
+            toggleMenu.setup();
         },
         toggle: function(e) {
-            $nav = $(this).closest(toggleMenu.config.navSelector);
             e.preventDefault();
+            var $nav = $(this).closest(toggleMenu.config.navSelector),
+                totalHeight = $nav.data('totalHeight'),
+                initialHeight = $nav.data('initialHeight');
+
             $nav.toggleClass(toggleMenu.config.activeClass);
             // Open
             if ($nav.hasClass(toggleMenu.config.activeClass))
-                $nav.height(toggleMenu.totalHeight);
+                $nav.height(totalHeight);
+
             // Close
             if (!$nav.hasClass(toggleMenu.config.activeClass))
-                $nav.height(toggleMenu.config.initialNavHeight);
+                $nav.height(initialHeight);
         }
     };
 
