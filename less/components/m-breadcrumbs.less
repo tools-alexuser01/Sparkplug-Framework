@@ -8,19 +8,22 @@
 	border: 1px solid darken(@mono-color, 5%);
 	border-radius: @global-radius;
 	padding-left: 1rem;
-	.clearfix;
+	.clearfix();
 }
+
 .breadcrumbs ul {
 	font-size: .8em;
 	color: @font-color;
 	list-style: none;
 	margin: 0;
-	.clearfix;
+	.clearfix();
 }
+
 .breadcrumbs ul li {
 	float: left;
 	margin-right: .2rem;
 }
+
 .breadcrumbs li + li:before {
     content: ">";
     color: #aaa;
@@ -29,24 +32,30 @@
 	position: relative;
 	top: -1px;
 }
+
 .breadcrumbs-sections li + li:before {
     content: " | ";
 	top: 0;
 }
+
 .breadcrumbs-path li + li:before {
     content: " / ";
 	top: 0;
 }
+
 .breadcrumbs ul li a {
 	color: @primary-color;
 	text-decoration: none;
 }
+
 .breadcrumbs ul li.active a {
 	text-decoration: none;
 	cursor: text;
 	color: @font-color;
 }
+
 .breadcrumbs ul li a:hover {
 	color: @primary-color;
 	text-decoration: underline;
 }
+

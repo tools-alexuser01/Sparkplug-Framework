@@ -42,8 +42,8 @@ button:focus {
 	margin:.8rem 0;
 	border:none;
 
-	.border-radius-global();	
-	.transition-bg-global();
+	border-radius: @global-radius;	
+	.transition();
 	&:hover {
 			background: darken(@primary-color, 10%);
 			color:@white;

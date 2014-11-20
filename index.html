@@ -46,71 +46,61 @@
 				
 
 				<h5>Basic Grid</h5>
-				<p>Large Grids only represent column width on large screens. When you resize the screen, it will break down to 100%. this can be any combination of numbers as long as it ads up to the number of your total columns.</p>
+				<p>The grid is really easy to use. for instance if you put .large-4.columns on a div it will span 4/12ths of it's parent container on "Large" screens. When resized below "large" it will break down to 100% width. This can be any combination of numbers as long as it ads up to the number of your total columns.</p>
 				<div class="row">
-					<div class="large-2 columns">
-						<span class="">large-2</span>
+					<div class="large-4 columns">
+						<span class="">large-4</span>
 						
 					</div>
-					<div class="large-2 columns">
-						<span class="">large-2</span>
+					<div class="large-4 columns">
+						<span class="">large-4</span>
 						
 					</div>
-					<div class="large-2 columns">
-						<span class="">large-2</span>
+					<div class="large-4 columns">
+						<span class="">large-4</span>
 						
 					</div>
-					<div class="large-2 columns">
-						<span class="">large-2</span>
-						
+				</div>
+				
+				<h5>Targeting Screen Sizes</h5>
+
+				<p>Often times you need medium and small screens to display multiple columns. You can easily target those screens using the .small or .medium column class. By default, these sizes cascade. so if you put small-4 on a div. It will render as 4/12ths width on small, medium and large. </p>
+
+				<div class="row">
+
+					<div class="medium-4 columns">
+						<span class="">Medium-4</span>
 					</div>
-					<div class="large-2 columns">
-						<span class="">large-2</span>
-						
+
+					<div class="medium-4 columns">
+						<span class="">Medium-4</span>	
 					</div>
-					<div class="large-2 columns">
-						<span class="">large-2</span>
-						
+
+					<div class="medium-4 columns">
+						<span class="">Medium-4</span>	
+					</div>
+
+					<div class="small-4 columns">
+						<span class="">Small-4</span>
+					</div>
+
+					<div class="small-4 columns">
+						<span class="">Small-4</span>	
+					</div>
+
+					<div class="small-4 columns">
+						<span class="">Small-4</span>	
 					</div>
 				</div>
 
-				<h5>Complex Grid</h5>
-				<div class="row">
-					<div class="large-2 medium-3 small-4 column">
-						<span class="show-for-large">large-2</span>
-						<span class="show-for-medium">medium-3</span>
-						<span class="show-for-small">small-4</span>
-					</div>
-					<div class="large-2 medium-3 small-4 column">
-						<span class="show-for-large">large-2</span>
-						<span class="show-for-medium">medium-3</span>
-						<span class="show-for-small">small-4</span>
-					</div>
-					<div class="large-2 medium-3 small-4 column">
-						<span class="show-for-large">large-2</span>
-						<span class="show-for-medium">medium-3</span>
-						<span class="show-for-small">small-4</span>
-					</div>
-					<div class="large-2 medium-3 small-4 column">
-						<span class="show-for-large">large-2</span>
-						<span class="show-for-medium">medium-6</span>
-						<span class="show-for-small">small-4</span>
-					</div>
-					<div class="large-2 medium-6 small-4 column show-for-large">
-						<span class="show-for-large">large-2</span>
-						<span class="show-for-medium">medium-6</span>
-						<span class="show-for-small">small-4</span>
-					</div>
-					<div class="large-2 medium-6 small-4 column show-for-large">
-						<span class="show-for-large">large-2</span>
-						<span class="show-for-medium">medium-6</span>
-						<span class="show-for-small">small-4</span>
-					</div>
-				</div>
+
+				<h5>Combining Different Column Widths</h5>
+				<p>You guessed it, you can combine "large", "medium" and "small" column widths to target each viewport specifically.</p>
+
 			
 
 			<div class="grid">
-				<h5>Basic Grid</h5>
+			
 				<div class="row">
 					<div class="large-2 medium-6 small-4 column">
 						<span class="show-for-large">large-2</span>
@@ -202,13 +192,48 @@
 					</div>
 				</div>
 
-				<h5>Push and Pull</h5>
+				<h5>Nesting Columns</h5>
+
+				<p>Sparkplug makes it really easy to nest columns too!</p>
+
 				<div class="row">
-					<div class="medium-4 column large-push-8">
+
+					<div class="medium-6 columns">
+						<span class="">Medium-6</span>
+						<div class="medium-6 columns">Medium-6</div>
+						<div class="medium-6 columns">Medium-6</div>
+					</div>
+
+					<div class="medium-6 columns">
+						<span class="">Medium-6</span>	
+
+							<div class="medium-6 columns">Medium-6</div>
+							<div class="medium-6 columns">Medium-6</div>
+					</div>
+
+
+				</div>
+
+				<h5>Offsets</h5>
+				<p>If you need some space between your columns you can use the offset class. Below we declare the column width (large-5) and the offset for the large screen (large-offset-1). Since we only declared large a large offset it will only apply to large screen widths. it breaks down to 100% width on medium and small.</p>
+				<div class="row">
+					<div class="column large-offset-1 large-5">
+						<span>.Large-offset-1 .large-5</span>
+					</div>
+
+					<div class="column large-offset-1 large-5">
+						<span>.large-offset-1 .large-5</span>
+					</div>
+				</div>
+
+				<h5>Push and Pull</h5>
+				<p>Sometimes you want columns to appear in a different order when on different screens. Push / pull classes allow you to target column order on screen width.</p>
+				<div class="row">
+					<div class="column large-push-8 medium-4">
 						<span>large-push-8</span>
 					</div>
 
-					<div class="medium-8 column large-pull-4">
+					<div class="column large-pull-4 medium-8">
 						<span>large-pull-4</span>
 					</div>
 				</div>
@@ -258,13 +283,13 @@
 		
 
 			<h5>Emphasis and Modifiers</h5>
-			<p>Cred tattooed jean shorts, <sup>church-key</sup> organic wayfarers</p>
-			<p>Cred tattooed jean shorts, <sub>church-key</sub> organic wayfarers</p>
+			<p><code>sup</code> Cred tattooed jean shorts, <sup>church-key</sup> organic wayfarers</p>
+			<p><code>sub</code> Cred tattooed jean shorts, <sub>church-key</sub> organic wayfarers</p>
 
-			<p>Cred tattooed jean shorts, <em>church-key</em> organic wayfarers</p>
-			<p>Cred tattooed jean shorts, <b>church-key</b> organic wayfarers</p>
-			<p>Cred tattooed jean shorts, <del>church-key</del> organic wayfarers</p>
-			<p>Cred tattooed jean shorts, <code>church-key</code> organic wayfarers</p>
+			<p><code>em</code> Cred tattooed jean shorts, <em>church-key</em> organic wayfarers</p>
+			<p><code>b</code> Cred tattooed jean shorts, <b>church-key</b> organic wayfarers</p>
+			<p><code>del</code> Cred tattooed jean shorts, <del>church-key</del> organic wayfarers</p>
+			<p><code>code</code> Cred tattooed jean shorts, <code>church-key</code> organic wayfarers</p>
 
 			<!-- End Text Treatment -->
 			
@@ -323,6 +348,22 @@
 					<li><a href="#">Employees</a></li>
 
 				</ul>
+			</div>
+
+			<h1 class="exampleSection" id="Gradients">Gradients</h1>
+
+			<div class="large-6 columns">
+			gradient
+				<div class="gradient">
+				
+				</div>
+			</div>
+
+			<div class="large-6 columns">
+			gradient
+				<div class="gradient">
+				
+				</div>
 			</div>
 			
 				
@@ -414,11 +455,17 @@
 			    <li><img src="img/image-6.jpg"></li>
 			</ul>
 
+
+
+
+
 			<h5>Content Collapse</h5>
 			<p>Content Collapse is a simple utility for collapsing your things.</p>
 			<div class="contentCollapse">
+				<i class="fa contentCollapse-plus"></i>
 				<a data-toggle>Things 1</a>
-				<div class="content">
+
+				<div class="contentCollapse-content">
 					<p>Newman: But you remember this: when you control the mail, you control... information. Elaine: Perhaps, there's more to Newman than meets the eye. Jerry: No. there's less. Mr. Peterman: None other than Ethel Kennedy. A woman whose triumph in the face of tragedy is exceeded only by her proclivity to procreate. Kramer: Karate. It's a lifetime pursuit of balance and harmony. Jerry: But with punching and kicking. George: I have never been anyone's type, but apparently, this Marisa Tomei loves funny, quirky, bald men! George: George is getting upset! George: Who buys an umbrella anyway? You can get them for free at the coffee shop in those metal cans. </p>
 
 					<p>Jerry: That is one magic loogie. George: Yeah, well, the jerk store called, they're running out of you. Jerry: Well, sometimes we do actually have to get up early, but a man will always trade sleep for sex." Morty Seinfeld: How could you spend $200 on a tip calculator?, Jerry: Alright. You’re on a desert island, you can bring five books. Which five do you take? George: I gotta read five books. Jerry: Why would anybody want a friend? Frank Costanza: George, we've had it with you. Understand? We love you like a son, but even parents have limits.</p>
@@ -426,8 +473,10 @@
 			</div>
 
 			<div class="contentCollapse">
+							<i class="fa contentCollapse-plus"></i>
+
 				<a data-toggle>Things 2</a>
-				<div class="content">
+				<div class="contentCollapse-content">
 					<p>laine: No, I don't have a square to spare. I can't spare a square. Jerry: So you think it's a non-vite? Elaine: It's an un-vitation. George: The sea was angry that day, my friends. Like an old man trying to send back soup in a deli. The Bubble Boy: What are you looking at? You never seen a kid in a bubble before. Jerry: Do you really want a shower radio? I guess there's no better place to dance than a slick surface next to a glass door. Latvian orthodox: What aspect of the faith do you find particularly attractive? George: I think the hats. Kramer: Boxers! How do you wear these things? Look at that–they’re bagging up, they’re rising in, and there’s nothing holding me in place. Kramer: What are you thinking about, Jerry, marriage? Family? They're prisons! Man-made prisons. You're doing time? Dec. 23. Jerry: Why do I always have the feeling everybody's doing something better than me on Saturday afternoons? George: I think she finds my stupidity charming? Jerry: I don't return fruit. Fruit is a gamble. I know that going in.
 					</p>
 					<p>George: I say stupid things all the time. I can’t go two minutes without saying something stupid. George: Is it my imagination, or do really good-looking women walk a lot faster than everybody else. Jerry (receiving an ugly new hat): Why don't you put it in the car so I don't accidentally toss it in that dumpster. George: I can't be blind, Jerry. The blind are courageous. ; Newman: Black market shower heads. All made in the former Yugoslavia, and from what I hear the Serbs are fanatic about their showers! Jerry: You know the difference between a dentist and a sadist, don't you? Newer magazines.</p>

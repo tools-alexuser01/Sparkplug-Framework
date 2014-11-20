@@ -165,8 +165,8 @@
         },
         animationActive: false,
         init: function(config) {
-            var prevBtn = '<li data-prev><i class="fa"></i></li>',
-                nextBtn = '<li data-next><i class="fa"></i></li>',
+            var prevBtn = '<li data-prev></li>',
+                nextBtn = '<li data-next></li>',
                 navigation = '<ul class="ss-navigation">' + prevBtn + nextBtn + '</ul>';
 
             // Allow overriding the default settings
@@ -209,7 +209,7 @@
     var contentCollapse = {
         config: {
             fireSelector: '[data-toggle]',
-            contentSelector: '.content',
+            contentSelector: '.contentCollapse-content',
             openClass: 'open',
             animate: true,
             duration: 300,
