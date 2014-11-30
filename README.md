@@ -2,7 +2,7 @@
 
 Sparkplug aims to help front-end developers approach building sites from a modular, scallable approach. 
 
-The file structure is specifically set up to help you deliberately build modular, isolated systems.
+The file structure is set up to help you deliberately build modular, isolated systems.
 
 Inspiration from: 
 * [smacss.com](http://smacss.com)
@@ -11,7 +11,7 @@ Inspiration from:
 
 ## 1. Install global dependancies (one time installation)
 
-  * [Node.js](http://nodejs.org) http://nodejs.org/
+  * [Node.js](http://nodejs.org)
   * [bower](http://bower.io): `[sudo] npm install bower -g`
   * [grunt.js](http://grunt.js); `[sudo] npm install -g grunt-cli`
 

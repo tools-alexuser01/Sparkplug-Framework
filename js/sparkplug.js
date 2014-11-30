@@ -5,6 +5,24 @@
         $(this.parentNode).fadeOut(400);
     });
 
+    //thumbNav menu
+    $('.thumbNav i').on('click', function(){
+        var $nav = $(this).closest('.thumbNav'),
+            width = $(window).width(0),
+            height = $nav.find('ul').height();
+
+        $nav.toggleClass('active')
+            .css({
+                'width': width,
+                'height': height
+            });
+
+        if(!$nav.hasClass('active')) 
+            $($nav).removeAttr('style');
+
+        $('.iconSprite').append($('.iconSprite i:first-child'));
+    });
+
     // Toggle Menu
     var toggleMenu = {
         config: {
