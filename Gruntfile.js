@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                 }
             },
             html:{
-                files: ['site/**/*.html', 'includes/**/*.html'],
+                files: ['site/**/*.html', 'includes/**/*.html' ],
                 tasks: ['includes'],
                 options: {
                     nospawn: true,
