@@ -10,61 +10,59 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // target.css file: source.less file
-                    "css/main.css": "less/main.less"
+                    "_output/css/main.css": "_input/less/main.less"
                 }
             }
         },
 
         includes: {
             html: {
-                cwd: 'site', // cwd = current working directory
+                cwd: '_input', // cwd = current working directory
                 src: ['*.html', 'templates/*.html'],
-                dest: 'build/',
+                dest: '_output/',
         
                 options: {
                     flatten: true,
-                    includePath: 'includes',
-                    banner: '<!-- This is the build file! -->\n'
+                    includePath: '_input/includes',
+                    banner: '<!-- This is the output file! -->\n'
                 }
             },
             img: {
+                cwd: '_input',
                 src: 'img/*.*',
-                dest: 'build/'
-            },
-            styles: {
-                src: 'css/*.css',
-                dest: 'build/'
+                dest: '_output/'
             },
             js: {
+                cwd: '_input',
                 src: 'js/*.js',
-                dest: 'build/'
+                dest: '_output/'
             }
         },
 
         watch: {
             html: {
-                files: ['site/**/*.html', 'includes/**/*.html' ],
+                files: ['_input/**/*.html', 'includes/**/*.html' ],
                 tasks: ['includes:html'],
                 options: {
                     nospawn: true,
                 }
             },
             img: {
-                files: ['img/*.*'],
+                files: ['_input/img/*.*'],
                 tasks: ['includes:img'],
                 options: {
                     nospawn: true,
                 }
             },
             styles: {
-                files: ['less/**/*.less'], // which files to watch
-                tasks: ['less', 'includes:styles'],
+                files: ['_input/less/**/*.less'], // which files to watch
+                tasks: ['less'],
                 options: {
                     nospawn: true
                 }
             },
             js: {
-                files: ['js/*.js'],
+                files: ['_input/js/*.js'],
                 tasks: ['includes:js'],
                 options: {
                     nospawn: true,
@@ -75,20 +73,20 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: 'build/**'
+                    src: '_output/**'
                 },
                 options: {
                     watchTask: true,
                     reloadDelay: 2000,
                     server: {
-                        baseDir: "build"
+                        baseDir: "_output"
                     }
                 }
             }
         },
 
         clean: {
-            build: 'build',
+            build: '_output/',
             css : 'css'      
         }
     });
