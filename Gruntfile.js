@@ -27,15 +27,18 @@ module.exports = function(grunt) {
                     banner: '<!-- This is the output file! -->\n'
                 }
             },
-            img: {
-                cwd: '_input',
-                src: 'img/*.*',
-                dest: '_output/'
-            },
             js: {
                 cwd: '_input',
                 src: 'js/*.js',
                 dest: '_output/'
+            }
+        },
+
+        copy: {
+            img: {
+                files: [
+                    {expand: true, cwd: '_input', src: ['img/**'], dest: '_output/'}
+                ]
             }
         },
 
@@ -49,7 +52,7 @@ module.exports = function(grunt) {
             },
             img: {
                 files: ['_input/img/*.*'],
-                tasks: ['includes:img'],
+                tasks: ['copy:img'],
                 options: {
                     nospawn: true,
                 }
@@ -94,8 +97,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-includes');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['clean', 'less', 'includes', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['clean', 'less', 'includes', 'copy', 'browserSync', 'watch']);
 };
