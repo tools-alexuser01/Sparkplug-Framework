@@ -3,10 +3,10 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    compress: false,
+                    compress: false, // minifies css if true
                     cleancss: false,
                     optimization: 2,
-                    dumpLineNumbers: 'comments'
+                    dumpLineNumbers: 'true'
                 },
                 files: {
                     // target.css file: source.less file
@@ -14,7 +14,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
         includes: {
             build: {
                 cwd: 'site', // cwd = current working directory
@@ -47,11 +46,19 @@ module.exports = function(grunt) {
                 }
             }
 
+        },
+        uncss: {
+            dist: {
+                files: {
+                    'css/main.css': ['build/**/*.html']
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-includes');
+    grunt.loadNpmTasks('grunt-uncss');
     grunt.registerTask('default', ['less', 'watch', 'includes']);
 };
