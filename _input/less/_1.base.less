@@ -27,10 +27,16 @@
 
 **/
 
-@import "components/b-normalize.less"; // this is the reset. Shouldn't need to remove or modify this
-@import "components/b-typography.less"; // includes headings, <p>, <a>, lists, blockquotes, <code> just to name a few
+// this is the reset. Shouldn't need to remove or modify this
+@import "components/b-normalize.less"; 
+// includes headings, <p>, <a>, lists, blockquotes, <code> just to name a few
+@import "components/b-typography.less"; 
 @import "components/b-visibility.less";
 @import "components/b-mixins.less";
+
+// html{
+// 	font-size: 62.5%;
+// }
 
 body {
 	background: @body-bg;
@@ -40,20 +46,5 @@ body {
 	font-family: @global-font-family;
 } 
 
-
-
-.primary-color-band{
-	background-color: @primary-color
-}
-
-
-.secondary-color-band{
-	background-color: @tertiary-color	
-}
-
-
-.tertiary-color-band{
-	background-color: @secondary-color	
-}
 
 

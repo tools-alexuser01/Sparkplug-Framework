@@ -101,5 +101,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['clean', 'less', 'includes', 'copy', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['less', 'includes', 'copy', 'browserSync', 'watch']);
+    grunt.registerTask('clean', ['clean']);
 };

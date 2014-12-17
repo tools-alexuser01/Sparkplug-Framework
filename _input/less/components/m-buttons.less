@@ -2,78 +2,34 @@
 //				Buttons
 // ==============================================
 
-@small-padding: 10px 15px;
-@normal-padding: .9rem 1.6rem;
-@large-padding: 20px 40px;
-
-// Mixins
-.btn-color(@color, @darken: 10%) {
-	background: @color;
-	&:hover {
-		background: darken(@color, @darken);
-	}
-}
-
-button:active,
-button:focus {
-	outline: none;
-}
 
 
-
-/* Normal Buttons */
-
-
-.btn {
+.button, button, 
+input[type="submit"], input[type="reset"], input[type="button"]{
 	display: block;
 	vertical-align: top;
 	cursor: pointer;
-	font-size: @base-font-size + 0px;
-	font-weight: 400;
+	font-size: 1rem;
 	line-height: 1;
     text-align: center;
 	text-decoration: none;
-
 	color: @white;
 	background: @primary-color;
-
-	
-	padding: @normal-padding;
+	font-weight: 100;
+	padding: 10px 15px;
 	margin:.8rem 0;
-	border:none;
-
+	border:1px solid @primary-color;
 	border-radius: @global-radius;	
 	.transition();
-	&:hover {
+		
+		&:hover {
 			background: darken(@primary-color, 10%);
 			color:@white;
-	}
+		}	
 }
 
-.btn-small{
-	&:extend(.btn);
-	padding:@small-padding;
-	background-color: @tertiary-color;
-		&:hover {
-			background: darken(@tertiary-color, 10%);
-			color:@white;
-	}
-}
-
-.btn-large{
-	&:extend(.btn);
-	padding:@large-padding;
-	background-color: @secondary-color;
-			&:hover {
-			background: darken(@secondary-color, 10%);
-			color:@white;
-	}
-}
-
-/* Outline Buttons */
-
-.btn-outline{
-	&:extend(.btn);
+.buttonOutline{
+	&:extend(.button);
 	background-color:transparent;
 	color:@primary-color;
 	border:1px solid @primary-color;
@@ -85,75 +41,24 @@ button:focus {
 		}
 }
 
-.btn-small-outline{
-	&:extend(.btn);
-	background-color:transparent;
-	color:@tertiary-color;
-	border:1px solid @tertiary-color;
-	padding:@small-padding;
-	.transition();
-	&:hover {
-		color:@white;
-		background-color:@tertiary-color;
-		.transition();
-	}
+button:active,
+button:focus {
+	outline: none;
 }
-
-.btn-large-outline{
-	&:extend(.btn);
-	background-color:transparent;
-	color:@secondary-color;
-	border:1px solid @secondary-color;
-	padding:@large-padding;
-
-		&:hover {
-			color:@white;
-			background-color:@secondary-color;
-			.transition();
-		}
-}
-
-/* Disabled Buttons */
-
-.btn-disabled{
-	&:extend(.btn);
-	color: lighten(@disabled, 25%);
-	background-color: lighten(@disabled, 40%);
-
-	text-decoration: none;
-
-		&:hover{
-		cursor:default;
-		color: lighten(@disabled, 25%);
-	}
-
-}
-
-.btn-small-disabled{
-	&:extend(.btn-disabled);
-	padding:@small-padding;
-
-		&:hover{
-		cursor:default;
-		color: lighten(@disabled, 25%);
-	}
-}
-
-.btn-large-disabled{
-	&:extend(.btn-disabled);
-	padding:@large-padding;
-
-		&:hover{
-		cursor:default;
-		color: lighten(@disabled, 25%);
-	}
-}
-
 
 
 @media only screen and (min-width: @medium-up) {
 
-.btn{
+.button-Outline{
+	display: inline-block;
+	margin-right:.5rem;
+	margin-left:0;
+	}
+
+
+
+
+.button{
 	display: inline-block;
 	margin-right:.5rem;
 	margin-left:0;

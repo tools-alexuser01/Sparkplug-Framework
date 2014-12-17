@@ -1,4 +1,4 @@
-# Project Boilerplate
+# Sparkplug Framework
 
 Sparkplug aims to help front-end developers approach building sites from a modular, scallable approach. 
 

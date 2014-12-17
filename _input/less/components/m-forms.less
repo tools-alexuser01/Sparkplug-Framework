@@ -23,7 +23,7 @@ cursor: pointer;
 fieldset {
 	padding: 2rem;
 	margin-bottom: 2rem;
-	border: 1px solid #dbdada;
+	border: 1px solid @mono-color;
 }
 legend {
 	font-weight: bold;
@@ -156,12 +156,12 @@ input[type="datetime-local"],
 textarea,
 select[multiple="multiple"] {
 	font-family: @inside-label-font-family;
-	line-height: 1;
-	font-size: @base-font-size + 0px;
+	line-height: initial;
+	font-size: 1rem;
 	border-radius: @global-radius;
-	background: #fff;
+	background: @white;
 	box-shadow: none;
-	border: 1px solid #bbbcc0;
+	border: 1px solid @mono-color;
 	outline: none;
 	padding: 7px 5px;
 	position: relative;
@@ -193,55 +193,4 @@ textarea {
 	line-height: 1.35em;
 }
 
-/* Sizes */
-.input-big,
-.input-small,
-.input-small-super {
-	padding: .3em 1.75em;
-}
 
-
-
-/* Append & Prepend */
-.input-groups {
-	display: table !important;
-}
-.input-groups input {
-	width: 100%;
-}
-.input-groups input,
-.input-groups .input-append,
-.input-groups .input-prepend,
-.input-groups .btn-append {
-	display: table-cell !important;
-}
-.input-groups .btn-append,
-.input-groups .input-append,
-.input-groups .input-prepend {
-	width: 1%;
-	vertical-align: middle;
-}
-.input-groups .input-append,
-.input-groups .input-prepend {
-	background-color: #eee;
-	border: 1px solid #ccc;
-	margin: 0;
-	padding: .35em .75em .25em .75em;
-	color: rgba(0, 0, 0, .5);
-	line-height: 12px;
-	font-size: @base-font-size;
-	white-space: nowrap;
-}
-.input-groups .input-prepend {
-	border-right: none;
-}
-.input-groups .input-append {
-	position: relative;
-	z-index: 1;
-	border-left: none;
-}
-.input-groups .btn-append .btn {
-	display: block;
-	height: auto;
-	border-radius: 0 2px 2px 0;
-}

@@ -2,7 +2,7 @@
 //				Typography
 // ==============================================
 
-.title,
+
 h1,
 h2,
 h3,
@@ -10,70 +10,119 @@ h4,
 h5,
 h6 {
 	font-family: @heading-font-family;
+	font-weight: normal;
+	font-style: normal;
 	color: @font-color;
 	line-height: initial;
 	text-rendering: optimizeLegibility;
-	margin-bottom: .5em;
+	margin-bottom: 1rem;
 	font-weight: normal;
-
+	line-height: 1.4;
 }
+
 h1 {
-	font-size: @base-font-size + 2rem; 
-	margin-top: 2.3rem;
-	margin-bottom: 1.3rem;
+	font-size: 2.125rem; 
 }
 
 h2 {
-	font-size: @base-font-size + 1.3rem;
-	margin-top: 2.2rem;
-	margin-bottom: 1.2rem;
+	font-size: 1.75rem;
 }
 
 h3 {
-	font-size: @base-font-size + 1rem;
-	margin-top: 2.1rem;
-	margin-bottom: 1.1rem;
+	font-size: 1.5rem;
 }
 
 h4 {
-	font-size: @base-font-size + .75rem;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	font-size: 1.25rem;
 }
 
 h5 {
-	font-size: @base-font-size + .5rem;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	font-size: 1rem;
 }
 
 h6 {
-	font-size: @base-font-size - .2rem;	
 	text-transform: uppercase;
 }
 
 p  {
-	margin-bottom:1rem;
 	color:@font-color;
 }
 
 a {
 	color: @link-color;
-	&:focus,
-	&:hover {
-		color: darken(@link-color, 10%);
+}
+
+a:focus, a:hover{
+	color: darken(@link-color, 10%);
+}
+
+
+@media only screen and (min-width: @medium-up) {
+	
+	h1 {
+		font-size: 2.225rem; 
+	}
+
+	h2 {
+		font-size: 1.85rem;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+
+	h4 {
+		font-size: 1.35rem;
+	}
+
+	h5 {
+		font-size: 1.1rem;
+	}
+
+	h6 {
+		text-transform: uppercase;
+	}
+}
+
+@media only screen and (min-width: @large-up) {
+	h1 {
+		font-size: 2.325rem; 
+	}
+
+	h2 {
+		font-size: 1.95rem;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+	}
+
+	h4 {
+		font-size: 1.45rem;
+	}
+
+	h5 {
+		font-size: 1.2rem;
+	}
+
+	h6 {
+		text-transform: uppercase;
 	}
 }
 
 
-ul {margin-bottom:1rem;}
+ul {
+	margin-bottom:1rem;
+}
 
 address {
 	font-style: normal;
 }
+
 dl dt {
 	font-weight: 500;
 }
+
 dd {
 	margin-left: 1em;
 }
@@ -84,8 +133,8 @@ blockquote {
 	padding: 0 0 0 1rem;
 	margin: 0 0 1rem 1rem;
 	border-left: 2px solid @mono-color;
-
 }
+
 blockquote p {
 	margin-bottom: .5em;
 }
