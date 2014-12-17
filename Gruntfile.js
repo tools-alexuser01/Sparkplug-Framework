@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                     compress: false,
                     cleancss: false,
                     optimization: 2,
-                    dumpLineNumbers: 'comments'
+                    dumpLineNumbers: 'false' // 'comments' or 'false'
                 },
                 files: {
                     // target.css file: source.less file
@@ -88,19 +88,32 @@ module.exports = function(grunt) {
             }
         },
 
-        clean: {
-            build: '_output/',
-            css : 'css'      
+        uncss: {
+            dist: {
+                files: {
+                    '_output/css/main.css': ['_output/*.html']
+                }
+            }
+        },
+
+        cssmin: {
+            dist: {
+                files: [
+                    { src: '_output/css/main.css', dest: '_output/css/main.css' }
+                ]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-includes');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-uncss');
 
     grunt.registerTask('default', ['less', 'includes', 'copy', 'browserSync', 'watch']);
-    grunt.registerTask('clean', ['clean']);
+    grunt.registerTask('minify', ['uncss', 'cssmin']);
+
 };
