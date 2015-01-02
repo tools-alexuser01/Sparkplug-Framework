@@ -132,7 +132,7 @@
             // Allow only one active modal
             $(activeDialogue.config.modalSelector).removeClass('active');
             $('.modal').each(function() {
-                if (activeTarget.currentTarget.dataset['fire'] == this.id) {
+                if ($(activeTarget.currentTarget).data('fire') == this.id) {
                     $(this).addClass('active');
                     $('body').addClass('active-modal');
                     return false;
@@ -195,7 +195,7 @@
         cycle: function(e) {
             var target = e.currentTarget.parentNode.parentNode;
             if (goodSlideshow.animationActive) return;
-            if (e.currentTarget.dataset.next == "") {
+            if ($(e.currentTarget).data('next') == "") {
                 goodSlideshow.next(target);
                 return;
             }
@@ -344,7 +344,7 @@
     var sparkplugScrollAnimations = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
-        offset: 0 // distance to the element when triggering the animation (default is 0)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
         mobile: true,  // trigger animations on mobile devices (default is true)
         live: true // act on asynchronously loaded content (default is true)
     });
