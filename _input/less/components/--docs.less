@@ -1,0 +1,76 @@
+//  ==============================
+//  
+//  	 Styles for the index.html example page in the root
+//  
+//  ==============================
+
+
+
+
+.exampleSection{
+	font-weight: bold;
+	color: @secondary-color;
+	clear: both;
+}
+.examplePage h5{
+	color:@primary-color;
+}
+.grid span{
+	color:@secondary-color;
+	display: block;
+	text-align: center;
+	padding: 10px 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: @mono-color;
+}
+.doc-menu{
+	position: fixed;
+	list-style: none;
+	margin-top: 15px;
+
+	li{	
+		a{
+			display:block;
+			text-decoration: none;
+			padding:5px 15px;
+			font-size:.9em;
+			color:@font-color;
+			.transition();
+			border-radius:@global-radius;
+
+			&:hover{
+				color:@white;
+				background-color: @primary-color;
+				.transition();
+			}
+		}
+
+		&.active a{
+			color:@font-color;
+			background-color: @mono-color;
+			.transition();
+		}
+	}
+}
+
+.doc-menu-mobile{
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:999;
+}
+
+.examplePage .equalHeight{
+	background-color:@mono-color;
+}
+
+.examplePage body{
+	padding-top:55px;
+}
+
+@media screen and (min-width:@medium-up){
+	.examplePage body{
+		padding-top:0px;
+	}
+}

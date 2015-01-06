@@ -30,10 +30,28 @@
 	opacity: @opacity;
 }
 
+.background-opacity(@color, @opacity) {
+    @rgba-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+    background-color: @rgba-color;
+
+    // Hack for IE8:
+    background: none\9; // Only IE8
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d')", argb(@rgba-color),argb(@rgba-color))); // IE9 and down
+    // Problem: Filter gets applied twice in IE9.
+    // Solution:
+    &:not([dummy]) {
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled='false'); // Only IE9
+    }
+}
+
 .box-sizing(@box-model) {
 	-webkit-box-sizing: @box-model;
 	-moz-box-sizing: @box-model;
 	box-sizing: @box-model;
+}
+
+.rgba(@color, @opacity: 1) {
+  background: rgba( red(@color), green(@color), blue(@color), @opacity);
 }
 
 .gradient(@start: @primary-color, @end: @secondary-color, @deg:0deg) {

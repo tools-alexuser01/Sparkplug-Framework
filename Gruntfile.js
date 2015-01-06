@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         less: {
-            development: {
+        development: {
                 options: {
                     compress: false,
                     cleancss: false,
                     optimization: 2,
-                    dumpLineNumbers: 'false' // 'comments' or 'false'
+                    dumpLineNumbers: 'comments' // 'comments' or 'false'
                 },
                 files: {
                     // target.css file: source.less file
@@ -16,17 +16,18 @@ module.exports = function(grunt) {
         },
 
         includes: {
-            html: {
-                cwd: '_input', // cwd = current working directory
-                src: ['*.html', 'templates/*.html'],
-                dest: '_output/',
+                html: {
+                    cwd: '_input', // cwd = current working directory
+                    src: ['*.html', 'templates/*.html'],
+                    dest: '_output/',
         
                 options: {
                     flatten: true,
                     includePath: '_input/includes',
                     banner: '<!-- This is the output file! -->\n'
                 }
-            },
+                },
+
             js: {
                 cwd: '_input',
                 src: 'js/*.js',
@@ -80,7 +81,7 @@ module.exports = function(grunt) {
                 },
                 options: {
                     watchTask: true,
-                    reloadDelay: 2000,
+                    reloadDelay: 1,
                     server: {
                         baseDir: "_output"
                     }

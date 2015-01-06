@@ -6,8 +6,6 @@
 // 2 Theme Settings
 // 3 Color Variables
 // 4 Typography Settings
-// 5 Form Settings
-// 6 buttons
 
 
 
@@ -43,7 +41,10 @@
 
 //Pro Tip: to use RGBA, use LESS's baked in fade(@color, 10%) mixin
 
-
+// alert colors
+@warning-color: #ffe5c7;
+@success-color: #dff0d8;
+@error-color: #f2dede;
 
 
 // ----------------------------------------
@@ -53,6 +54,10 @@
 @row-width: 75rem;
 @total-columns: 12;
 @column-gutter: 2rem;
+
+@row-padding-small:1rem;
+@row-padding-medium:2rem;
+@row-padding-large:3rem;
 
 
 // Media Query Settings
@@ -75,26 +80,11 @@
 
 
 // Font Colors
-@font-color: #666666;
+@font-color: #333333;
 @link-color: @secondary-color;
 
-@h1-color:@font-color; 
-@h2-color:@font-color; 
-@h3-color:@font-color; 
-@h4-color:@font-color; 
-@h5-color:@font-color; 
-@h6-color:@font-color; 
-
 // Font Sizes
-
 @base-font-size: 1rem;
-@h1-size: 2rem; 
-@h2-size: 1.8rem; 
-@h3-size: 1.6rem; 
-@h4-size: 1.4rem; 
-@h5-size: 1.2rem; 
-@h6-size: .8rem; 
-
 @base-line-height: 2rem;
 
 // Font Family
@@ -105,34 +95,5 @@
 @code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 
 
-// ---------------------------------------------------------
-//     5 Content Popup aka modal, aka active dialogue
-// ---------------------------------------------------------
 
 
-@modal-width:37.5rem;
-
-
-// ---------------------------------------------------------
-//     6 Alerts
-// ---------------------------------------------------------
-
-// alert colors
-@warning-color: #ffe5c7;
-@success-color: #dff0d8;
-@error-color: #f2dede;
-
-
-// ---------------------------------------------------------
-//     7 Breadcrumbs
-// ---------------------------------------------------------
-
-@transparent-overlay: rgba(0, 0, 0, .2);
-
-
-
-// Forms
-@fieldsBottom: 1.6em;
-
-// Util
-@em: @base-font-size * 1em; // outputting ems, e.g. 14 / @em

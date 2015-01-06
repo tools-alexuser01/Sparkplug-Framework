@@ -28,7 +28,6 @@
 
 // this is the reset. Shouldn't need to remove or modify this
 @import "components/b-normalize.less"; 
-// includes headings, <p>, <a>, lists, blockquotes, <code> just to name a few
 @import "components/b-typography.less"; 
 @import "components/b-visibility.less";
 @import "components/b-mixins.less";
@@ -44,6 +43,26 @@ body {
 	line-height:@base-line-height;
 	font-family: @global-font-family;
 } 
+
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+	height: auto; 
+} 
+
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	}
 
 
 
