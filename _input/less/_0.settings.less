@@ -13,14 +13,44 @@
 // ----------------------------------------
 // 		1 Global Settings
 // ----------------------------------------
+// By default, all other sections will inherit from global settings
 
-@body-bg: @white; // you can set body-bg to a variable, color, or image
-@global-radius: 3px; // the roundness of all things (buttons, inputs, panels, boxes)
-@global-background-transition: background-color 300ms ease-out;
+@body-bg: @white; // you can set this to a variable, color, or image
 
+// fonts
+@base-font-size: 1em; // p's, labels,
+@base-pixel-value:@base-font-size * 16;
+
+@global-font-family: 'Open Sans', sans-serif; 
+@global-font-color:#333333;
+@global-link-color:@secondary-color;
+
+//shape
+@global-radius: 10px; // the roundness of all things (buttons, inputs, panels, boxes)
+@base-line-height:2em;
+
+// transitions
 @global-transition:all ease .2s; // for use with the .transition(); mixin
 @global-blur:5px; // for use with the .blur(); mixin
 
+
+
+// ---------------------------------------------------------
+//      Navigations Settings
+// ---------------------------------------------------------
+
+
+@nav-link-color:@global-link-color;
+@nav-background-color:@primary-color;
+@nav-background-hover:@primary-dark;
+@nav-border-radius:@global-radius;
+
+@nav-padding: 1em 1em;
+
+
+@nav-font-family:@global-font-color;
+@nav-font-size:@base-font-size;
+@nav-font-weight:normal;
 
 
 // ----------------------------------------
@@ -28,42 +58,51 @@
 // ----------------------------------------
 
 // Theme colors
-@primary-color: #FC604B;
-@secondary-color: #288DBA;
+@primary-color: #FFEB3B;
+@primary-dark:darken(@primary-color, 10%);
+@primary-light:lighten(@primary-color, 10%);
+
+@secondary-color: #607D8B;
 @tertiary-color: #2ecc71;
 
+@accent-color:#2ecc71;
 
-// Basic Colors
+@secondary-text:#727272;
+@divider-color:#ccc;
+
+
+@secondary-text:#888888;
+
 @mono-color: #eee; // light gray primarily used for borders
-@disabled: #808080;
-@white: #fff;
-@black: #333; // ok so not REALLY black.
+@white: #FEFEFE; 
+@black: #333333; // ok so not REALLY black.
+
+
+@warning-color: #E97D3D;
+@success-color: #50C05A;
+@error-color: #de2c3b;
 
 //Pro Tip: to use RGBA, use LESS's baked in fade(@color, 10%) mixin
 
-// alert colors
-@warning-color: #ffe5c7;
-@success-color: #dff0d8;
-@error-color: #f2dede;
 
 
 // ----------------------------------------
 // 		3 Grid Settings
 // ----------------------------------------
 
-@row-width: 75rem;
+@row-width: 75em;
 @total-columns: 12;
-@column-gutter: 2rem;
+@column-gutter: 2em;
 
-@row-padding-small:1rem;
-@row-padding-medium:2rem;
-@row-padding-large:3rem;
+@row-padding-small:1em;
+@row-padding-medium:2em;
+@row-padding-large:3em;
 
 
 // Media Query Settings
-@large-up: @row-width; // your largest width should inherit whatever the @row-width is
-@medium-up: 48rem; // 48rem = 768px
-@small-up: 30rem; // 30rem = 480px
+@large-up: 62.5em; 
+@medium-up: 48em; 
+@small-up: 30em; // 30em = 480px
 
 
 // Only adjust the follow variables if you want to change grid from "Fixed Responsive" to "Fluid Responsive"
@@ -80,19 +119,78 @@
 
 
 // Font Colors
-@font-color: #333333;
-@link-color: @secondary-color;
+@heading-font-color:@global-font-color;
 
-// Font Sizes
-@base-font-size: 1rem;
-@base-line-height: 2rem;
+// links
+@link-color: @global-link-color;
 
-// Font Family
-@global-font-family: Helvetica, Arial, sans-serif;
+// headings
 @heading-font-family: @global-font-family;
+@heading-font-color:@global-font-color;
 
-@inside-label-font-family: @global-font-family;
+
+
+
+// Paragraph
+@paragraph-font-color: @global-font-color;
+@paragraph-font-size:  @base-font-size;
+@paragraph-font-weight: 300;
+@paragraph-line-height: 2em;
+
+
 @code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+
+// ---------------------------------------------------------
+//      Buttons
+// ---------------------------------------------------------
+
+// button fonts
+@button-font-family:@global-font-family;
+@button-font-size:@base-font-size;
+@button-font-weight:300;
+
+// button colors
+@button-background:@primary-color;
+@button-color:@white;
+@button-hover-background:darken(@button-background, 20%);;
+
+// button shape
+@button-radius:@global-radius;
+@button-padding:0.625em 1em;
+
+
+
+
+// ---------------------------------------------------------
+//     5 Form Settings
+// ---------------------------------------------------------
+
+// Labels 
+@label-font-size: @base-font-size;
+@label-font-weight: light;
+@label-font-family: @global-font-family;
+@label-font-color: @global-font-color;
+@form-description-color: @secondary-text;
+
+// Inputs
+@input-font-family: @global-font-family;
+@input-font-size: @base-font-size;
+@input-font-weight: 100;
+@input-font-color: @global-font-color;
+
+@input-border-color: #ccc;
+@input-border-width: 1px;
+@input-border-radius: @global-radius;
+
+@input-focus-border-color: @secondary-color;
+@input-focus-background: #fbfbfb;
+
+@input-box-shadow: 0 0 3px rgba(70,161,231,0.3);
+
+// Selects
+@select-background-color: #FAFAFA;
 
 
 

@@ -3,17 +3,17 @@
 // ==============================================
 
 .breadcrumbs {
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 	background-color: lighten(@mono-color, 5%);
 	border: 1px solid darken(@mono-color, 5%);
 	border-radius: @global-radius;
-	padding-left: 1rem;
+	padding-left: 1em;
 	.clearfix();
 }
 
 .breadcrumbs ul {
 	font-size: .8em;
-	color: @font-color;
+	color: @global-font-color;
 	list-style: none;
 	margin: 0;
 	.clearfix();
@@ -21,14 +21,14 @@
 
 .breadcrumbs ul li {
 	float: left;
-	margin-right: .2rem;
+	margin-right: .2em;
 }
 
 .breadcrumbs li + li:before {
     content: ">";
     color: #aaa;
-    font-size: .7rem;
-	margin: 0 .5rem;
+    font-size: .7em;
+	margin: 0 .5em;
 	position: relative;
 	top: -1px;
 }
@@ -51,7 +51,7 @@
 .breadcrumbs ul li.active a {
 	text-decoration: none;
 	cursor: text;
-	color: @font-color;
+	color: @global-font-color;
 }
 
 .breadcrumbs ul li a:hover {

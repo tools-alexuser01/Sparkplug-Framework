@@ -5,6 +5,35 @@
 //  ==============================
 
 
+.utilityDocs{
+	.clearfix();
+	background-color: @secondary-color;
+	margin-bottom: 2em;
+	padding: .5em;
+}
+
+.utilityDocs ul{
+	list-style: none;
+}
+
+.utilityDocs ul li{
+	float: right;
+}
+
+.utilityDocs ul li a{
+	padding: .5em 1em;
+}
+
+.logoDocs{
+	background-color: @secondary-color;
+	text-align: center;
+	padding: .9rem;
+	border-radius: @global-radius;
+}
+
+
+
+
 
 
 .exampleSection{
@@ -35,7 +64,7 @@
 			text-decoration: none;
 			padding:5px 15px;
 			font-size:.9em;
-			color:@font-color;
+			color:@global-font-color;
 			.transition();
 			border-radius:@global-radius;
 
@@ -47,7 +76,7 @@
 		}
 
 		&.active a{
-			color:@font-color;
+			color:@global-font-color;
 			background-color: @mono-color;
 			.transition();
 		}

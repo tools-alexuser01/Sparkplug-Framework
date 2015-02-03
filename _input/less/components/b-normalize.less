@@ -2,30 +2,26 @@
 //				Normalize 
 // ==============================================
 
-*,
-*:before,
-*:after {
-	.box-sizing(border-box);
-}
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
+    font-family: sans-serif;
+    font-size:100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
-*, *:before, *:after {
+
+*, 
+*:before, 
+*:after {
   box-sizing: inherit;
 }
- 
+
 .clearfix:after {
   content: " ";
   display: table;
   clear: both; 
 }
 
-html {
-    font-family: sans-serif;
-    font-size:100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
 html,
 body,
 div,
@@ -256,7 +252,7 @@ ul ul,
 ol ol,
 ul ol,
 ol ul {
-	margin: 0 0 0 1.6rem;
+	margin: 0 0 0 1.6em;
 }
 ol ol li {
 	list-style-type: lower-alpha;

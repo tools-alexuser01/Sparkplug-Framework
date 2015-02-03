@@ -1,72 +1,116 @@
 // ==============================================
-//				Buttons
+//              Buttons
 // ==============================================
 
 
 
-.button, button, 
-input[type="submit"], input[type="reset"], input[type="button"]{
-	display: block;
-	vertical-align: top;
-	cursor: pointer;
-	font-size: 1rem;
-	line-height: 1;
+.button, 
+button, 
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"]{
+
+    font-family: @button-font-family;
+      font-size: @button-font-size;
+    font-weight: @button-font-weight;
+     background: @button-background;
+          color: @button-color;
+  border-radius: @button-radius;
+        padding: @button-padding;
+         margin: .8em 0;
+         border: 1px solid @button-background;
+       .transition();
+    
+    display: block;
+    vertical-align: top;
+    cursor: pointer;
+    line-height: 1;
     text-align: center;
-	text-decoration: none;
-	color: @white;
-	background: @primary-color;
-	font-weight: 100;
-	padding: 10px 15px;
-	margin:.8rem 0;
-	border:1px solid @primary-color;
-	border-radius: @global-radius;	
-	.transition();
-		
-		&:hover {
-			background: darken(@primary-color, 10%);
-			color:@white;
-		}	
+    text-decoration: none; 
+
+    // -webkit-font-smoothing: none;
+    -webkit-font-smoothing: subpixel-antialiased; 
+        
+        &:hover {
+            background:@button-hover-background;
+            color:@white;
+        }   
 }
 
-.buttonOutline{
-	&:extend(.button);
-	background-color:transparent;
-	color:@primary-color;
-	border:1px solid @primary-color;
+.buttonOutline,
+input.buttonOutline,
+button.buttonOutline{
 
-		&:hover {
-			color:@white;
-			background-color:@primary-color;
-			.transition();
-		}
+    font-family: @button-font-family;
+      font-size: @button-font-size;
+    font-weight: @button-font-weight;
+     background: transparent;
+          color: @button-background;
+  border-radius: @button-radius;
+        padding: @button-padding;
+         margin: .8em 0;
+         border: 1px solid @button-background;
+       .transition();
+
+    display: block;
+    vertical-align: top;
+    cursor: pointer;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+
+        &:hover {
+            color:@white;
+            background-color:@button-background;
+            .transition();
+        }
 }
+
 
 button:active,
 button:focus {
-	outline: none;
+    outline: none;
 }
 
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"]{
+    height: auto;
+    border-color:@button-background;
+}
+
+input[type="submit"]:focus, 
+input[type="reset"]:focus, 
+input[type="button"]:focus{
+    height: auto;
+    border-color:@button-background;
+    background-color:@button-background;
+
+    box-shadow: none;
+
+}
 
 @media only screen and (min-width: @medium-up) {
 
-.button-Outline{
-	display: inline-block;
-	margin-right:.5rem;
-	margin-left:0;
-	}
+.buttonOutline,
+button.buttonOutline, 
+input.buttonOutline,
 
-
-
-
-.button{
-	display: inline-block;
-	margin-right:.5rem;
-	margin-left:0;
-	}
-
-}
-
-
-@media only screen and (min-width: @large-up) {
+.button,
+button,
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"]{
+    display: inline-block;
+    margin-right:.5em;
+    margin-left:0;
+    width: auto;
+    }
 
 }
+
+
+
+
+
+

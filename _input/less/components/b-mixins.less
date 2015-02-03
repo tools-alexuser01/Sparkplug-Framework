@@ -12,13 +12,6 @@
   }
 }
 
-.transition-bg-global(@transition:@global-background-transition){
-	-webkit-transition: @transition;
-	-moz-transition:    @transition;
-	-ms-transition: 	@transition;
-	transition:         @transition;
-}
-
 
 .opacity(@opacity:.5) {
 	@freaking-ie: @opacity * 50;
@@ -42,12 +35,6 @@
     &:not([dummy]) {
       filter: progid:DXImageTransform.Microsoft.gradient(enabled='false'); // Only IE9
     }
-}
-
-.box-sizing(@box-model) {
-	-webkit-box-sizing: @box-model;
-	-moz-box-sizing: @box-model;
-	box-sizing: @box-model;
 }
 
 .rgba(@color, @opacity: 1) {
@@ -83,6 +70,13 @@
 }
 
 
+.font-size(@font-size: @base-font-size) {
+	@em: (@font-size / @base-font-size);
+	font-size: @font-size * 1px;
+	font-size: @em / @base-pixel-value; 
+}
+
+
 .transition(@transition: @global-transition) {
 	-webkit-transition:@transition;
 	-moz-transition: @transition;
@@ -108,7 +102,9 @@
 	.opacity(50);
 	
 	&:before {
-		content: '\00D7';
+		font-family: FontAwesome;
+		content: '\f00d';
+		font-style: normal;
 	}
 
 	&:hover {

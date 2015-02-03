@@ -2,94 +2,105 @@
 //				Navigation
 // ==============================================
 
+
+// doNothing
+
 .doNothing{	
-	display: block;
+	background-color: @nav-background-color;
+	border-radius: @global-radius;
+	font-family: @nav-font-family;
+	font-weight: @nav-font-weight;
+
+
+	.clearfix();
+
 }
-.doNothing:after{
-	visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-}
+
 .doNothing ul{
 	margin: 0;
-	display: block;
-	float: left;
+	list-style: none;
 }
 
 .doNothing ul li{
-	float:left;
-	list-style: none;
+	float: left;
+
 }
 .doNothing ul li a{
+	padding: @nav-padding;
+	font-size: @nav-font-size;
+	color: @nav-link-color;
 	text-decoration: none;
-	padding: 1rem;
-	font-size: 1rem;
 	float: left;
-	color: @font-color;
-	border-radius: @global-radius;
-	font-weight:100;
 	.transition();
 }
 
+.doNothing ul li:first-child{
+	border-radius: @nav-border-radius;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}
+
 @media only screen and (min-width: @large-up) {
-	.doNothing ul li a:hover{
-		color: @white;
-		background-color: @secondary-color;
+	.doNothing ul li:hover{
+		background-color: @nav-background-hover;
 		.transition();
 	}
 }
 
+// ----- END doNothing
 
-// navBlock Start
+
+// navBlock
 
 .navBlock {
-	display: block;
-	background-color: @primary-color;	
+	background-color: @nav-background-color;	
 	border-radius: @global-radius;
-}
+	font-family: @nav-font-family;
+	font-weight: @nav-font-weight;
 
-.navBlock:after {
-	visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;	
+	.clearfix();	
+
 }
 
 .navBlock ul {
-	margin-left: 0;
-}
-
-.navBlock ul li {
-	width: 50%;
-	float: left;
+	margin: 0;
 	list-style: none;
 }
 
+.navBlock ul li {
+	float: left;
+	width: 50%;
+}
+
+.navBlock ul li a:first-child{
+	border-radius: @nav-border-radius;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}
+
+
 .navBlock ul li a {
-	display: block;
-	padding: 1rem 2rem;
+	padding: @nav-padding;
+	font-size: @nav-font-size;
+	color: @nav-link-color;
 	text-decoration: none;
-	color: @white;
+	float: left;
 	text-align:center;
-	font-weight:100;
+	width: 100%;
 	.transition();
 }
 
 @media only screen and (min-width: @medium-up) {
 	
-	.navBlock li{
+	.navBlock ul li{
 		width: 33.3333%;
+		text-align: center;
 	}	
 }
 @media only screen and (min-width: @large-up) {
 
 	.navBlock ul li a:hover {
-		background-color: @secondary-color;
+		background-color: @nav-background-hover;
 		.transition();
 	}
 
@@ -102,35 +113,26 @@
 
 }
 
-// ---------- navBlock End
+// ---------- END navBlock
 
 
-// navToggle Start
+// navToggle 
 
 .navToggle{
-	.transition();
+	background-color: @nav-background-color;
 	border-radius: @global-radius;
-	display: block;
-	color: @font-color;
+	font-family: @nav-font-family;
+	font-weight: @nav-font-weight;
 	overflow: hidden;
-	width:100%;
-	background-color: @primary-color;
-	color: @white;
+	.clearfix();
+	.transition();
 }
 
 .navToggle ul{
-	.transition();
 	visibility: hidden;
 	position: absolute;
-}
+	.transition();
 
-.navToggle:after{
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
 }
 
 .navToggle ul{
@@ -142,35 +144,29 @@
 	width: 100%;
 	float: left;
 	list-style: none;
+	border-top: 1px solid @primary-light;
+	background-color: @primary-dark;
 }
 .navToggle ul li a{
+	padding: @nav-padding;
+	font-size: @nav-font-size;
+	color: @nav-link-color;
 	display: block;
-	padding: 1rem 1rem;
 	text-decoration: none;
-	font-weight:100;
-	color: @white;
 	.transition();
 }
 
-.navToggle{}
 .navToggle-burger{
-	float: right;
-	padding: 10px;
-	font-size: 1em;
-	margin-right: 5px;
+	float: left;
 	text-decoration: none;
 	text-transform: capitalize;
-	padding: 5px 10px;
+	padding:5px 15px;
 	border-radius: 5px;
 	margin:.5em 1em .5em 0;
-	color: @font-color;
+	color: @nav-link-color;
 	.transition();
 }
-.navToggle-burger:hover{
-	background-color: @primary-color;
-	color:@white;
-	.transition();
-}
+
 
 @media only screen and (min-width: @medium-up) {}
 
@@ -178,6 +174,8 @@
 
 	.navToggle ul li{
 		width: auto;
+		border:0;
+		background-color: initial;
 	}
 
 	.navToggle-burger{
@@ -185,8 +183,7 @@
 	}
 
 	.navToggle ul li a:hover{
-		background-color: darken(@primary-color, 10%);
-		color:@white;
+		background-color: @nav-background-hover;
 		.transition();
 	}
 
@@ -199,17 +196,20 @@
 // thumbNav Start
 
 .thumbNav{
+	background-color: @nav-background-color;
+	border-radius:@global-radius;
+	font-family: @nav-font-family;
+	font-weight: @nav-font-weight;
 	position:fixed;
 	z-index:1000;
 	width:50px;
 	height:50px;
-	background-color: @secondary-color;
-	border-radius:@global-radius;
 	overflow: hidden;
 	bottom:0;
 	margin-bottom:20px;
 	right:20px;
-	.transition(all ease .35s);
+	.transition();
+
 }
 
 .thumbNav i{
@@ -221,9 +221,8 @@
 	display: block;
 	text-align: center;
 	padding-bottom: 16px;
-	color: @white;
+	color: @nav-link-color;
 	font-size: 20px;
-	-webkit-font-smoothing: antialiased;
 }
 
 .thumbNav ul{
@@ -233,40 +232,39 @@
 	list-style:none;
 	position:absolute;
 	width:100%;
-	-webkit-font-smoothing: antialiased;
 }
 
 .thumbNav ul li a{
+	color:@nav-link-color;
+	font-size: @nav-font-size;
+	padding: @nav-padding;
 	display: block;
-	font-size: 1rem;
 	width:100%;
-	padding:1rem 2rem;
-	color:@white;
 	text-decoration: none;
-	font-weight:100;
-	-webkit-font-smoothing: antialiased;
 }
 
 .thumbNav.active{
-	.transition(all ease .35s);
+	.transition();
 	border-radius:@global-radius;
-	width: 88%;	
+	width: 40%;	
+	border:1px solid @primary-dark;
+
 }
 
 .thumbNav.active ul{
-	.transition(all ease .35s);
+	.transition();
 	visibility:visible;
 	opacity:1;
 }
 
 .iconSprite i:first-child{
-	.transition(all ease .35s);
+	.transition();
 	opacity:1;
 	visibility: visible;	
 }
 
 .iconSprite i:last-child{
-	.transition(all ease .35s);
+	.transition();
 	opacity:0;
 	visibility: hidden;
 }
@@ -291,12 +289,9 @@
 		display: inline-block;
 	}
 
-	.thumbNav ul li a {
-		padding:.6rem 2rem;
-	}
 
 	.thumbNav ul li a:hover{
-		background-color: @primary-color;
+		background-color: @nav-background-hover;
 		.transition();
 	}	
 
