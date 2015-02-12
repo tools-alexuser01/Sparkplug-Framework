@@ -3,11 +3,11 @@
 // ==============================================
 
 .warning, .success, .error{
-	line-height: @base-line-height;
-	padding:1em;
+	padding:@alert-padding;
+	margin:@alert-margin;
+	font-size: @alert-font-size;
 	display: inline-block;
 	width:100%;
-	margin:1em 0;
 }
 
 i.close{	
@@ -15,19 +15,19 @@ i.close{
 	float: right;
 	opacity: .7;
 	color: inherit;
-	}
+}
 
 .warning{
-	background-color: lighten(@warning-color, 30%);
-	color:darken(@warning-color, 20%);
+	background-color: @warning-background-color;
+	color:@warning-font-color;
 }
 
 .success{
-	background-color: lighten(@success-color, 30%);
-	color:darken(@success-color, 20%);
+	background-color: @success-background-color;
+	color:@success-font-color;
 }
 
 .error{
-	background-color: lighten(@error-color, 30%);
-	color:darken(@error-color, 20%);
+	background-color: @error-background-color;
+	color:@error-font-color;
 }

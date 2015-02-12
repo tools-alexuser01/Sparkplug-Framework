@@ -3,16 +3,17 @@
 // ==============================================
 
 .contentCollapse{
-	border:1px solid @mono-color;
-	border-radius:@global-radius;
+	border:1px solid @cc-border;
+	border-radius:@cc-border-radius;
 	margin-top:1em;
 	position:relative;
 }
 .contentCollapse [data-toggle]{
+	color:@cc-title-color;
+	font-size: @cc-title-font-size;
 	display:block;
-	padding:.5em 1em;
+	padding: @cc-padding;
 	cursor:pointer;
-	color:@global-font-color;
 	.transition();
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -20,22 +21,20 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
 }
 
 .contentCollapse-content{
 	display:none;
-	padding:1em 2em;
-	border-top: 1px solid @mono-color;
+	padding: @cc-padding;
+	border-top: 1px solid @cc-border;
 }
 
 i.contentCollapse-plus{
 	font-size: 1.5em;
-	padding: .8em 1em;
+	padding: .6em 1em;
 	position:absolute;
 	right:0;
-
-	color:darken(@mono-color, 10%);
+	color:@cc-plus-minus-color;
 
 }
 .contentCollapse i.contentCollapse-plus:before{
@@ -48,7 +47,5 @@ i.contentCollapse-plus{
 
 .contentCollapse.open [data-toggle]{
 	 .transition();
-	 color:@secondary-color;
-
 }
 

@@ -31,7 +31,7 @@
             activeClass: 'active',
             // Point at which toggle menu 
             // switches between default and dropdown behavior.
-            maxWidth: 1200
+            maxWidth: 1000
         },
         init: function() {
             $(toggleMenu.config.toggleSelector).on('click', toggleMenu.toggle);

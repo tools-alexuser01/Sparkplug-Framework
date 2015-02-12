@@ -2,60 +2,44 @@
 //				Breadcrumbs
 // ==============================================
 
+
 .breadcrumbs {
-	margin-bottom: 1em;
-	background-color: lighten(@mono-color, 5%);
-	border: 1px solid darken(@mono-color, 5%);
-	border-radius: @global-radius;
-	padding-left: 1em;
 	.clearfix();
+	background-color: @breadcrumb-background-color;
+	border: 1px solid @breadcrumb-border-color;
+	border-radius: @breadcrumb-border-radius;
+	padding: @breadcrumb-padding;
+	margin: @breadcrumb-margin;
 }
 
-.breadcrumbs ul {
-	font-size: .8em;
-	color: @global-font-color;
-	list-style: none;
-	margin: 0;
-	.clearfix();
-}
-
-.breadcrumbs ul li {
-	float: left;
-	margin-right: .2em;
-}
-
-.breadcrumbs li + li:before {
-    content: ">";
-    color: #aaa;
-    font-size: .7em;
-	margin: 0 .5em;
-	position: relative;
-	top: -1px;
-}
-
-.breadcrumbs-sections li + li:before {
-    content: " | ";
-	top: 0;
-}
-
-.breadcrumbs-path li + li:before {
-    content: " / ";
-	top: 0;
-}
-
-.breadcrumbs ul li a {
-	color: @primary-color;
+.breadcrumbs a, .breadcrumbs span{
+	font-size: @breadcrumb-font-size;
+	font-weight: @breadcrumb-font-weight;
 	text-decoration: none;
 }
 
-.breadcrumbs ul li.active a {
-	text-decoration: none;
-	cursor: text;
-	color: @global-font-color;
+.breadcrumbs a{
+	color:@breadcrumb-link-color;
 }
 
-.breadcrumbs ul li a:hover {
-	color: @primary-color;
-	text-decoration: underline;
+.breadcrumbs span{
+	color:@breadcrumb-span-color;
 }
 
+.breadcrumbs a:after{
+	content: @breadcrumb-seperator;
+	margin: 0 .5rem;
+}
+
+
+@media only screen and (min-width: @large-up) {
+
+	.breadcrumbs a:hover{
+		color: @breadcrumb-link-hover-color;
+	}
+
+	.breadcrumbs a:hover:after{
+		color: @breadcrumb-link-color;
+		cursor: text;
+	}
+}

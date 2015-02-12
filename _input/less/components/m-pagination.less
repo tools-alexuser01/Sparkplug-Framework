@@ -3,44 +3,49 @@
 // ==============================================
 
 .pagination {
-	.clearfix;
-	border:1px solid @mono-color;
-	border-radius: @global-radius;
+	.clearfix();
 	position: relative;
 	display: inline-block;
 }
 
 .pagination ul{
+	border:1px solid @mono-color;
+	border-radius: @pagination-border-radius;
+	background-color: @pagination-background-color;
 	margin: 0;
 	padding: 0;
+	float: left;
+}
+
+.pagination ul li:first-child {
+	border-radius: @pagination-border-radius;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	
+}
+
+.pagination ul li:last-child {
+	border-radius: @pagination-border-radius;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
 }
 
 .pagination li {
+	border-right:1px solid @pagination-border-color;
 	float: left;
 	list-style: none;
-	border-right:1px solid @mono-color;
 }
 
 .pagination li a{
+	padding: @pagination-padding;
+	color: @pagination-font-color;
 	display: block;
-	padding: .5rem .8rem;
-	line-height: @base-line-height / 2;
-
-	color: @primary-color;
 	text-decoration: none;
+	line-height: initial;
 }
 
 .pagination li:last-child{
 	border:0;
-}
-
-
-.pagination li a:focus,
-.pagination li a:hover {
-	text-decoration: none;
-	background-color: @primary-color;
-	color: @white;
-	box-shadow: none;
 }
 
 .pagination .active {
@@ -49,14 +54,17 @@
 }
 
 
-
-@media only screen and (min-width: @medium-up) {
-
-}
-
-
-
 @media only screen and (min-width: @large-up) {
+
+	.pagination li:focus,
+	.pagination li:hover {
+		background-color: @primary-color;
+		text-decoration: none;
+		box-shadow: none;
+	}
+	.pagination li a:hover{
+		color: @pagination-font-hover-color;
+	}
 
 }
 

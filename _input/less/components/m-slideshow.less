@@ -12,7 +12,7 @@ ul[data-slideshow]{
 }
 
 ul[data-slideshow] li {
-.transition();
+  .transition();
 }
 
 ul[data-slideshow] > li{
@@ -23,26 +23,29 @@ ul[data-slideshow] > li{
   visibility: hidden;
   opacity:0;
 }
+
 ul[data-slideshow] > li:first-child{
   position: relative;
   float: left;
   visibility: visible;
   opacity:1;
 }
+
 ul[data-slideshow] img{
   display: block;
   height: auto;
   float: left;
   width: 100%;
   border: 0;
-  border-radius:@global-radius;
+  border-radius: @ss-border-radius;
   width:100%;
   max-width:100%;
 }
 
-[data-next], [data-prev]{
+[data-next], 
+[data-prev]{
   cursor:pointer;
-   -webkit-touch-callout: none;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -61,6 +64,7 @@ ul.ss-navigation{
   right: 0;
   bottom: 0;
 }
+
 ul.ss-navigation li{
   padding:.5em 1.5em;
   padding-top: 30%;
@@ -86,7 +90,7 @@ ul.ss-navigation li[data-prev], {
 
 ul.ss-navigation li[data-prev]:before,
 ul.ss-navigation li[data-next]:before{
-color: @white;
+color: @ss-next-prev-color;
 font-size: 2em;
 text-shadow: 0px 1px 0px @black;
 }

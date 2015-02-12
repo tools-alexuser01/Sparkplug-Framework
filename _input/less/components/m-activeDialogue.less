@@ -7,8 +7,12 @@ body.active-modal{
 	overflow:hidden;
 }
 
-.modal-box:before, .modal-box:after { 
-	content: "\0020"; display: block; height: 0; overflow: hidden; 
+.modal-box:before, 
+.modal-box:after { 
+	content: "\0020"; 
+	display: block; 
+	height: 0; 
+	overflow: hidden; 
 }
 
 .modal-box:after { 
@@ -16,6 +20,7 @@ body.active-modal{
 }
 
 .modal{
+	background: @modal-body-background;
 	visibility: hidden;
 	opacity:0;
 	position: fixed;
@@ -26,31 +31,35 @@ body.active-modal{
 	z-index:1050;
 	outline: 0;
 	overflow-y:scroll;
-	background: fade(@black, 70%);
 	zoom: 1;
-	
-	.transition(.5s all ease); 
+	.transition(); 
+}
 
-	&.active{
-		visibility: visible;
-		opacity: 1;
-		.transition(); 
-	}
+.modal.active{
+	visibility: visible;
+	opacity: 1;
+	.transition(); 
+
 }
 
 .modal-box{
-	width:37.5em;
-	background:@white;
-	border-radius:@global-radius;
+	width:@modal-width-small;
+	background:@modal-background-color;
+	border-radius:@modal-radius;
+	padding:@modal-padding;
 	max-width:100%;
 	display:block;
 	margin:2em auto;
-	padding:.625em 1.25em;
 	clear:both;
 }
 
 .modal .navigation{
 	display:block;
+}
+
+a.modal-next, a.modal-prev{
+	color: @modal-next-prev-color;
+	margin-top: 1em;
 }
 
 .modal-next{
@@ -61,6 +70,32 @@ body.active-modal{
 	float:left;
 }
 
-a[data-fire], .modal-next, .modal-prev{
+a[data-fire], 
+.modal-next, 
+.modal-prev{
 	cursor:pointer;
+}
+
+.modal-box h1,
+.modal-box h2,
+.modal-box h3,
+.modal-box h4,
+.modal-box h5,{
+	margin-top: 0;
+}
+
+
+@media only screen and (min-width: @medium-up) {
+	.modal-box{
+		width:@modal-width-medium;
+	}
+}
+
+
+@media only screen and (min-width: @large-up) {
+
+	.modal-box{
+		width:@modal-width-large;
+	}
+
 }

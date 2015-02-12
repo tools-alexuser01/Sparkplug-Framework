@@ -2,7 +2,6 @@
 //				Typography
 // ==============================================
 
-
 h1,
 h2,
 h3,
@@ -10,15 +9,11 @@ h4,
 h5,
 h6 {
 	font-family: @heading-font-family;
-	font-weight: normal;
-	font-style: normal;
-	color: @global-font-color;
-	line-height: initial;
+	font-weight: @heading-font-weight;
+	font-style: @heading-font-style;
+	line-height: @heading-line-height;
+	margin:@heading-margin;
 	text-rendering: optimizeLegibility;
-	margin-bottom: .75em;
-	margin-top:1.5em;
-	font-weight: normal;
-	line-height: 1.4;
 }
 
 h1 {

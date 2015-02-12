@@ -13,26 +13,170 @@
 // ----------------------------------------
 // 		1 Global Settings
 // ----------------------------------------
-// By default, all other sections will inherit from global settings
+// By default, all other sections will inherit f
+ 
 
 @body-bg: @white; // you can set this to a variable, color, or image
 
 // fonts
-@base-font-size: 1em; // p's, labels,
-@base-pixel-value:@base-font-size * 16;
-
 @global-font-family: 'Open Sans', sans-serif; 
-@global-font-color:#333333;
-@global-link-color:@secondary-color;
+@global-font-color: #333333;
+@global-link-color: @secondary-color;
+
+@global-line-height: 1.4;
+@base-line-height: 2em;
+
+@base-font-size: 1em; // p's, labels,
+@base-pixel-value: @base-font-size * 16;
+@global-font-weight: normal;
+@global-font-style: normal;
+
 
 //shape
 @global-radius: 10px; // the roundness of all things (buttons, inputs, panels, boxes)
-@base-line-height:2em;
 
 // transitions
 @global-transition:all ease .2s; // for use with the .transition(); mixin
 @global-blur:5px; // for use with the .blur(); mixin
 
+
+
+// ---------------------------------------------------------
+//     Slideshow
+// ---------------------------------------------------------
+
+@ss-border-radius:@global-radius;
+
+@ss-next-prev-color:@white;
+
+
+// ---------------------------------------------------------
+//     Content Collapse
+// ---------------------------------------------------------
+
+@cc-title-color: @primary-color;
+@cc-title-font-size: @base-font-size;
+
+@cc-border: @mono-color;
+@cc-border-radius: @global-radius;
+
+@cc-plus-minus-color: @secondary-color;
+
+@cc-padding: .5em 1em;
+
+// ---------------------------------------------------------
+//     Active Dialogue (modal) Settings 
+// ---------------------------------------------------------
+
+@modal-body-background: fade(@secondary-color, 80%);
+
+// sizes
+@modal-width-small: 90%;
+@modal-width-medium: 75%;
+@modal-width-large: 50%;
+
+
+@modal-radius: @global-radius;
+@modal-padding: 1.5em;
+
+@modal-background-color: @white;
+
+@modal-next-prev-color: @primary-color;
+
+
+
+// ---------------------------------------------------------
+//     Pagination Settings
+// ---------------------------------------------------------
+
+   //border
+@pagination-border-radius: @global-radius;
+@pagination-border-color: @mono-color;
+
+   //font
+@pagination-font-color: @primary-color;
+@pagination-font-hover-color: @white;
+
+  //color
+@pagination-background-color: transparent;
+@pagination-background-hover-color: @primary-color;
+
+  //padding
+@pagination-padding: .35rem .8rem;
+
+
+
+
+
+
+// ---------------------------------------------------------
+//     4 Typography Settings
+// ---------------------------------------------------------
+
+
+// Font Colors
+
+// links
+@link-color: @global-link-color;
+
+// headings
+@heading-font-family: @global-font-family;
+@heading-font-color: @global-font-color;
+@heading-font-weight: @global-font-weight;
+@heading-font-style: @global-font-style;
+@heading-line-height: @global-line-height;
+@heading-margin: 1.5em 0 1em;
+
+
+
+// Paragraph
+@paragraph-font-color: @global-font-color;
+@paragraph-font-size:  @base-font-size;
+@paragraph-font-weight: 300;
+@paragraph-line-height: 2em;
+
+
+@code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+
+
+// ---------------------------------------------------------
+//      Alert Settings
+// ---------------------------------------------------------
+
+@alert-padding:1em;
+@alert-margin:1em 0;
+@alert-font-size:@base-font-size;
+
+@warning-background-color:lighten(@warning-color, 30%);;
+@warning-font-color:darken(@warning-color, 25%);
+
+@success-background-color:lighten(@success-color, 30%);
+@success-font-color:darken(@success-color, 25%);
+
+@error-background-color:lighten(@error-color, 30%);
+@error-font-color:darken(@error-color, 25%);
+
+// ---------------------------------------------------------
+//      Breadcrumb Settings
+// ---------------------------------------------------------
+
+@breadcrumb-background-color:lighten(@divider-color, 18%);
+@breadcrumb-border-color:darken(@divider-color, 0%);
+@breadcrumb-border-radius:@global-radius;
+
+@breadcrumb-padding:0 1em;
+@breadcrumb-margin:1em 0;
+
+@breadcrumb-font-size:@base-font-size;
+@breadcrumb-font-weight:300;
+
+@breadcrumb-link-color:@primary-color;
+@breadcrumb-span-color:@global-font-color;
+@breadcrumb-link-hover-color:@primary-light;
+
+@breadcrumb-seperator:" / ";
 
 
 // ---------------------------------------------------------
@@ -48,7 +192,7 @@
 @nav-padding: 1em 1em;
 
 
-@nav-font-family:@global-font-color;
+@nav-font-family:@global-font-family;
 @nav-font-size:@base-font-size;
 @nav-font-weight:normal;
 
@@ -58,11 +202,11 @@
 // ----------------------------------------
 
 // Theme colors
-@primary-color: #FFEB3B;
+@primary-color: #388E3C;
 @primary-dark:darken(@primary-color, 10%);
 @primary-light:lighten(@primary-color, 10%);
 
-@secondary-color: #607D8B;
+@secondary-color: #795548;
 @tertiary-color: #2ecc71;
 
 @accent-color:#2ecc71;
@@ -110,36 +254,6 @@
 @large-row-width: @row-width; // Don't change this one. Ever.
 @medium-row-width: @medium-up;
 @small-row-width: @small-up;
-
-
-
-// ---------------------------------------------------------
-//     4 Typography Settings
-// ---------------------------------------------------------
-
-
-// Font Colors
-@heading-font-color:@global-font-color;
-
-// links
-@link-color: @global-link-color;
-
-// headings
-@heading-font-family: @global-font-family;
-@heading-font-color:@global-font-color;
-
-
-
-
-// Paragraph
-@paragraph-font-color: @global-font-color;
-@paragraph-font-size:  @base-font-size;
-@paragraph-font-weight: 300;
-@paragraph-line-height: 2em;
-
-
-@code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-
 
 
 // ---------------------------------------------------------
