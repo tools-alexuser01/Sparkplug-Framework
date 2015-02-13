@@ -3,7 +3,7 @@
 // ==============================================
 
 .contentCollapse{
-	border:1px solid @cc-border;
+	border:1px solid @cc-border-color;
 	border-radius:@cc-border-radius;
 	margin-top:1em;
 	position:relative;
@@ -26,12 +26,12 @@
 .contentCollapse-content{
 	display:none;
 	padding: @cc-padding;
-	border-top: 1px solid @cc-border;
+	border-top: 1px solid @cc-border-color;
 }
 
 i.contentCollapse-plus{
 	font-size: 1.5em;
-	padding: .6em 1em;
+	padding: @cc-plus-padding;
 	position:absolute;
 	right:0;
 	color:@cc-plus-minus-color;

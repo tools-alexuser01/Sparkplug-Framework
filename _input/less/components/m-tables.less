@@ -2,16 +2,31 @@
 //				Tables
 // ==============================================
 
-// == Index of Tables ==
-// 1. Default Table (no class Required)
-// 2. Bordered Table
-// 3. Responsive Table
+.column, .columns{
+	table{
+		width:100%;
+		border-radius: @table-border-radius;
+	}
+}
 
+thead th,
+thead td {
+	font-weight: @table-heading-font-weight;
+	vertical-align: bottom;
+}
 
-/* Bordered Table */
+th,
+td {
+	border-bottom: 1px solid @table-border-color;
+	padding: @table-cell-padding;
+	font-size: 	@table-content-font-size;
+}
+
+// Bordered Table
 table.table-bordered td,
 table.table-bordered th {
-	border: 1px solid @mono-color;
+	border: 1px solid @table-border-color;
+
 }
 table.table-simple td,
 table.table-simple th {
@@ -24,21 +39,16 @@ table.table-flat th {
 	padding: 0;
 }
 table.table-striped tbody tr:nth-child(odd) td {
-	background-color: lighten(@mono-color, 5%);
+	background-color: @table-striped-color;
+
 }
 table.table-hovered tbody tr:hover td {
-	background-color: lighten(@mono-color, 5%);
+	background-color: @table-striped-color;
 }
 
 
 
-/* Responsive Tables */
-.column, .columns{
-	table{
-		width:100%;
-	}
-}
-
+// Responsive Tables 
 .table-container {
 	width: 100%;
 	overflow: auto;
@@ -60,12 +70,6 @@ table.table-hovered tbody tr:hover td {
 	}
 }
 
-
-th,
-td {
-	border-bottom: 1px solid @mono-color;
-	padding: .5em .6em;
-}
 .no-wrap td{
 	white-space: nowrap;
 }
@@ -73,11 +77,6 @@ td {
 table caption {
 	text-transform: uppercase;
 	padding: 0 1em;
-	color: #777;
+	color: @secondary-text;
 	font-size: @base-font-size - .3em;
 }
-
-
-@media only screen and (min-width: @medium-up) {}
-
-@media only screen and (min-width: @large-up) {}
